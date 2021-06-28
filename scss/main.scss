@@ -1,0 +1,23 @@
+@import "illustrations";
+
+
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap" rel="stylesheet');
+
+* {
+	margin: 0;
+	padding: 0;
+  border: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Cairo';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+}
+
+code {
+  font-family: 'Cairo';
+}
