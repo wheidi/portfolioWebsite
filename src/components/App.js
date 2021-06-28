@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import io from 'socket.io-client';
-import connectionEmitter from "../clientSockets/connectionEmitter.js";
-import connectionHandler from "../clientSockets/connectionHandler.js";
 
 // Component imports
 import Login from './Login.js';
@@ -28,13 +26,6 @@ class App extends Component {
         this.displayPlayerNamesFromString = this.displayPlayerNamesFromString.bind(this);
         this.displayVoteChoices = this.displayVoteChoices.bind(this);
         this.displaySubmitButton = this.displaySubmitButton.bind(this);
-        //this.submitVote = this.submitVote.bind(this);
-
-
-        // create socket connection
-        const socket = io();
-        const emitters = new connectionEmitter(socket);
-        const handlers = new connectionHandler(socket,this);
         
         // state
         this.state = {

@@ -1,4 +1,5 @@
 @import "illustrations";
+@import "projectPage";
 
 
 //fonts
@@ -11,13 +12,14 @@
 }
 
 body {
-  margin: 0;
-  font-family: 'Cairo';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
+  background-color: white;
+
+  font-family: 'Maven Pro', verdana, sans-serif;
+  
 }
 
 code {
-  font-family: 'Cairo';
+  font-family: 'Maven Pro';
 }
