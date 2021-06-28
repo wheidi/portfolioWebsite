@@ -261,7 +261,7 @@ h1 {
 }
 
 .navtext {
-    margin-top: 10px;
+    margin-top: 25px;
     padding-right: 10px;
     padding-left: 10px;
     height: 38px;
@@ -287,7 +287,7 @@ title {
 }
 
 .cell {
-    background-color: #EEE;
+    background-color: #ccebff;
     width: 41.5%;
     border-radius: 15px;
     padding: 30px;
