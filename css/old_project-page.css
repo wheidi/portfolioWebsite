@@ -248,3 +248,25 @@ h1 {
   .footerlinks a:hover {
       color: #ff4141;
   }
+
+  /**blue warning box**/
+.cell {
+    background-color: #e6f9ff;
+    width: 80%;
+    border-radius: 15px;
+    
+    border: 1px solid #0099ff;
+    padding: 20px 30px 20px 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    text-align: center;
+}
+
+.warning {
+    text-decoration: underline;
+}
+
+.warning:hover {
+    color: #ff4141 ;
+}
