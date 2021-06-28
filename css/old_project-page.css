@@ -162,92 +162,7 @@ h1 {
   .bold {
       font-weight: 700;
   }
-  
-  /** Footer + pagination*/
-  
-  .pagination {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      padding-left: 40px;
-      padding-right: 40px;
-      width: 95%;
-      max-width: 1040px;
-      
-  }
-  
-  .pagebutton {
-      padding: 10px;
-      border-radius: 25px;
-  
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-  
-      color: grey;
-  }
-  
-  .pagebutton:hover {
-      color: #ff4141;
-  }
-  
-  .pagenavicons {
-      font-size: 2em;
-      padding-left: 10px;
-      padding-right: 10px;
-  }
-  
-  .navtext {
-      margin-top: 10px;
-      height: 38px;
-  }
-  
-  title {
-      display: None;
-  }
-  
-  /**FOOTER**/
-  
-  #footer {
-      width: 100%;
-      height: 150px;
 
-      display: flex;
-      background-color: #eee;
-      
-      flex-direction: column;
-  
-      
-      justify-content: center;
-      align-items: center;
-      
-      color: #7b7b7b;
-  }
-  
-  #footercontainer {
-      width: 50%;
-      
-      display: flex;
-      flex-direction: row;
-  
-      
-      justify-content: center;
-      align-items: center;
-  }
-  
-  .footerlinks a {
-      margin: 15px;
-      
-      color: #7b7b7b;
-      
-      text-decoration: underline;
-  }
-  
-  .footerlinks a:hover {
-      color: #ff4141;
-  }
 
   /**blue warning box**/
 .cell {
@@ -269,4 +184,45 @@ h1 {
 
 .warning:hover {
     color: #ff4141 ;
+}
+
+/**FOOTER**/
+
+#footer {
+    width: 100%;
+    height: 150px;
+    margin-top: 100px;
+    display: flex;
+    background-color: #eee;
+    
+    flex-direction: column;
+
+    
+    justify-content: center;
+    align-items: center;
+    
+    color: #7b7b7b;
+}
+
+#footercontainer {
+    width: 50%;
+    
+    display: flex;
+    flex-direction: row;
+
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.footerlinks a {
+    margin: 15px;
+    
+    color: #7b7b7b;
+    
+    text-decoration: underline;
+}
+
+.footerlinks a:hover {
+    color: #FF3900;
 }
