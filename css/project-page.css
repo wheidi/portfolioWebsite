@@ -1,0 +1,289 @@
+content {
+  max-width: 800px;
+  min-width: 500px;
+  padding-left: 10px;
+  padding-right: 10px; 
+}
+
+
+h1 {
+  font-size: 3em;
+  font-weight: 500;
+  padding-bottom: .5em;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 500;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+h3 {
+  font-size: 1.5em;
+  padding-top: 3em;
+  color: #767676;
+
+}
+
+h4 {
+    font-size: 1.5em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    text-align: center;
+}
+
+content p {
+    max-width: inherit;
+    
+    text-align: left;
+    
+    padding-bottom: 1em;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+}
+
+
+#description {
+margin: -1em 1em 3em 1.5em;
+color: #5E5B5B;
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  color: white;
+  background: #ff4141;
+}
+
+::-moz-selection {
+  color: white;
+  background: #ff4141;
+}
+
+/*project pages*/
+
+#pagebanner {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  
+  position: relative;
+  height: 100%;
+  
+}
+
+header {
+    max-width: 1000px;
+
+    height: 550px;
+    
+    padding-top: 25px;
+    padding-bottom: 125px;
+}
+
+
+#herobg {
+    position: absolute;
+    z-index: -1;
+    
+    width: 1000px;
+    height: 500px;
+    object-fit: cover;
+    
+    margin-top: 50px;
+}
+
+#pagehero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    height: 100%;
+    padding-top: 75px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.heroimg {
+    max-width: 375px;
+}
+
+.herotext {
+    font-size: 3em;
+    font-weight: 500;
+    color: white;
+    max-width: 30%;
+}
+
+
+#summary {
+    text-align: center;
+}
+
+.imgscreencontainer {
+    margin-bottom: 3em;
+    margin-top: 2em;
+    max-width: inherit;
+    border: 2px solid #EEE;
+}
+
+.imgcontainer {
+    margin-bottom: 2em;
+    margin-top: 2em;
+    max-width: inherit;
+}
+
+.margin {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.bold {
+    font-weight: 700;
+    display: inline;
+}
+
+span {
+    display: inline;
+}
+
+/** Footer + pagination*/
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    width: 100%;
+    max-width: inherit;
+    
+}
+
+.pagebutton {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    color: grey;
+}
+
+.pagebutton:hover {
+    color: #FF3900;
+}
+
+.pagenavicons {
+    font-size: 2em;
+}
+
+.navtext {
+    margin-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    height: 38px;
+}
+
+.accent {
+    color: #FF7F5A;
+}
+
+title {
+    display: None;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-between;
+    
+    margin-bottom: 1em;
+    
+    width: 100%;
+}
+
+.cell {
+    background-color: #EEE;
+    width: 41.5%;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+li {
+    padding-bottom: 1em;
+}
+
+/**FOOTER**/
+
+#footer {
+    width: 100%;
+    height: 150px;
+    margin-top: 100px;
+    display: flex;
+    background-color: #eee;
+    
+    flex-direction: column;
+
+    
+    justify-content: center;
+    align-items: center;
+    
+    color: #7b7b7b;
+}
+
+#footercontainer {
+    width: 50%;
+    
+    display: flex;
+    flex-direction: row;
+
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.footerlinks a {
+    margin: 15px;
+    
+    color: #7b7b7b;
+    
+    text-decoration: underline;
+}
+
+.footerlinks a:hover {
+    color: #FF3900;
+}
