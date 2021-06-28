@@ -226,3 +226,73 @@ h1 {
 .footerlinks a:hover {
     color: #FF3900;
 }
+
+/** PAGINATION **/
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    width: 95%;
+    max-width: 1040px;
+}
+
+.pagebutton {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    color: grey;
+}
+
+.pagebutton:hover {
+    color: #FF3900;
+}
+
+.pagenavicons {
+    font-size: 2em;
+}
+
+.navtext {
+    margin-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    height: 38px;
+}
+
+.accent {
+    color: #FF7F5A;
+}
+
+title {
+    display: None;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-between;
+    
+    margin-bottom: 1em;
+    
+    width: 100%;
+}
+
+.cell {
+    background-color: #EEE;
+    width: 41.5%;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+li {
+    padding-bottom: 1em;
+}
