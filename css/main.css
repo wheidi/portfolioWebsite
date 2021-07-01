@@ -283,6 +283,11 @@ h3.cardtitle {
     box-shadow: 0px 2px 2px #ff8080, 0px 4px 2px #ff9999, 0px 7px 2px #ffb3b3,0px 9px 2px #ffcccc, 0px 11px 2px #ffe6e6;
 }
 
+.bluegradient:hover {
+  box-shadow: 0px 2px 2px #668cff, 0px 4px 2px #99b3ff, 0px 7px 2px #b3c6ff,0px 9px 2px #ccd9ff, 0px 11px 2px #e6ecff;
+  ;
+}
+
 .orangegradient:hover {
     box-shadow: 0px 2px 2px #ff6600, 0px 4px 2px #ff944d, 0px 7px 2px #ffb380,0px 9px 2px #ffd1b3, 0px 11px 2px #fff0e6;
 }
