@@ -9,7 +9,7 @@ content {
 h1 {
   font-size: 3em;
   font-weight: 500;
-  padding-bottom: .5em;
+  padding-bottom: .3em;
 }
 
 h2 {
@@ -126,7 +126,7 @@ header {
 }
 
 .heroimg {
-    max-width: 375px;
+    width: 600px;
 }
 
 .herotext {
@@ -245,4 +245,26 @@ title {
 
 li {
     padding-bottom: 1em;
+}
+
+/**alerts**/
+
+.warningcell {
+    background-color: #ccebff;
+    width: 50%;
+    border-radius: 15px;
+    padding: 30px 30px 10px 30px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #0099ff;
+}
+
+.warning {
+    text-decoration: underline;
+}
+
+.warning:hover {
+    color: #ff4141 ;
 }
