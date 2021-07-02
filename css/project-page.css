@@ -148,7 +148,7 @@ header {
 .imgcontainer {
     margin-bottom: 2em;
     margin-top: 2em;
-    max-width: inherit;
+    max-width: 800px;
 }
 
 .margin {
