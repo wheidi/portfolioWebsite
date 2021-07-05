@@ -62,15 +62,6 @@ img {
   max-width: 100%;
 }
 
-::selection {
-  color: white;
-  background: #ff4141;
-}
-
-::-moz-selection {
-  color: white;
-  background: #ff4141;
-}
 
 /*project pages*/
 
@@ -200,7 +191,7 @@ span {
 }
 
 .pagebutton:hover {
-    color: #FF3900;
+    color: black;
 }
 
 .pagenavicons {
@@ -212,10 +203,6 @@ span {
     padding-right: 10px;
     padding-left: 10px;
     height: 38px;
-}
-
-.accent {
-    color: #FF3900;
 }
 
 title {

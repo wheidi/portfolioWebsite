@@ -37,17 +37,6 @@ img {
   max-width: 100%;
 }
 
-::selection {
-  color: white;
-  background: #ff4141;
-}
-
-::-moz-selection {
-  color: white;
-  background: #ff4141;
-}
-
-
 /*hero*/
 
 #pagebanner {
