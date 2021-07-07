@@ -49,6 +49,9 @@ html {
     scroll-behavior: smooth;  
 }
 
+.bold {
+  font-weight: 700;
+}
 h1 {
   font-size: 3em;
   margin-bottom: 1em;
@@ -245,9 +248,10 @@ img {
     padding: 0px;
     flex-grow: 1;
     width: 100%;
-    padding-top: 15px;
-    padding-bottom: 20px;
-    background-color: white;
+
+    border: solid #EEEEEE;
+
+    border-width: 5px 0 0 0;
 }
 
 #navtitle {
@@ -255,19 +259,51 @@ img {
   color: black;
 
   text-decoration: none;
+
+  background-color: #EEEEEE;
+	color: black;
+
+  transition: all 0.3s ease-in-out;
+  transition-timing-function: ease-in-out;
+
+  padding: 10px 15px 15px 15px;
+
+  border-radius: 0 0 15px 15px;
+}
+
+#navtitle:hover {
+    box-shadow: 0px 2px 1px #ffc2b3,
+  0px 3px 1px #ffc2b3,
+   0px 4px 1px #ffff80,
+    0px 5px 1px #ccffcc,
+     0px 6px 1px #ccccff,
+  0px 7px 1px #e6ccff;
 }
 
 #navlinks a{
 	margin-left: 30px;
 	text-decoration: none;
+
+  background-color: #EEEEEE;
 	color: grey;
-    transition: color 0.2s ease-in-out;
 
+  transition: all 0.3s ease-in-out;
+  transition-timing-function: ease-in-out;
 
+  padding: 10px 15px 15px 15px;
+
+  border-radius: 0 0 15px 15px;
 }
 
 #navlinks a:hover {
 	color: black;
+
+  box-shadow: 0px 2px 1px #ffc2b3,
+  0px 3px 1px #ffc2b3,
+   0px 4px 1px #ffff80,
+    0px 5px 1px #ccffcc,
+     0px 6px 1px #ccccff,
+  0px 7px 1px #e6ccff;
 }
 
 .margin {
@@ -284,10 +320,10 @@ img {
 }
 
 .toplinks {
-    display: flex;
+  display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 	
 }
 
