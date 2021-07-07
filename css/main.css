@@ -63,8 +63,25 @@ h3 {
 }
 
 a {
-  text-decoration: inherit;
-  color: #ff4141;
+  text-decoration: underline;
+  color: black;
+}
+
+.headerlink {
+  transition: all 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.headerlink:hover {
+
+  text-shadow:
+  0px -1px 3px white,
+  0px -2px 1px #ffc2b3,
+  0px -4px 1px #ffff80,
+  0px -6px 1px #ccffcc,
+  0px -8px 1px #ccccff,
+  0px -10px 1px #e6ccff;
+
 }
 
 .center{
@@ -302,6 +319,7 @@ img {
     background-color: white;
     
     margin-bottom: 50px;
+    text-decoration: none;
 }
 
 .casetext {
@@ -314,6 +332,7 @@ img {
     flex-direction: column;
     justify-content: center;
     background-color: white;
+
     z-index: 5;
     color: black;
     text-decoration: none;
