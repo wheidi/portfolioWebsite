@@ -171,15 +171,6 @@ img {
     
 }
 
-.drips:hover {
-    box-shadow: 0px 2px 1px #ffc2b3,
-    0px 4px 1px #ffc2b3,
-     0px 8px 1px #ffff80,
-      0px 10px 1px #ccffcc,
-       0px 12px 1px #ccccff,
-    0px 14px 1px #e6ccff;
-}
-
 
 a:hover {
     text-decoration: underline;
