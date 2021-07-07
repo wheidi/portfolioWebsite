@@ -212,6 +212,17 @@ img {
   margin-bottom: 80px;
 }
 
+.tear:hover {
+  transform: translateY(15px) rotate(45deg);
+    
+  box-shadow: -2px -2px 1px #ffc2b3,
+   -4px -4px 1px #ffc2b3,
+    -6px -6px 1px #ffff80,
+     -8px -8px 1px #ccffcc,
+      -10px -10px 1px #ccccff,
+   -12px -12px 1px #e6ccff;
+}
+
 .downarrow {
   border: solid grey;
   border-width: 0 3px 3px 0;
@@ -221,12 +232,6 @@ img {
   margin: 12px;
   width: 15px;
   height: 15px;
-}
-
-.tear:hover {
-  transform: translateY(15px) rotate(45deg);
-    
-  box-shadow: -2px -2px 1px #ffc2b3, -4px -4px 1px #ffc2b3, -6px -6px 1px #ffff80, -8px -8px 1px #ccffcc, -10px -10px 1px #ccccff, -12px -12px 1px #e6ccff;
 }
 
 /**END SCROLL DOWN BUTTON**/
