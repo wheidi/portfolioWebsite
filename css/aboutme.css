@@ -2,12 +2,16 @@
 h2 {
   font-size: 1.5em;
   padding-bottom: 1em;
-  max-width: 75%;
 }
 
 h3 {
   font-size: 2em;
   padding-bottom: 1em;
+}
+
+h4 {
+    font-size: 1.25em;
+    padding-bottom: 1em;
 }
 
 a {
@@ -18,6 +22,10 @@ a {
 h5 {
     font-weight: 700;
     margin-bottom: 1em;
+}
+
+.bold {
+    font-weight: 700;
 }
 
 .center {
@@ -46,7 +54,7 @@ img {
   align-items: center;
 
   height: 500px;
-  max-width: 1100px;
+  max-width: 800px;
 
 }
 
@@ -76,7 +84,7 @@ img {
     justify-content: center;
     align-items: center;
     width: 75%;
-    max-width: 850px;
+    max-width: 800px;
 
     
     text-align: center;
@@ -98,7 +106,7 @@ img {
 
 .imgcontainer {
     padding-bottom: 3em;
-    max-width: 850px;
+    max-width: 800px;
 }
 
 .tablepost {
@@ -107,7 +115,7 @@ img {
     align-items: top;
     justify-content: space-between;
     width: 75%;
-    max-width: 900px;
+    max-width: 800px;
     
     min-width: 500px;
     
