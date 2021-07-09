@@ -101,10 +101,13 @@ img {
 
 ::selection {
   background: #EEEEEE;
+  text-decoration: inherit;
 }
 
 ::-moz-selection {
   background: #EEEEEE;
+  text-decoration: inherit;
+
 }
 
 /*Welcome page*/
@@ -135,7 +138,7 @@ img {
   
   background-color: white;
 
-  height: 40%;
+  height: 60%;
   width: 800px;
   min-width: 700px;
   padding-left: 10%;
@@ -181,7 +184,7 @@ img {
 }
 
 #welcomeheader {
-    height: 100vh;
+    height: 85vh;
     display: flex;
     flex-direction:column;
     justify-content: center;
