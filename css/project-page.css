@@ -66,7 +66,7 @@ img {
 /*project pages*/
 
 #pagebanner {
-  margin-top: 100px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,7 +102,7 @@ header {
 #pagehero {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 75%;
     height: 100%;
@@ -114,11 +114,11 @@ header {
 }
 
 .heroimg {
-    width: 600px;
+    width: 500px;
 }
 
 .herotext {
-    font-size: 3em;
+    font-size: 1.5em;
     font-weight: 500;
     color: white;
     max-width: 30%;
