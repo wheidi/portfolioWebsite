@@ -73,126 +73,129 @@
 </div>
 
 <ul class="projectoverview"></ul>
-<h2>🐝Who is Honeybee?</h2>
-<p>“How has Social Distancing Affected Your Well Being?” Honeybee connects people to Research Studies to answer questions such as these. Researchers post their research studies to the Study Hive, and users browse these studies and participate! Honeybee aims to make research participation accessible and inclusive, and not just tied tightly within academia. As a psychology student, I could not resonate more with this mission. </p>
-
-<h2>🎨Who am I in Honeybee?</h2>
-<p>During my Internship, I was Honeybee’s one and only Designer Bee. I was responsible for UX design and research and was tasked with designing new or current features to improve the usability, experience, and feasibility of our website and app. The Honeybee Profile Builder was likely the most challenging out of all the projects I tackled. </p>
+<h2>Honeybee is a platform</h2>
+<p>Honeybee is a platform that connects people to Research Studies in need of participants.
+     Researchers post their research studies to the Study Hive, and users browse these studies
+      and participate in them.</p>
+<h2>My role in Honeybee</h2>
+<p>At the time, I was Honeybee’s first and only UX Designer and Researcher.
+     As such, I was responsible for leading each project from its varying levels of abstract
+      ideation, to a concrete, implementable design. The Honeybee Profile Builder was one of
+       these projects.</p>
 
 <!--Research-->
 
 <h3>Research</h3>
-<h1>Participating in research studies is too difficult</h1>
-<p>From a recent survey on user experience, we found that <span class="bold">30% of our users were unsatisfied with our website</span>. We wanted to know why. So, we interviewed these users and examined their survey responses to find out.</p>
+<h1>Discovering the problem</h1>
+<p>From a recent survey on user experience, we found that 30% of our users were unsatisfied
+     with our website. A teammate interviewed a few of these users, while I examined their 
+     survey responses, and together we found that <span class="bold">49% of these unsatisfied users had 
+        difficulty finding research studies.</span></p>
 
-<p><img class="imgcontainer center" src="images/HBProfileBuilder/User Percent Response Wide.png" /></p>
-
-<p>And here we have our main issue.
 
 <h2>Understanding our user</h2> 
-<p>According to the same survey, a majority of our users are motivated by the reward incentive. Taking this, and other demographic information from our user base, I drafted a persona.
+<p>From this research we noted that our target audience was mostly:
+    <ul class="insightcont">
+        <li>Extrinsically motivated - they participated to gain monetary compensation</li>
+        <li>Main behaviour was browsing our home page instead of searching for specific topics</li>
+    </ul>
 
 <a target="_blank" href="images/HBProfileBuilder/Persona.png">
 
     <p><img class="imgcontainer" src="images/HBProfileBuilder/Persona.png">
 </a>
 
-<p class="bold">Insights
-<ul class="insightcont">
-    <li>Cade isn't looking for specific research studies, his behaviour will likely be browsing the Study Hive and not searching with the search bar</li>
-    <li>Cade is extrinsically motivated, thus will likely have less patience and spend less effort</li>
-</ul>
+<h2>Understanding the main issue</h2>
+<p>What makes research studies hard to find for the browsing experience?
 
-<h2>Understanding current roadblocks</h2>
-<p>Ideally, we’d be able to test this with our users, but due to limited resources we couldn’t. Instead, I tried to go through the flow myself as Cade.
+    <a target="_blank" href="images/HBProfileBuilder/Homepage Comparison.png">
 
-<p><img class="imgcontainer" src="https://64.media.tumblr.com/b0e0db41918977fbe8e1186d256cdc19/1f38f63b70a4f292-af/s2048x3072/afcc8a370a94d34f63433b4ec72d61b3fd15bee2.png" /></p>
-
-<p>This is a screenshot of our homepage and is exactly what Cade would encounter.
-
-<p class="bold">Insights
-<ul class="insightcont">
-    <li>Cade is not eligible for a majority of the research studies he sees</li>
-    <li>Repeated rejection after spending effort on these research studies will exacerbate his limited patience and effort</li>
-</ul>
+        <p><img class="imgcontainer" src="images/HBProfileBuilder/Homepage Comparison.png">
+    </a>
 
 <h2>Gaining insight from other platforms</h2>
-<p>We needed to get Cade directly to the research studies that are relevant to him. But how to do that? I did some Competitive Benchmarking on other health, research, and content platforms to see how they gave personalized user results from the get-go.
+<p>I visited other platforms that offered health, research, or entertainment content to see
+     how they offered personalized services.
+     <ul class="insightcont">
+        <li>Extrinsically motivated - they participated to gain monetary compensation</li>
+        <li>Main behaviour was browsing our home page instead of searching for specific topics</li>
+    </ul>
 
     <a target="_blank" href="images/HBProfileBuilder/Competitive Benchmark Summary.png">
 
         <p><img class="imgcontainer" src="images/HBProfileBuilder/Competitive Benchmark Summary.png">
 </a>
 
-
-<p class="bold">Insights
-<ul class="insightcont">
-    <li>Other platforms used a survey upon sign up to collect user information</li>
-    <li>This information would be used to give them a more personalized experience</li>
-</ul>
-
-<h3>Planning</h3>
-<h1>Breaking down a profile builder</h1>
-<p>I decided to go with a profile builder upon signup as it provides the following:
-
-<h4>A profile builder presents users with what their interested in, saving them time and effort</h4>
-
-<h2>Components of a Profile Builder</h2>
-<p>I divided the profile builder into 2 mini projects to tackle:
-
+<h1>Addressing the solution in 2 parts</h1>
+<p>From my market research, I found that a profile builder would fit the bill. I then 
+    divided the profile builder into 2 parts.
+    
     <a target="_blank" href="images/HBProfileBuilder/Profile Builder Breakdown.png">
 
         <p><img class="imgcontainer" src="images/HBProfileBuilder/Profile Builder Breakdown.png">
 </a>
 
 
-<h2>Designing the questions</h2>
-<h4>What must we know about Cade, to filter out irrelevant research studies?</h4>
+<h1>Part 1: Planning the Questions and Answers</h2>
 
-<p>Honeybee is unique in that we not only need personal interest information, but also a lot of demographic information. If Cade is a 26 year old male living in the US, we do not want to show him research studies for elderly couples living in the UK.
+    <h2>Planning the Questions</h2>
+        <p>Honeybee is unique in that we not only need personal interest information,
+            but also a lot of demographic information to adequately filter out research studies.
 
-<p>I did some data analysis on the research studies we had and their intake criteria along with research studies from Sick Kids and other Academia Sources, taking note of each and every one.
+        <p>I looked at existing studies on Honeybee, SickKids Children’s Hospital,
+            research papers, and many other research study boards to see what criteria was
+            often used to determine eligibility.
 
-    <a target="_blank" href="images/HBProfileBuilder/Intake Criteria Graph.png">
+            <a target="_blank" href="images/HBProfileBuilder/Intake Criteria Graph.png">
 
-        <p><img class="imgcontainer" src="images/HBProfileBuilder/Intake Criteria Graph.png">
-</a>
+                <p><img class="imgcontainer" src="images/HBProfileBuilder/Intake Criteria Graph.png">
+            </a>
 
+        <p class=bold>Question flow</p>
+            <a target="_blank" href="images/HBProfileBuilder/Questions only flow one.png">
 
-<p class="bold">Insights
-<ul class="insightcont">
-    <li>Research studies reject participants most often based on health conditions, location, having children, and age</li>
+                <p><img class="imgcontainer" src="images/HBProfileBuilder/Questions only flow one.png">
+            </a>
 
-</ul>
+<h2>Planning the Answers</h2>
 
-<h2>Designing the answers</h2>
+<p>How can I include and present all possible answers without overwhelming the user?
 
-<h4>How can I include and present all possible answers without overwhelming the user?</h4>
+<p>Since the questions are multiple choice, I needed to figure out all answer options for each question.
+     I had 2 main considerations here.</p>
+     <ul class="insightcont">
+        <li>Include a minimal number of answer options to not overwhelm the user</li>
+        <li>Be inclusive and make sure all individuals will feel represented,
+             avoid the use of the answer option, “other”</li>
+    </ul>
 
-<p>Since the questions are multiple choice, I also needed to figure out all answer options for each question.
+<h2>Spotlight: Representing Physiological Health Information</h2>
 
-A pretty daunting task was to make sure the answer options were inclusive to every individual. Every health condition, identity, etc. We want our users to feel seen and not have to choose “Other”.
+<p>I looked at medical intake charts, personalized health care websites,
+     surveys, and other resources for inclusivity to better understand the possible answers
+      to include.
 
-<h2>Spotlight: Representing Health Information</h2>
-
-<p>To list out all possible health conditions would be overwhelming for the user to sift through and select. I wanted to reduce the possible options for health conditions, while still being inclusive of all the health conditions available.
-
-<p>I did extensive research looking at medical intake charts, personalized health care websites, surveys, and other resources for inclusivity to better understand the possible answers to include.
+<p>After a brainstorming session with my manager, we decided on a “body” approach where
+     we’d present each answer option as a specific part of the body, and cover the entire
+      human body.
 
 <a target="_blank" href="images/HBProfileBuilder/Medical Examples.png">
 
         <p><img class="imgcontainer" src="images/HBProfileBuilder/Medical Examples.png">
 </a>
 
-<p class="bold">Insights
+<p class="bold">Pros
 <ul class="insightcont">
-    <li>Health conditions are often generalized to categories of conditions such as heart, lung, or neurological conditions</li>
-
+    <li>Inclusive - this would include all physical health conditions</li>
+    <li>Minimal number of answer options and avoid overwhelming users</li>
 </ul>
 
-<h3>Testing and Iterating</h3>
-<h1>Testing the Question Flow</h1>
-<p>Before moving on to designs, my manager and I went over the question flow.
+<p class="bold">Cons
+    <ul class="insightcont">
+        <li>Users may be looking for their specific condition name at first </li>
+    </ul>
+
+<h1>Reviewing the question flow</h1>
 
 <h2>Iteration 1</h2>
 
@@ -222,10 +225,8 @@ A pretty daunting task was to make sure the answer options were inclusive to eve
 
 </ul>
 
-<h3>Design</h3>
-<h1>Designing the Profile Builder</h1>
 
-<p>What would Cade’s mindset be, upon encountering this Profile Builder?
+<h1>Part 2: Designing the Profile Builder</h1>
 
 <a target="_blank" href="images/HBProfileBuilder/Cades Mindset.png">
 
