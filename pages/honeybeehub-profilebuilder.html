@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
 
+<html>
+    
+<head>
+      
+<meta charset="UTF-8">
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -19,6 +21,7 @@
 
 <!--nav-->
 <body>
+
 <ul id="topnav">
     <div class="margin">
         <a href="../index.html" id="navtitle">Heidi</a>
@@ -46,7 +49,9 @@
 
 <!--OVERVIEW-->
 
+
 <h1>Revamping the signup flow to make Honeybee new-user friendly</h1>
+
 
 <h2>Project Overview</h2>
 
@@ -72,7 +77,6 @@
     </div>
 </div>
 
-<ul class="projectoverview"></ul>
 <h2>Honeybee is a platform</h2>
 <p>Honeybee is a platform that connects people to Research Studies in need of participants.
      Researchers post their research studies to the Study Hive, and users browse these studies
@@ -85,12 +89,13 @@
 
 <!--Research-->
 
+<div class="tag section">
 <h1>Discovering the problem</h1>
 <p>From a recent survey on user experience, we found that 30% of our users were unsatisfied
      with our website. A teammate interviewed a few of these users, while I examined their 
      survey responses, and together we found the following.</p>
 
-    <ul class="insightcont">
+    <ul>
         <li>49% of unsatisfied users had difficulty finding research studies</li>
 
         <li>These users were extrinsically motivated - their main goal was to gain compensation</li>
@@ -103,11 +108,13 @@
 
         <p><img class="imgcontainer" src="images/HBProfileBuilder/Homepage Comparison.png">
     </a>
+</div>
 
+<div class=section>
 <h2>Gaining insight from other platforms</h2>
 <p>I visited other platforms that offered health, research, or entertainment content to see
      how they offered personalized services.
-     <ul class="insightcont">
+     <ul>
         <li>Other platforms used a survey upon sign up to collect user information</li>
         <li>This information would be used to give them a more personalized experience
         </li>
@@ -121,8 +128,9 @@
 <p>From my market research, I found that a profile builder would fit the bill. I then 
     divided the profile builder into 2 parts, the questions to ask and the visual design.
     </p>
+</div>
 
-
+<div class=section>
 <h1>Part 1: Planning the Questions and Answers</h1>
     <h2>Planning the Questions</h2>
         <p>Honeybee is unique in that we not only need personal interest information,
@@ -148,7 +156,7 @@
 
 <p>Since the questions are multiple choice, I needed to figure out all answer options for each question.
      I had 2 main considerations here.</p>
-     <ul class="insightcont">
+     <ul>
         <li>Include a minimal number of answer options to not overwhelm the user</li>
         <li>Be inclusive and make sure all individuals will feel represented,
              avoid the use of the answer option, “other”</li>
@@ -175,29 +183,34 @@
 <h2>Reviewing the question flow</h2>
 
 
+<div class="insightcont">
+    <p class="bold">Initial Feedback
+        <ul>
+            <li>Felt long with 4 different sections</li>
+            <li>Questions about children felt too invasive for a signup survey</li>
+        
+        </ul>
+</div>
 
-<p class="bold">Initial Feedback
-<ul class="insightcont">
-    <li>Felt long with 4 different sections</li>
-    <li>Questions about children felt too invasive for a signup survey</li>
 
-</ul>
-
-<h3>Final Iteration</h3>
+<h4>Final Iteration</h4>
 
 <a target="_blank" href="images/HBProfileBuilder/Question Flow Final.png">
 
     <p><img class="imgcontainer" src="images/HBProfileBuilder/Question Flow Final.png">
 </a>
+<div class="insightcont">
+    <p class="bold">Key Design Decisions
+        <ul>
+            <li>Only the bare minimum of questions are asked</li>
+            <li>Removed any less mandatory, highly invasive questions</li>
+        
+        </ul>
+</div>
 
-<p class="bold">Key Design Decisions
-<ul class="insightcont">
-    <li>Only the bare minimum of questions are asked</li>
-    <li>Removed any less mandatory, highly invasive questions</li>
+</div>
 
-</ul>
-
-
+<div class=section>
 <h1>Part 2: Designing the Profile Builder</h1>
 
 <h2>Design principles</h2>
@@ -208,9 +221,7 @@
         <p><img class="imgcontainer" src="images/HBProfileBuilder/Considerations Horizontal.png">
 </a>
 
-<h2>😎 Questions are easy to answer</h2>
-
-<h2>Questions with multiple answers</h2>
+<h2>😎 Easy questions with multiple answers</h2>
 
 <a target="_blank" href="images/HBProfileBuilder/Multi select.gif">
 
@@ -224,15 +235,17 @@
         <p><img class="imgcontainer" src="images/HBProfileBuilder/multi select focus pic.png">
 </a>
 
-<p class="bold">Key Design Decisions
-<ul class="insightcont">
-    <li>Square shapes with plentiful padding + simplistic icons to avoid looking overcrowded</li>
-    <li>Prototypical icons to help convey meaning and encourage users to process information with the least amount of effort</li>
-    <li>Text to help clarify the categories</li>
-    <li>Vibrant and consistent selection colors to elicit more positive affect when you select an option </li>
-</ul>
+<div class="insightcont">
+    <p class="bold">Key Design Decisions
+    <ul>
+        <li>Square shapes with plentiful padding + simplistic icons to avoid looking overcrowded</li>
+        <li>Prototypical icons to help convey meaning and encourage users to process information with the least amount of effort</li>
+        <li>Text to help clarify the categories</li>
+        <li>Vibrant and consistent selection colors to elicit more positive affect when you select an option </li>
+    </ul>
+</div>
 
-<h2>Questions with one answer</h2>
+<h2>😎 Easy questions with one answer</h2>
 
 <a target="_blank" href="images/HBProfileBuilder/single select.gif">
 
@@ -240,16 +253,17 @@
 </a>
 
 <p>I wanted to make these questions as fast and easy-to-answer as possible.</p>
-<p class="bold">Key Design Decisions
-<ul class="insightcont">
-    <li>Use common language that they would expect</li>
-    <li>Simplistic design with no extra material to be processed</li>
-    <li>Order responses such that the most common ones are at the top</li>
-</ul>
+<div class="insightcont">
+    <p class="bold">Key Design Decisions
+        <ul>
+            <li>Use common language that they would expect</li>
+            <li>Simplistic design with no extra material to be processed</li>
+            <li>Order responses such that the most common ones are at the top</li>
+        </ul>
+        
+</div>
 
-<h2>⏱️ Feels short and fast to complete</h2>
-
-<h2>Hot Keys</h2>
+<h2>⏱️ Fast hot keys</h2>
 
 <p>I added a hot key option, where pressing space bar would function as if clicking the “Next” button
 
@@ -258,20 +272,25 @@
         <p><img class="imgcontainer" src="images/HBProfileBuilder/hotkey next.png">
 </a>
 
-<p class="bold">Pros
-<ul class="insightcont">
-    <li>The entire survey could be done from one hand position, without moving either hand</li>
-    <li>The mouse would not need to travel long distances to the “Next” button, decreasing time and effort required</li>
-</ul>
+<div class="insightcont">
+    <p class="bold">Pros
+        <ul>
+            <li>The entire survey could be done from one hand position, without moving either hand</li>
+            <li>The mouse would not need to travel long distances to the “Next” button, decreasing time and effort required</li>
+        </ul>
+</div>
 
-<p class="bold">Cons
-<ul class="insightcont">
-    <li>In multiple select questions, users would see the prompt and eagerly go to the next question, selecting less answers than they otherwise would have</li>
-</ul>
+<div class="insightcont">
+    <p class="bold">Cons
+        <ul class="insightcont">
+            <li>In multiple select questions, users would see the prompt and eagerly go to the next question, selecting less answers than they otherwise would have</li>
+        </ul>
+</div>
+
 
 <p>To accommodate for this con, I decided to not display the “press spacebar” prompt in multiple select questions.
 
-<h2>Breaking it up into sections</h2>
+<h2>⏱️ Short sub-sections</h2>
 
 
     <a target="_blank" href="images/HBProfileBuilder/Question Sections.png">
@@ -281,13 +300,16 @@
 
 <p>I broke up the profile builder into 3 sections to increase motivation within the users.
 
-<p class="bold">Key Design Decisions
-<ul class="insightcont">
-    <li>The section with the least amount of questions is in the middle, making it easy to complete up to section 2 / 3</li>
-    <li>Users would likely complete the builder after section 2, as they'd only have one section left</li>
-</ul>
+    <div class="insightcont">
+        <p class="bold">Key Design Decisions
+            <ul>
+                <li>The section with the least amount of questions is in the middle, making it easy to complete up to section 2 / 3</li>
+                <li>Users would likely complete the builder after section 2, as they'd only have one section left</li>
+            </ul>
+    </div>
 
-<h2>A satisfying and informative progress bar</h2>
+
+<h2>⏱️ Progress bar that feels productive</h2>
 
 <a target="_blank" href="images/HBProfileBuilder/space hotkey.gif">
 
@@ -296,49 +318,57 @@
 
 <p>Progress feels good! I wanted a progress bar that maximized the feeling of productivity, while still being accurate in informing the user.
 
-<h3>Option 1</h3>
+<h4>Option 1</h4>
 
 <a target="_blank" href="images/HBProfileBuilder/Progress bar 2.gif">
 
     <p><img class="imgcontainer" src="images/HBProfileBuilder/Progress bar 2.gif">
 </a>
+<div class="insightcont">
+    <p class="bold">Pros
+        <ul>
+            <li>Progress bar is easy to notice and is at a standard location</li>
+        
+        </ul>
+</div>
 
-<p class="bold">Pros
-<ul class="insightcont">
-    <li>Progress bar is easy to notice and is at a standard location</li>
+<div class="insightcont">
+    <p class="bold">Cons
+        <ul>
+            <li>Confusing what the lighter orange color could represent</li>
+            <li>3 separate sections are not clear</li>
+            <li>Unfinished sections span a large portion of the screen</li>
+            <li>User will likely notice the progress bar when it is not progressing (when they read the question/when eyes are at the top of the screen)</li>
+        </ul>
+        
+</div>
 
-</ul>
-
-<p class="bold">Cons
-<ul class="insightcont">
-    <li>Confusing what the lighter orange color could represent</li>
-    <li>3 separate sections are not clear</li>
-    <li>Unfinished sections span a large portion of the screen</li>
-    <li>User will likely notice the progress bar when it is not progressing (when they read the question/when eyes are at the top of the screen)</li>
-</ul>
-
-<h3>Option 2</h3>
+<h4>Option 2</h4>
 
 <a target="_blank" href="images/HBProfileBuilder/Progress bar 1.gif">
 
     <p><img class="imgcontainer" src="images/HBProfileBuilder/Progress bar 1.gif">
 </a>
 
-<p class="bold">Pros
-<ul class="insightcont">
-    <li>Clearly see that there are 3 different sections</li>
-    <li>User is more likely to view the progress bar when it will be growing - when the user interacts with the “Next” button</li>
+<div class="insightcont">
+    <p class="bold">Pros
+        <ul>
+            <li>Clearly see that there are 3 different sections</li>
+            <li>User is more likely to view the progress bar when it will be growing - when the user interacts with the “Next” button</li>
+        </ul>
+</div>
 
-</ul>
+<div class="insightcont">
+    <p class="bold">Cons
+        <ul>
+            <li>Confusing whether the circles are sections or questions themselves</li>
+            <li>Unfinished/irrelevant portions of progress bar still take up a lot of space</li>
+        
+        </ul>
+</div>
 
-<p class="bold">Cons
-<ul class="insightcont">
-    <li>Confusing whether the circles are sections or questions themselves</li>
-    <li>Unfinished/irrelevant portions of progress bar still take up a lot of space</li>
 
-</ul>
-
-<h3>Option 3 - Final Progress Bar</h3>
+<h4>Option 3 - Final Progress Bar</h4>
 
 <a target="_blank" href="images/HBProfileBuilder/Progress bar 3.gif">
 
@@ -350,31 +380,32 @@
     <p><img class="imgcontainer" src="images/HBProfileBuilder/Progress bar 3.5.gif">
 </a>
 
-<p class="bold">Pros
-<ul class="insightcont">
-    <li>3 different sections are clearly indicated</li>
-    <li>Current section takes up the most space, incomplete sections do not look too long</li>
-    <li>Progress bar growth animation is bigger</li>
-    <li>User is more likely to view the progress bar when it will be growing - when the user interacts with the “Next” button</li>
+<div class="insightcont">
+    <p class="bold">Pros
+    <ul>
+        <li>3 different sections are clearly indicated</li>
+        <li>Current section takes up the most space, incomplete sections do not look too long</li>
+        <li>Progress bar growth animation is bigger</li>
+        <li>User is more likely to view the progress bar when it will be growing - when the user interacts with the “Next” button</li>
 
-</ul>
+    </ul>
+</div>
 
-<h2>🔎 Transparency and comfort when giving personal information</h2>
-
-
-<h2>Addressing initial worries</h2>
+<h2>🔎 Initial privacy statement</h2>
 
 <a target="_blank" href="images/HBProfileBuilder/Health Section.png">
 
     <p><img class="imgcontainer" src="images/HBProfileBuilder/Health Section.png">
 </a>
 
-<p class="bold">Key Design Decisions
-<ul class="insightcont">
-    <li>General Privacy Policy statement is presented once at the beginning of the section to address general, initial worries</li>
-</ul>
+<div class="insightcont">
+    <p class="bold">Key Design Decisions
+    <ul>
+        <li>General Privacy Policy statement is presented once at the beginning of the section to address general, initial worries</li>
+    </ul>
+</div>
 
-<h2>Personalized statements for specific questions</h2>
+<h2>🔎 Info buttons to encourage transparency</h2>
 
 <a target="_blank" href="images/HBProfileBuilder/Info bubble.gif">
 
@@ -388,33 +419,35 @@
 
         <p><img class="imgcontainer" src="images/HBProfileBuilder/info bubble focus.png">
 </a>
+<div class="insightcont">
+    <p class="bold">Key Design Decisions
+    <ul>
+        <li>Button text informs users how that specific information will be used</li>
+        <li>Mentions its prosocial impact on the world to help introduce our product’s mission and build prosocial motivation</li>
 
-<p class="bold">Key Design Decisions
-<ul class="insightcont">
-    <li>Button text informs users how that specific information will be used</li>
-    <li>Mentions its prosocial impact on the world to help introduce our product’s mission and build prosocial motivation</li>
+    </ul>
+</div>
+</div>
 
-</ul>
-
+<div class="section">
 <!--FINAL PRODUCT-->
-<h3 class="accent">The Final Product</h3>
 <h1>A profile builder for a personalized experience</h1>
-
+</div>
 <div style="position: relative; padding-bottom: 65.39509536784742%; height: 0;"><iframe src="https://www.loom.com/embed/0e3bea7987e0466d911b1f98fe92f22d" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
-
 <br>
 <br>
 
-<p>The final product is a profile builder that appears upon signup. It takes less than 3 minutes and collects a reasonable amount of information from the user. This information will be used to present research studies that the user is eligible for, and may be interested in.
+<div class="insightcont">
+    <p class="bold">What does this solution do?
+    <ul>
+        <li>Personalized experience for the user</li>
+        <li>Easier for new and returning users to engage with Honeybee and participate in research studies</li>
+        <li>Slower onboarding time, but is projected to improve conversion KPIs</li>
 
-<p class="bold">What does this solution do?
-<ul class="insightcont">
-    <li>Personalized experience for the user</li>
-    <li>Easier for new and returning users to engage with Honeybee and participate in research studies</li>
-    <li>Slower onboarding time, but is projected to improve conversion KPIs</li>
+    </ul>
+</div>
 
-</ul>
-
+<div class=section>
 <!--REFLECTION-->
 
 <h3 class="accent">Reflection</h3>
@@ -425,7 +458,7 @@
 <p>If we could’ve conducted user testing, then many of the design decisions would be more well informed, pain points would be more realistic and accurate, and we could truly get a picture of our users’ needs as well. As it stands, I did my best to empathize with Cade and to understand his needs. Hopefully moving forward, once we get metrics on how our profile builder and KPIs are affected, we can improve and iterate as needed.
 
 
-<h3 class="accent">Most Notable Feedback + Going Forward</h3>
+<h3 class="accent">Feedback + Going Forward</h3>
 <h1>Telling a Story</h1>
 <p>A piece of feedback that stood out to me was, "this should feel like it's telling a story". I hadn't realized it, but I was only barely grazing the surface of what a well crafted profile builder could do. Though an experience could feel good by optimizing the visuals and elements, how to marry all of these together and tell a story was truly the soul of the challenge. Structuring the questions, giving them a logical order, giving the graphics a logical order, wording them consistently, these all contributed to the overall story of the experience. 
 
@@ -434,6 +467,7 @@
 
 
 <p>This could be done simply through the progress indicator. Making a lightbulb light up, a flower bloom, or a slime blob grow into a personalized slime. The possibilities are endless!
+</div>
 
 <!--PAGINATION-->
     <div class="pagination">
