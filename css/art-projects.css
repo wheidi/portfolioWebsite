@@ -1,16 +1,12 @@
-
 content {
   max-width: 800px;
   min-width: 500px;
-  padding-left: 10px;
-  padding-right: 10px; 
 }
 
 
 h1 {
   font-size: 3em;
-  font-weight: 500;
-  padding-bottom: .5em;
+
 }
 
 h2 {
@@ -18,6 +14,25 @@ h2 {
   font-weight: 500;
   padding-top: .5em;
   padding-bottom: .5em;
+}
+
+h3 {
+  font-size: 2em;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1.5em;
+  padding-bottom: 5px;
+}
+
+.bold {
+  font-weight: 700;
+  display: inline;
+}
+
+span {
+  display: inline;
 }
 
 a {
@@ -51,18 +66,106 @@ title {
     display: None;
 }
 
-header {
-    max-width: 800px;
+#header {
+    width: 100%;
+    height: 25vh;
 
-    height: 800px;
-    
-    padding-top: 25px;
-    padding-bottom: 125px;
-    
-    margin-top: 100px;
-    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
+/*project list*/
+
+.projectlist {
+  display: flex;
+  flex-direction: column;
+
+  width: 800px;
+
+  align-items: center;
+  justify-content: center;
+
+  
+}
+
+.project {
+  margin-bottom: 100px;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.projectheader {
+  width: 100%;
+
+  border: solid #EEEEEE;
+  border-width: 0 0 2px 0;
+
+  margin-bottom: 50px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.projectdesc {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.projecttitle {
+  font-size: 2em;
+  font-weight: 500;
+
+  padding-right: 20px;
+
+
+}
+
+/*tear*/
+
+.tear {
+  width: 25px;
+  height: 25px;
+  border-radius: 5% 50% 50% 50%;
+  transform: rotate(45deg);
+  margin-top: 20px;
+  transition: all 0.3s;
+  transition-timing-function: ease-in-out;
+
+  background-color: #EEEEEE;
+
+  border: solid gray;
+
+  border-width: 1px;
+
+  margin-bottom: 10px;
+}
+
+.tear:hover {
+  transform: translateY(20px) rotate(45deg);
+    
+  box-shadow: -2px -2px 1px #ffc2b3,
+   -4px -4px 1px #ffc2b3,
+    -6px -6px 1px #ffff80,
+     -8px -8px 1px #ccffcc,
+      -10px -10px 1px #ccccff,
+   -12px -12px 1px #e6ccff;
+}
 /*gallery*/
 
 #gallery {
@@ -72,21 +175,12 @@ header {
     align-items: center;
     justify-content: center;
     
-    width: 100%;
-}
-
-.bold {
-    font-weight: 700;
-    display: inline;
-}
-
-span {
-    display: inline;
 }
 
 #gallery img {
   object-fit: cover;
-  
-  max-width: 800px;
-  margin-bottom: 250px;
+
+  padding-bottom: 25px;
 }
+
+
