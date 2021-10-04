@@ -72,20 +72,19 @@ a {
   color: black;
 }
 
-.headerlink {
+.orangetext {
+
   transition: all 0.3s;
   transition-timing-function: ease-in-out;
+
+  padding: 5px;
+  border-radius: 10px;
+
 }
 
-.headerlink:hover {
-
-  text-shadow:
-  0px -1px 3px white,
-  0px -2px 1px #ffc2b3,
-  0px -4px 1px #ffff80,
-  0px -6px 1px #ccffcc,
-  0px -8px 1px #ccccff,
-  0px -10px 1px #e6ccff;
+.orangetext:hover {
+  box-shadow: 
+    0px 6px 1px #ffd1b3;
 
 }
 
@@ -115,16 +114,14 @@ img {
 /*Welcome page*/
 
 #welcomedescription {
-    width: 100%;
+  width: 100%;
 
-    text-align: center;
+  display: flex;
+  flex-direction: column;
 
-    height: 100%;
+  justify-content: center;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  padding-top: 100px;
 }
 
 
@@ -133,7 +130,6 @@ img {
 }
 
 .welcomecontent {
-  padding-top: 15vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -142,7 +138,7 @@ img {
   background-color: white;
 
   height: 60%;
-  width: 1000px;
+  width: 100%;
   min-width: 700px;
   padding-left: 10%;
   padding-right: 10%;
@@ -185,8 +181,8 @@ img {
 
   z-index: 0;
 
-  min-width: 800px;
-  object-fit: fill;
+  width: 1000px;
+  object-fit: cover;
 }
 
 #welcomeheader {
@@ -197,23 +193,12 @@ img {
     align-items: center;
 }
 
-.portrait {
-  height: 350px;
-  width: 350px;
-  display: block;
-  border-radius: 64px;
-  margin: 0 1em;
-  float: left;
-  
-  object-fit: cover;
-}
-
 /** SCROLL DOWN BUTTON**/
 
 .tear {
-  width: 50px;
-  height: 50px;
-  border-radius: 5% 50% 50% 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 0% 50% 50% 50%;
   transform: rotate(45deg);
   margin-top: 20px;
   transition: all 0.3s;
@@ -221,7 +206,7 @@ img {
 
   background-color: #EEEEEE;
 
-  margin-bottom: 10px;
+  margin: 50px;
 }
 
 .tear:hover {
@@ -236,14 +221,17 @@ img {
 }
 
 .downarrow {
-  border: solid grey;
-  border-width: 0 3px 3px 0;
-  border-radius: 3px;
   display: inline-block;
-  padding: 2px;
+  padding: 0px 86px 73px 0px;
   margin: 12px;
   width: 15px;
   height: 15px;
+
+  transform: rotate(45deg);
+
+  font-size: 4em;
+  color: gray;
+  text-align: center;
 }
 
 /**END SCROLL DOWN BUTTON**/
