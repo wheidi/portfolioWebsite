@@ -101,12 +101,12 @@ img {
 }
 
 ::selection {
-  background: #EEEEEE;
+  background: #e5e5e5;
   text-decoration: inherit;
 }
 
 ::-moz-selection {
-  background: #EEEEEE;
+  background: #e5e5e5;
   text-decoration: inherit;
 
 }

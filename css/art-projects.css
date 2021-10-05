@@ -51,13 +51,11 @@ a {
 
 
 ::selection {
-  color: white;
-  background: #ff4141;
+  background: #e5e5e5;
 }
 
 ::-moz-selection {
-  color: white;
-  background: #ff4141;
+  background: #e5e5e5;
 }
 
 /*header*/
