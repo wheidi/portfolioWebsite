@@ -138,48 +138,31 @@ title {
 
 /*tear*/
 
-.tear {
-  width: 25px;
-  height: 25px;
-  border-radius: 5% 50% 50% 50%;
-  transform: rotate(45deg);
-  margin-top: 20px;
-  transition: all 0.3s;
-  transition-timing-function: ease-in-out;
 
-  background-color: #EEEEEE;
-
-  border: solid gray;
-
-  border-width: 1px;
-
-  margin-bottom: 10px;
-}
-
-.tear:hover {
-  transform: translateY(20px) rotate(45deg);
-    
-  box-shadow: -2px -2px 1px #ffc2b3,
-   -4px -4px 1px #ffc2b3,
-    -6px -6px 1px #ffff80,
-     -8px -8px 1px #ccffcc,
-      -10px -10px 1px #ccccff,
-   -12px -12px 1px #e6ccff;
-}
 /*gallery*/
 
-#gallery {
+.gallery {
     display: flex;
     flex-direction: column;
     
     align-items: center;
     justify-content: center;
+
+    width: 100%;
     
 }
 
-#gallery img {
-  object-fit: cover;
+.gallery a {
+  width: 100%;
 
+  display: inherit;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery img {
+  object-fit: cover;
   padding-bottom: 25px;
 }
 
