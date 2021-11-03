@@ -2,15 +2,32 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <link rel="stylesheet" type="text/css" href="../css/main.css">
 <link rel="stylesheet" type="text/css" href="../css/project-page.css">
 
-
+<script>
+    function myFunction() {
+      var x = document.getElementById("navlinks");
+      if (x.className === "toplinks") {
+        x.className += " responsive";
+      } else {
+        x.className = "toplinks";
+      }
+    
+      var x = document.getElementById("navtitle");
+      if (x.className === "brandbutton") {
+        x.className += " responsive";
+      } else {
+        x.className = "brandbutton";
+      }
+    }
+    </script>
 </head>
 
 <title>Heidi | Smart Read App
@@ -18,19 +35,25 @@
 
 
 <!--nav-->
-<body>
-<ul id="topnav">
-    <div class="margin">
-        <a href="../index.html" id="navtitle">Heidi</a>
-        
-        <div class="toplinks" id="navlinks">
-            <a href="../index.html">Work</a> 
-            <a href="./aboutme.html">About</a> 
-            <a href="HeidiW_Resume_2021.pdf" target="_blank">Resume</a>
-            <a href="./art-projects.html">Extras</a>
+<body class="center">
+    <ul id="topnav" class="center">
+    
+        <div class="margin">
+            <div class="brandbutton" id="navtitle">
+              <a href="../index.html">Heidi</a>
+            </div>
+      
+            <div class="toplinks" id="navlinks">
+                <a href="../index.html#casestudylist">Work</a> 
+                <a href="./aboutme.html">About</a> 
+                <a href="./HeidiW_Resume_2021.pdf" target=_blank>Resume</a>
+                <a href="./art-projects.html">Extras</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                  <i class="fa fa-bars"></i>
+                </a>
+            </div>
         </div>
-    </div>
-</ul>
+      </ul>
 <!--nav-->
 
 <header class="center">
@@ -365,7 +388,7 @@
 
 <div id="footer">
     <p>Have feedback, have questions? Ask me anything!<p>
-    <div class="footerlinks" id="footercontainer"><a href="mailto:heidihwang8@gmail.com" target="_blank">Email</a> • <a href="https://www.linkedin.com/in/w-heidi/">LinkedIn</a></div>
+    <div class="footerlinks" id="footercontainer"><a href="mailto:heidihwang8@gmail.com" target="_blank">Email</a> • <a href="https://www.linkedin.com/in/w-heidi/" target="_blank">LinkedIn</a></div>
 </div>
 
 </body>

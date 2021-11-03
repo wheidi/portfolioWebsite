@@ -1,3 +1,8 @@
+body {
+    font-family: 'Maven Pro', verdana, sans-serif;
+  
+    max-width: 100%;
+  }
 
 h2 {
   font-size: 1.5em;
@@ -21,14 +26,6 @@ h5 {
 
 .bold {
     font-weight: 700;
-}
-
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 75%;
-    height: 100%;
 }
 
 .grey{

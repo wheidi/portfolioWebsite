@@ -19,10 +19,6 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-html {
-  font-size: 17px;
-}
-
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -43,10 +39,12 @@ ul {
 
 body {
   font-family: 'Maven Pro', verdana, sans-serif;
+
+  max-width: 1000px;
 }
 
 html {
-    scroll-behavior: smooth;  
+  scroll-behavior: smooth;  
 }
 
 .bold {
@@ -88,12 +86,11 @@ a {
 
 }
 
-.center{
+.center {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 75%;
-  height: 100%;
+  width: 100%;
 }
 
 img {
@@ -124,7 +121,6 @@ img {
   padding-top: 100px;
 }
 
-
 .grey{
     background-color: #FAFAFA;
 }
@@ -139,7 +135,7 @@ img {
 
   height: 60%;
   width: 100%;
-  min-width: 700px;
+  max-width: 800px;
   padding-left: 10%;
   padding-right: 10%;
 }
@@ -238,69 +234,69 @@ img {
 
 /*top navbar*/
 #topnav {
-    position: fixed;
-    top: -18px;
-    left: 0px;
-    z-index: 100;
     padding: 0px;
-    flex-grow: 1;
-    width: 100%;
+    max-width: 100%;
 
     border: solid #EEEEEE;
 
     border-width: 5px 0 0 0;
 }
 
+.toplinks a.active {
+  color: black;
+}
+
 #navtitle {
   float: left;
-  color: black;
+
+  color: inherit;
 
   text-decoration: none;
 
-  background-color: #EEEEEE;
+  background-color: white;
 	color: black;
 
   transition: all 0.3s ease-in-out;
   transition-timing-function: ease-in-out;
 
-  padding: 10px 15px 15px 15px;
+  padding: 10px 15px 20px 15px;
 
-  border-radius: 0 0 15px 15px;
+  border-radius: 0 0 50px 50px;
 }
 
+#navtitle a {
+  text-decoration: none;
+}
 #navtitle:hover {
-    box-shadow: 0px 2px 1px #ffc2b3,
-  0px 3px 1px #ffc2b3,
-   0px 4px 1px #ffff80,
-    0px 5px 1px #ccffcc,
-     0px 6px 1px #ccccff,
-  0px 7px 1px #e6ccff;
+    box-shadow: 0px 2px 0px #ffc2b3,
+  0px 3px 0px #ffc2b3,
+   0px 4px 0px #ffff80,
+    0px 5px 0px #ccffcc,
+     0px 6px 0px #ccccff,
+  0px 7px 0px #e6ccff;
 }
 
 #navlinks a{
-	margin-left: 30px;
 	text-decoration: none;
 
-  background-color: #EEEEEE;
-	color: grey;
-
+  margin: 0 15px 0 15px;
+  
   transition: all 0.3s ease-in-out;
   transition-timing-function: ease-in-out;
 
-  padding: 10px 15px 15px 15px;
+  padding: 15px 15px 10px 15px;
 
-  border-radius: 0 0 15px 15px;
 }
 
 #navlinks a:hover {
 	color: black;
 
-  box-shadow: 0px 2px 1px #ffc2b3,
-  0px 3px 1px #ffc2b3,
-   0px 4px 1px #ffff80,
-    0px 5px 1px #ccffcc,
-     0px 6px 1px #ccccff,
-  0px 7px 1px #e6ccff;
+  box-shadow: 0px 2px 0px #ffc2b3,
+  0px 3px 0px #ffc2b3,
+   0px 4px 0px #ffff80,
+    0px 5px 0px #ccffcc,
+     0px 6px 0px #ccccff,
+  0px 7px 0px #e6ccff;
 }
 
 .margin {
@@ -313,7 +309,6 @@ img {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
 }
 
 .toplinks {
@@ -321,9 +316,70 @@ img {
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+
+  transition: all 0.3s ease-in-out;
+  transition-timing-function: ease-in-out;
 	
 }
 
+.toplinks .icon {
+  display: none;
+
+  font-size: 1.5em;
+}
+
+.brandbutton {
+  display: flex;
+}
+
+@media screen and (max-width: 800px) {
+  .toplinks a {
+    display: none;
+  }
+  .toplinks a.icon {
+    float: right;
+    display: block;
+  }
+
+  #navtitle {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .toplinks.responsive {
+    position: relative;
+    
+    background-color: white;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 50px;
+  }
+
+  .brandbutton.responsive {
+    display: none;
+  }
+
+  .toplinks.responsive a {
+    float: left;
+    padding: 100px;
+    display: flex;
+    text-align: left;
+
+    font-size: 1.5em;
+  }
+
+  .toplinks.responsive a.icon {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+}
 /*case studies*/
 
 #casestudylist {
@@ -331,9 +387,7 @@ img {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 75%;
-    max-width: 1000px;
-    min-width: 700px;
+    width: 100%;
     padding-top: 65px;
     margin-bottom: 30px;
 }
@@ -460,7 +514,6 @@ title {
     height: 150px;
     margin-top: 100px;
     display: flex;
-    background-color: #eee;
     
     flex-direction: column;
 
