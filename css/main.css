@@ -39,8 +39,11 @@ ul {
 
 body {
   font-family: 'Maven Pro', verdana, sans-serif;
-
   max-width: 1000px;
+}
+
+p {
+  line-height: 1.5em;
 }
 
 html {
@@ -126,6 +129,7 @@ img {
   justify-content: center;
 
   padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .grey{
@@ -226,6 +230,11 @@ img {
 
 /**END SCROLL DOWN BUTTON**/
 
+.margin {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 /*top navbar*/
 #topnav {
     padding: 0px;
@@ -253,7 +262,7 @@ img {
   transition: all 0.3s ease-in-out;
   transition-timing-function: ease-in-out;
 
-  padding: 10px 15px 20px 15px;
+  padding: 15px 15px 20px 15px;
 
   border-radius: 0 0 50px 50px;
 }
@@ -293,7 +302,7 @@ img {
   0px 7px 0px #e6ccff;
 }
 
-.margin {
+.navmargin {
     margin-left: auto;
     margin-right: auto;
     padding-left: 30px;
@@ -346,7 +355,7 @@ img {
   }
 
   #navtitle {
-    font-size: 1.5em;
+    font-size: 1em;
   }
 }
 
@@ -399,15 +408,12 @@ img {
 .casestudy {
 
     border: 2px solid rgb(236, 236, 236);
-    min-width: 100px;
     width: 100%;
     height: 500px;
     flex-grow: 1;
     border-radius: 10px;
     overflow: hidden;
-    animation: none;
-    transition: all 0.3s;
-    transition-timing-function: ease-in-out;
+
     display: flex;
     flex-direction: column;
     position: relative;
@@ -415,6 +421,10 @@ img {
     
     margin-bottom: 50px;
     text-decoration: none;
+
+    animation: none;
+    transition: all 0.3s;
+    transition-timing-function: ease-in-out;
 }
 
 .casetext {
@@ -526,6 +536,10 @@ title {
     align-items: center;
     
     color: #7b7b7b;
+}
+
+#footer p {
+  text-align: center;
 }
 
 #footercontainer {
