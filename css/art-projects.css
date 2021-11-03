@@ -1,6 +1,5 @@
 content {
-  max-width: 800px;
-  min-width: 500px;
+  max-width: 1000px;
 }
 
 
@@ -73,7 +72,7 @@ title {
   display: flex;
   flex-direction: column;
 
-  width: 800px;
+  width: 100%;
 
   align-items: center;
   justify-content: center;
@@ -87,7 +86,7 @@ title {
   display: flex;
   flex-direction: column;
 
-  width: 100%;
+  max-width: 100%;
 
   align-items: flex-start;
   justify-content: flex-start;
@@ -108,7 +107,7 @@ title {
 }
 
 .projectdesc {
-  width: 100%;
+  max-width: 100%;
 
   display: flex;
   justify-content: flex-end;
@@ -152,6 +151,8 @@ title {
 .gallery img {
   object-fit: cover;
   padding-bottom: 25px;
+
+  max-width: 100%;
 }
 
 
