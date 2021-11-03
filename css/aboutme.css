@@ -1,8 +1,3 @@
-body {
-    font-family: 'Maven Pro', verdana, sans-serif;
-  
-    max-width: 100%;
-  }
 
 h2 {
   font-size: 1.5em;
@@ -21,7 +16,7 @@ h4 {
 
 h5 {
     font-weight: 700;
-    margin-bottom: 1em;
+    margin: 0 2em 1em 2em;
 }
 
 .bold {
@@ -40,18 +35,20 @@ img {
 /*hero*/
 
 #pagebanner {
-  margin-top: 2em;
+  margin: 2em 0 2em 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  height: 500px;
-  width: 800px;
+  max-width: 100%;
+
+  height: 50vh;
 
 }
 
 .herotext {
-    width: 400px
+    width: 60%
 }
 
 #pagehero {
@@ -59,34 +56,20 @@ img {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    max-width: 100%;
+
+    margin-bottom: 2em;
 }
 
 .portrait {
-  height: 300px;
-  width: 300px;
+  max-height: 250px;
+  max-width: 250px;
   display: block;
-  border-radius: 64px;
+  border-radius: 400px;
 
   float: left;
   
   object-fit: cover;
-}
-
-.textcontent {
-    padding-bottom: 2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 75%;
-    max-width: 800px;
-
-    
-    text-align: center;
-    
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .section {
@@ -102,7 +85,7 @@ img {
 
 .imgcontainer {
     padding-bottom: 3em;
-    max-width: 800px;
+    max-width: 100%;
 }
 
 .tablepost {
@@ -110,26 +93,21 @@ img {
     flex-direction: row;
     align-items: top;
     justify-content: space-between;
-    width: 75%;
-    max-width: 800px;
+    max-width: 1000px;
     
-    min-width: 500px;
-    
-    padding-bottom: 4em;
+    padding: 2em 0em 2em 0em;
 }
 
 .rcolumn {
     width: 50%;
-    padding-left: 50px;
 }
 
 .lcolumn {
     width: 50%;
-    padding-right: 50px;
 }
 
 .column {
-    padding: 2em;
+    padding: 2em 2em 0 2em;
     width: auto;
     width: 30%;
 }
@@ -146,7 +124,7 @@ img {
 
     margin-bottom: 50px;
 
-    width: 800px;
+    width: 100%;
 }
 
 .drips {
@@ -168,7 +146,6 @@ img {
     
 }
 
-
 a:hover {
     text-decoration: underline;
 }
@@ -176,11 +153,11 @@ a:hover {
 #accentbutton {
     background-color: gray;
     text-decoration: none;
-    padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 10px;
+    padding: 10px 15px 10px 15px;
+
+    margin: 1em;
     
+    border-radius: 8px;
     color: white;
     width: 60px;
     text-align: center;
@@ -205,13 +182,88 @@ a:hover {
 
 .buttonset {
     display: flex;
-    flex-direction: row;
+    flex-direction: flex-start;
     justify-content: space-between;
     align-items: center;
-    width: 200px;
-    margin-bottom: 20px;
+    width: auto;
+    margin: 2em;
 }
 
 title {
     display: None;
+}
+
+.featurecolumn {
+    width: 100%;
+}
+
+.featurecolumn h2 {
+    width: 100%;
+}
+
+.textcenter {
+    text-align: center;
+}
+
+/**Mobile adjustments**/
+
+@media screen and (max-width: 800px) {
+
+    .herotext {
+        width: auto;
+    }
+
+    #pagehero {
+        flex-direction: column-reverse;
+    }
+
+    #pagebanner {
+        height: auto;
+        padding-top: 2em;
+    }
+
+    .portrait {
+        margin: 2em 0 2em 0;
+    }
+    .tablepost {
+        flex-direction: column;
+    }
+
+    .lcolumn {
+        width: 100%;
+        padding-bottom: 2em;
+    }
+
+    .rcolumn {
+        width: 100%;
+        padding-bottom: 2em;
+
+    }
+
+    .column {
+        width: auto;
+        text-align: center;
+    }
+
+    .drips {
+        width: auto;
+        margin: 0 10px 30px 10px;
+        padding: 1em 2em 30px 2em;
+        border-radius: 0 0 50px 50px;
+
+    }
+
+    #dripscontainer {
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 0px;
+    }
+
+    .buttonset {
+        flex-direction: column;
+    }
+
+    #accentbutton {
+        width: 100%;
+    }
 }
