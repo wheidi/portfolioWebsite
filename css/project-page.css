@@ -49,6 +49,8 @@ img {
   align-items: center;
 
   width: 100%;
+
+  height: auto;
   
   position: relative;
   
@@ -64,12 +66,16 @@ header {
     justify-content: center;
     align-items: center;
 
-    margin-top: 50px;
-    margin-bottom: 50px;
+    padding: 50px 0 50px 0;
+    margin: 0 30px 50px 30px;
+
+    border-radius: 15px;
 }
 
 .heroimg {
-    max-width: 100%;
+    max-width: 60%;
+
+    border-radius: 5px;
 }
 
 /*end header*/
@@ -198,6 +204,10 @@ title {
         width: 100%;
         margin-bottom: 1em;
         padding: 20px 0px 20px 10px;
+    }
+
+    .heroimg {
+        max-width: 80%;
     }
 }
 
