@@ -566,7 +566,7 @@ title {
     justify-content: center;
     align-items: center;
     
-    color: #7b7b7b;
+    color: #414141;
 }
 
 #footer p {
@@ -589,7 +589,7 @@ title {
 .footerlinks a {
     margin: 15px;
     
-    color: #7b7b7b;
+    color: #414141;
     
     text-decoration: underline;
 }
@@ -599,7 +599,7 @@ title {
 }
 
 .footer {
-  color: #7b7b7b;
+  color: #414141;
 }
 
 /**page nav**/
