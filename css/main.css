@@ -555,7 +555,7 @@ title {
     width: 100%;
     height: auto;
     margin-top: 100px;
-    padding: 50px 0 50px 0;
+    padding: 40px 0 20px 0;
     display: flex;
 
     background-color: #EEEEEE;
@@ -572,6 +572,7 @@ title {
 #footer p {
   text-align: center;
   padding: 0 2em 0 2em;
+
 }
 
 #footercontainer {
@@ -595,6 +596,10 @@ title {
 
 .footerlinks a:hover {
     color: black;
+}
+
+.footer {
+  color: #7b7b7b;
 }
 
 /**page nav**/
