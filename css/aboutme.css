@@ -151,7 +151,7 @@ a:hover {
 }
 
 #accentbutton {
-    background-color: gray;
+    background-color: rgb(97, 97, 97);
     text-decoration: none;
     padding: 10px 15px 10px 15px;
 
@@ -168,7 +168,6 @@ a:hover {
 
 #accentbutton:hover {
     text-decoration: none;
-    background-color: gray;
     
     transform: translateY(-8px);
     
