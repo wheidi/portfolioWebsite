@@ -95,8 +95,8 @@ header {
 }
 
 .imgcontainer {
-    margin-bottom: 2em;
-    margin-top: 2em;
+    margin-bottom: 5em;
+    margin-top: 5em;
     max-width: 100%;
     display: block;
     margin-left: auto;
@@ -116,6 +116,20 @@ span {
 .section p {
     width: 100%;
 }
+
+.introsection {
+     max-width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    padding: 30px 30px 100px 30px;
+
+}
 .section {
     max-width: 100%;
 
@@ -126,7 +140,12 @@ span {
     align-items: flex-start;
     justify-content: center;
 
-    padding: 100px 30px 0px 30px;
+    padding: 30px 30px 100px 30px;
+
+    border: solid #EEEEEE;
+
+    border-width: 5px 0 0 0;
+
 }
 /** PAGINATION **/
 
@@ -211,8 +230,14 @@ title {
     }
 }
 
-li {
+ul {
+    padding-top: 1em;
+
     padding-bottom: 1em;
+}
+
+li {
+    padding: 0 0 1em 1em;
 }
 
 /**alerts**/
