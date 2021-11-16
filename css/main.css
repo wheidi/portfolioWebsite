@@ -586,6 +586,7 @@ h3.cardtitle {
 .bluegradient {
   background-color: #b3b3ff;
 }
+
 .bluegradient:hover {
   box-shadow: #e6e6ff, 0px 11px 2px #e6eeff;
   ;
@@ -597,6 +598,14 @@ h3.cardtitle {
 
 .orangegradient:hover {
     box-shadow: #ffd1b3, 0px 11px 2px #fff0e6;
+}
+
+.yellowgradient {
+  background-color: #ffe880;
+}
+
+.yellowgradient:hover {
+    box-shadow: #ffff80, 0px 11px 2px #fff0e6;
 }
 
 .casestudy:hover .static{
@@ -636,7 +645,6 @@ title {
     margin-top: 100px;
     padding: 40px;
 
-    background-color: #EEEEEE;
     display: flex;
   
     justify-content: center;
