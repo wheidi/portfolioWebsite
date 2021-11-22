@@ -245,10 +245,8 @@ img {
   transition-timing-function: ease-in-out;
   
   text-shadow: -1px -1px 5px white,
-  1px 1em 1px #ffae99,
-  1px 2em 1px #ebeb84,
-    1px 3em 1px #aff8af,
-  1px 4em 1px #e6ccff;
+  1px 1em 1px #ffae99;
+
 }
 
 .bluetext:hover {
@@ -256,7 +254,7 @@ img {
   transition-timing-function: ease-in-out;
   
   text-shadow: -1px -1px 5px white,
-  1px 1em 1px #ccccff;
+  1px 1em 1px #7ce27c;
 
 }
 
