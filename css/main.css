@@ -591,33 +591,20 @@ h3.cardtitle {
 	transform: translateY(-11px);
 }
 
-.redgradient:hover {
-    box-shadow: 0px 2px 2px #ff8080, 0px 4px 2px #ff9999, 0px 7px 2px #ffb3b3,0px 9px 2px #ffcccc, 0px 11px 2px #ffe6e6;
+.hbppgradient {
+    background-color: #96c3ee;
 }
 
-.bluegradient {
-  background-color: #b3b3ff;
-}
-
-.bluegradient:hover {
-  box-shadow: #e6e6ff, 0px 11px 2px #e6eeff;
-  ;
+.srgradient {
+  background-color: #b6eca9;
 }
 
 .orangegradient {
   background-color: #ffb380;
 }
 
-.orangegradient:hover {
-    box-shadow: #ffd1b3, 0px 11px 2px #fff0e6;
-}
-
 .yellowgradient {
   background-color: #ffe880;
-}
-
-.yellowgradient:hover {
-    box-shadow: #ffff80, 0px 11px 2px #fff0e6;
 }
 
 .casestudy:hover .static{

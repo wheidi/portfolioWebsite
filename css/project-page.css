@@ -244,22 +244,25 @@ li {
 
 .warningcell {
     background-color: #ccebff;
-    width: 50%;
+    width: auto;
     border-radius: 15px;
-    padding: 30px 30px 10px 30px;
+    padding: 30px;
 
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 30px;
     text-align: center;
     border: 1px solid #0099ff;
 }
 
-.warning {
+.warningcell h2 {
+    padding-bottom: .5em;
+    padding-top: 0;
+}
+.warningcell a {
     text-decoration: underline;
 }
 
-.warning:hover {
-    color: #ff4141 ;
+.warningcell a:hover {
+    font-weight: 700;
 }
 
 /**recommend section**/
