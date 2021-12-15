@@ -23,6 +23,9 @@ h5 {
     background-color: #FAFAFA;
 }
 
+content {
+    max-width: 1000px;
+}
 
 img {
   max-width: 100%;

@@ -41,11 +41,6 @@ body {
   font-family: 'Maven Pro', verdana, sans-serif;
 }
 
-content {
-  max-width: 1000px;
-
-}
-
 p {
   line-height: 1.5em;
 }
@@ -117,6 +112,8 @@ img {
 /*Welcome page*/
 
 #welcomeheader {
+  max-width: 1000px;
+
   display: flex;
   flex-direction:column;
   justify-content: center;
@@ -517,27 +514,31 @@ img {
 
 #casestudylist {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    max-width: 100%;
+    max-width: 2000px;
     padding-top: 65px;
-    margin: 0px 30px 65px 30px;
+    margin: 0px 50px 0 50px;
+
+    height: auto;
 }
 
 .casestudy {
 
-    width: 100%;
+    width: 45%;
     height: 400px;
     flex-grow: 1;
     border-radius: 10px;
     overflow: hidden;
 
+    padding: 0 15px 0 15px;
+
     display: flex;
     flex-direction: column;
     position: relative;
     
-    margin-bottom: 50px;
+    margin: 0 30px 50px 30px;
     text-decoration: none;
 
     animation: none;
@@ -648,13 +649,20 @@ title {
     display: None;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
+
+  #casestudylist {
+    flex-direction: column;
+
+  }
+
   .casetext {
     padding: 10px 20px 0 20px;
   }
 
   .casestudy {
     height: 35vh;
+    width: 100%;
   }
 }
 
