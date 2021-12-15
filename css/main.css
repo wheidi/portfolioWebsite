@@ -224,20 +224,52 @@ img {
   7px 7px 1px #e6ccff;
 }
 
-.awetext:hover {
+@keyframes colourfulshadow {
+  0%{text-shadow: 
+    -2px -2px 1px white,
+    -2px 2px 1px white;
+  }
+
+  50%{  text-shadow: 
+    -2px -2px 1px white,
+    -2px 2px 1px white,
+    2px 2px 1px white,
+    2px -2px 1px white,
+    -5px 5px 1px #ffae99,
+    -6px -6px 1px #fcfc96,
+      5px -5px 1px #aff8af,
+    6px 6px 1px #e6ccff;
+  }
+
+  100% {
+    text-shadow: 
+    -2px -2px 1px white,
+    -2px 2px 1px white;
+  }
+}
+
+.awetext {
 
   transition: all 0.3s ease-in-out;
   transition-timing-function: ease-in-out;
 
+  animation-name: colourfulshadow;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-iteration-count: 1;
+
+}
+
+.awetext:hover {
   text-shadow: 
-  -2px -2px 1px white,
-  -2px 2px 1px white,
-  2px 2px 1px white,
-  2px -2px 1px white,
-  -7px 7px 1px #ffae99,
-  -8px -8px 1px #fcfc96,
-    7px -7px 1px #aff8af,
-  8px 8px 1px #e6ccff;
+    -2px -2px 1px white,
+    -2px 2px 1px white,
+    2px 2px 1px white,
+    2px -2px 1px white,
+    -7px 7px 1px #ffae99,
+    -8px -8px 1px #fcfc96,
+      7px -7px 1px #aff8af,
+    8px 8px 1px #e6ccff;
 }
 
 .fancytext:hover {
@@ -349,7 +381,7 @@ img {
   text-decoration: none;
 }
 
-#navtitle:hover {
+#navtitle::after {
 
     width: 550px;
     box-shadow: 0px 2px 0px #ffc2b3,
