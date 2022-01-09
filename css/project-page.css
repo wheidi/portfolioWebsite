@@ -56,13 +56,14 @@ header {
 /*header*/
 #pagebanner {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 
-  width: 100%;
-  max-width: 1200px;
+  width: auto;
+  max-width: 80%;
 
-  height: auto;
+  height: 80vh;
   
   position: relative;
   
@@ -74,14 +75,31 @@ header {
     justify-content: center;
     align-items: center;
 
-    padding: 80px 0 80px 0;
-    margin: 50px 30px 50px 30px;
+    width: 50%;
+    padding: 30px 80px 30px 30px;
 
     border-radius: 15px;
 }
 
+.headertext {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+
+    width: 50%;
+
+    color: white;
+}
+
+.headertext h2 {
+    font-size: 1em;
+    color: #ffd7cb;
+    padding: 20px 0px;
+}
+
 .heroimg {
-    max-width: 60%;
+    max-width: 100%;
 
     border-radius: 5px;
 }
@@ -233,7 +251,36 @@ title {
     padding: 20px 10px 20px 50px;
 }
 
+@media screen and (max-width: 1000px) {
+    #pagebanner {
+        flex-direction: column;
+        max-width: 100%;
+        padding: 100px 50px;
+    }
+
+    .heroimg {
+        max-width: auto;
+    }
+
+    
+    #pagehero {
+        padding: 50px;
+        width: auto;
+    }
+
+    .headertext {
+        width: auto;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
 @media screen and (max-width: 800px){
+
+    #pagebanner {
+        padding: 50px 30px;
+    }
 
     .row {
         flex-direction: column;
@@ -243,14 +290,6 @@ title {
         width: 100%;
         margin-bottom: 1em;
         padding: 20px 0px 20px 10px;
-    }
-
-    .heroimg {
-        max-width: 80%;
-    }
-
-    #pagehero {
-        padding: 50px 0 50px 0;
     }
 }
 
