@@ -123,9 +123,6 @@ title {
 
 }
 
-/*tear*/
-
-
 /*gallery*/
 
 .gallery {
@@ -137,6 +134,10 @@ title {
 
     width: 100%;
     
+}
+
+.row {
+  flex-direction: row;
 }
 
 .gallery a {
