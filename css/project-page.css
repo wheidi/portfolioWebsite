@@ -129,7 +129,7 @@ header {
     justify-content: center;
 
     width: 100%;
-    max-width: 1000px;
+    max-width: 800px;
 }
 
 .prod {
@@ -162,11 +162,11 @@ span {
 
 .section {
     width: 100%;
-    max-width: 1000px;
+    max-width: 800px;
 }
 
 .section p, ul {
-    max-width: 1000px;
+    max-width: 800px;
 }
 
 /** PAGINATION **/
