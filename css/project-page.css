@@ -6,8 +6,7 @@ h1 {
 h2 {
   font-size: 2em;
   font-weight: 500;
-  padding-top: 100px;
-  padding-bottom: .5em; 
+  padding: 1em 0 .5em 0;
 }
 
 #challenge {
@@ -23,18 +22,8 @@ h2 {
     padding-top: 0;
 }
 
-#reflection h2 {
-    padding-top: .5em;
-}
-
 h3 {
   font-size: 1.5em;
-  padding-top: 2em;
-}
-
-h4 {
-    font-size: 1.5em;
-    padding-top: 1em;
 }
 
 a {
@@ -45,6 +34,11 @@ a {
 #description {
 margin: -1em 1em 3em 1.5em;
 color: #5E5B5B;
+}
+
+#navlinks a {
+    background-color: rgb(255, 255, 255, 0);
+    color: white;
 }
 
 /*project pages*/
@@ -286,7 +280,7 @@ title {
     .cell {
         width: 100%;
         margin-bottom: 1em;
-        padding: 20px 0px 20px 10px;
+        padding: 10px;
     }
 }
 
@@ -356,19 +350,30 @@ li {
 }
 
 .casestudy {
-    max-width: auto;
     height: 250px;
-
+    width: 100%;
+    
+    padding: 20px;
     margin: 30px;
+    flex-direction: column;
+}
+
+.casestudy a:hover {
+    text-decoration: none;
 }
 
 .casetext {
-    padding: 20px;
+    padding-bottom: 20px;
+    height: auto;
 }
 
 h3.cardtitle {
     margin: 0;
     padding: 0;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 @media screen and (max-width: 800px){
