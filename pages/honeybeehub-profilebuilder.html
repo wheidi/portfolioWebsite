@@ -30,6 +30,26 @@
         x.className = "brandbutton";
       }
     }
+
+    //toc
+    window.addEventListener('DOMContentLoaded', () => {
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                if (entry.intersectionRatio > 0) {
+                    document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
+                } else {
+                    document.querySelector(`nav a[href="#${id}"]`).classList.remove('active');
+                }
+            });
+        });
+
+        // Track all sections that have an `id` applied
+        document.querySelectorAll('section[id]').forEach((section) => {
+            observer.observe(section);
+        });
+    });
 </script>
 
 </head>
@@ -103,7 +123,7 @@
 
 <div class="sectioncontainer gray">
     <div id="challenge" class="section">
-        <h2 class="orangetext">The challenge</h2>
+        <h1 class="orangetext">The challenge</h1>
         <p>Honeybee is a platform that connects people to research studies. But, <span class="bold">people have difficulty
             finding research studies that they can actually take.</span>
             </p>
@@ -114,78 +134,112 @@
     </div>
 </div>
 
-<!--Research-->
-<div class="sectioncontainer">
+<div class="sectioncontainer toctitlecontainer">
     <div class="section">
-        <h1>Discovering the problem</h1>
-        <p>From a recent survey on user experience, we found that 30% of our users were unsatisfied
-            with our website. 49% of these unsatisfied users had difficulty finding research studies </p>
-
-        <br>
-        <p>What makes research studies hard to find for the browsing experience?
-
+        <h1>The process</h1>
     </div>
-
-    <a target="_blank" href="images/HBProfileBuilder/Homepage Comparison.png">
-        <div class="imgcontainer">
-            <img src="images/HBProfileBuilder/Homepage Comparison.png">
-        </div>
-    </a>
-
-    <div class="insightcont">
-        <p class="bold">Insights
-            <ul>
-                <li>Many of the options that we show are not applicable to the user</li>
-            </ul>
-    </div>
-    </div>
-
-<div class="sectioncontainer gray">
-    <div class="section">
-        <h1>Defining a target audience</h1>
-    </div>
-
-        <a target="_blank" href="images/HBProfileBuilder/TargetAudience.png">
-            <div class="imgcontainer">
-                <img src="images/HBProfileBuilder/TargetAudience.png">
-            </div>
-        </a>
 </div>
 
-<div class="sectioncontainer">
-    <div class="section">
-        <h1>Insight from other platforms</h1>
-        <p>I visited other platforms that offered health, research, or entertainment content to see
-            how they offered personalized services.</p>
+<nav id="nav-toc" class="sticky">
+        <a class="toc" href="#discover">
+            Research
+        </a>
+
+    <a class="toc" href="#define">
+            Design
+        </a>
+
+        <a class="toc" href="#design">
+            Prototype
+        </a>
+
+
+        <a class="toc" href="#outcomes">
+            Outcomes
+        </a>
+
+</nav>
+
+<div class="sectioncontainer toctitlecontainer">
+    <br>
+</div>
+
+
+
+<!--Research-->
+<section id="discover">
+    <div class="sectioncontainer">
+        <div class="section">
+            <h1>Discovering the problem</h1>
+            <p>From a recent survey on user experience, we found that 30% of our users were unsatisfied
+                with our website. 49% of these unsatisfied users had difficulty finding research studies </p>
+
+            <br>
+            <p>What makes research studies hard to find for the browsing experience?
+
         </div>
 
-        <a target="_blank" href="images/HBProfileBuilder/Competitive Benchmark Summary.png">
+        <a target="_blank" href="images/HBProfileBuilder/Homepage Comparison.png">
             <div class="imgcontainer">
-                <img src="images/HBProfileBuilder/Competitive Benchmark Summary.png">
+                <img src="images/HBProfileBuilder/Homepage Comparison.png">
             </div>
         </a>
-    
-    <div class="section">
+
         <div class="insightcont">
             <p class="bold">Insights
                 <ul>
-                    <li>These services asked questions to personalize results</li>
-                    <li>Sensitive questions were better asked during onboarding</li>
-                    <li>Asking questions during onboarding also fit our developer needs better</li>
+                    <li>Many of the options that we show are not applicable to the user</li>
                 </ul>
         </div>
-    </div>
-</div>
+        </div>
 
-<div class="sectioncontainer gray">
-    <div class=section>
-        <h1>Planning the questions & answers</h1>
-            <h2>The questions</h2>
+    <div class="sectioncontainer gray">
+        <div class="section">
+            <h1>Defining a target audience</h1>
+        </div>
+
+            <a target="_blank" href="images/HBProfileBuilder/TargetAudience.png">
+                <div class="imgcontainer">
+                    <img src="images/HBProfileBuilder/TargetAudience.png">
+                </div>
+            </a>
+    </div>
+
+    <div class="sectioncontainer">
+        <div class="section">
+            <h1>Insight from other platforms</h1>
+            <p>I visited other platforms that offered health, research, or entertainment content to see
+                how they offered personalized services.</p>
+            </div>
+
+            <a target="_blank" href="images/HBProfileBuilder/Competitive Benchmark Summary.png">
+                <div class="imgcontainer">
+                    <img src="images/HBProfileBuilder/Competitive Benchmark Summary.png">
+                </div>
+            </a>
+        
+        <div class="section">
+            <div class="insightcont">
+                <p class="bold">Insights
+                    <ul>
+                        <li>These services asked questions to personalize results</li>
+                        <li>Sensitive questions were better asked during onboarding</li>
+                        <li>Asking questions during onboarding also fit our developer needs better</li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="define">
+    <div class="sectioncontainer gray">
+        <div class=section>
+                <h1>Planning the questions</h1>
                 <p>Honeybee is unique in that we not only need personal interest information,
                     but also demographic information to filter out research studies.</p>
-                    <br>
-                    <p>I looked at existing studies from other sources to see what criteria was
-                    often used to determine eligibility.</p>
+                <br>
+                <p>I looked at existing studies from other sources to see what criteria was
+                often used to determine eligibility.</p>
     </div>
 
     <div class="imgcontainer">
@@ -199,40 +253,41 @@
         <p>I drafted the questions based on these criteria into a question flow</p>
     </div>
 
-            <a target="_blank" href="images/HBProfileBuilder/Questions only flow one.png">
-                <div class="imgcontainer">
-                    <img src="images/HBProfileBuilder/Questions only flow one.png">
-                </div>
-            </a>
-
-    <div class="section">
-        <h2>The answers</h2>
-
-        <p>Since the questions are multiple choice, I needed to figure out all answer options for each question.
-            I had 2 main considerations.</p>
-            <ul>
-                <li>Include a minimal number of answer options to not overwhelm the user</li>
-                <li>Be inclusive and make sure all individuals will feel represented,
-                    avoid the use of the answer option, “other”</li>
-            </ul>
-
-        <p>I then conducted research online for adequate answer options and added these to the flow.</p>
-    </div>
+    <a target="_blank" href="images/HBProfileBuilder/Questions only flow one.png">
         <div class="imgcontainer">
-            <img src="images/HBProfileBuilder/Question Flow One.png">
+            <img src="images/HBProfileBuilder/Questions only flow one.png">
         </div>
+    </a>
 
     <div class="section">
-        <h2>The final question flow</h2>
+    <h1>Planning the answers</h1>
+
+    <p>Since the questions are multiple choice, I needed to figure out all answer options for each question.
+        I had 2 main considerations.</p>
+        <ul>
+            <li>Include a minimal number of answer options to not overwhelm the user</li>
+            <li>Be inclusive and make sure all individuals will feel represented,
+                avoid the use of the answer option, “other”</li>
+        </ul>
+
+    <p>I then conducted research online for adequate answer options and added these to the flow.</p>
+    </div>
+
+    <div class="imgcontainer">
+        <img src="images/HBProfileBuilder/Question Flow One.png">
+    </div>
+
+    <div class="section">
+        <h1>The final question flow</h1>
         <p>After a few rounds of review, the final question flow was decided upon.</p>
     </div>
-    
-        <a target="_blank" href="images/HBProfileBuilder/Question Flow Final.png">
 
-            <div class="imgcontainer">
-                <img src="images/HBProfileBuilder/Question Flow Final.png">
-            </div>
-        </a>
+    <a target="_blank" href="images/HBProfileBuilder/Question Flow Final.png">
+
+        <div class="imgcontainer">
+            <img src="images/HBProfileBuilder/Question Flow Final.png">
+        </div>
+    </a>
 
     <div class="section">
         <div class="insightcont">
@@ -244,174 +299,175 @@
                 </ul>
         </div>
     </div>
-</div>
-
-<div class="sectioncontainer">
-    <div class=section>
-        <h1>Designing the Profile Builder</h1>
-
-        <h2>Design principles</h2>
-
-        <p>Because our target audience is extrinsically motivated, I decided on the following design principles.</p>
     </div>
+</section>
 
-    <div class="imgcontainer">
-        <img src="images/HBProfileBuilder/Considerations Horizontal.png">
-    </div>
+<section id="design">
+    <div class="sectioncontainer">
+        <div class=section>
+            <h1>Design principles</h1>
 
-    <div class="section">
-        <h2>Questions with multiple answers</h2>
-    </div>
-
-    <a target="_blank" href="images/HBProfileBuilder/Multi select.gif">
-        <div class="imgcontainer prod">
-            <img src="images/HBProfileBuilder/Multi select.gif">
-        </div>
-    </a>
-
-    <div class="section">
-        <div class="insightcont">
-            <p class="bold">The question
-            <ul>
-                <p>How can we encourage users to select more options and not rush through this question?</p>
-            </ul>
+            <p>Because our target audience is extrinsically motivated, I decided on the following design principles.</p>
         </div>
 
-        <div class="insightcont">
-            <p class="bold">Key design outcomes
-            <ul>
-                <li>Bigger answer options with visual icons to gather more interest </li>
-                <li>Prototypical icons and text to help convey meaning</li>
-                <li>Vibrant colors to elicit more positive affect when you select an option </li>
-            </ul>
+        <div class="imgcontainer">
+            <img src="images/HBProfileBuilder/Considerations Horizontal.png">
         </div>
-    </div>
 
-    <div class="section">
-        <h2>An informative progress bar</h2>
-    </div>
-
-    <a target="_blank" href="images/HBProfileBuilder/Progress bar 3.5.gif">
-        <div class="imgcontainer prod">
-            <img src="images/HBProfileBuilder/Progress bar 3.5.gif">
+        <div class="section">
+            <h1>Designing questions with multiple answers</h1>
         </div>
+
+        <a target="_blank" href="images/HBProfileBuilder/Multi select.gif">
+            <div class="imgcontainer prod">
+                <img src="images/HBProfileBuilder/Multi select.gif">
+            </div>
         </a>
 
         <div class="section">
             <div class="insightcont">
                 <p class="bold">The question
                 <ul>
-                    <p>How can we accurately keep track of progress, what's to come, and capitalize on the feeling of progress?</p>
+                    <p>How can we encourage users to select more options and not rush through this question?</p>
                 </ul>
             </div>
-    
+
             <div class="insightcont">
                 <p class="bold">Key design outcomes
                 <ul>
-                    <li>3 separate loading bars to represent 3 separate sections</li>
-                    <li>The current section's loading bar is maximized</li>
-                    <li>User is more likely to view the progress bar when it will be growing - when the user interacts with the “Next” button</li>
+                    <li>Bigger answer options with visual icons to gather more interest </li>
+                    <li>Prototypical icons and text to help convey meaning</li>
+                    <li>Vibrant colors to elicit more positive affect when you select an option </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h1>Designing the progress bar</h1>
+        </div>
+
+        <a target="_blank" href="images/HBProfileBuilder/Progress bar 3.5.gif">
+            <div class="imgcontainer prod">
+                <img src="images/HBProfileBuilder/Progress bar 3.5.gif">
+            </div>
+            </a>
+
+            <div class="section">
+                <div class="insightcont">
+                    <p class="bold">The question
+                    <ul>
+                        <p>How can we accurately keep track of progress, what's to come, and capitalize on the feeling of progress?</p>
+                    </ul>
+                </div>
+        
+                <div class="insightcont">
+                    <p class="bold">Key design outcomes
+                    <ul>
+                        <li>3 separate loading bars to represent 3 separate sections</li>
+                        <li>The current section's loading bar is maximized</li>
+                        <li>User is more likely to view the progress bar when it will be growing - when the user interacts with the “Next” button</li>
+                    </ul>
+                </div>
+            </div>
+
+
+        <div class="section">
+            <h1>Addressing general privacy worries</h1>
+        </div>
+
+        <a target="_blank" href="images/HBProfileBuilder/Health Section.png">
+
+            <div class="imgcontainer prod">
+                <img src="images/HBProfileBuilder/Health Section.png">
+            </div>
+        </a>
+
+        <div class="section">
+            <div class="insightcont">
+                <p class="bold">The question
+                <ul>
+                    <p>How can we address the right privacy worries at the right time?</p>
+                </ul>
+            </div>
+
+            <div class="insightcont">
+                <p class="bold">Key design outcomes
+                <ul>
+                    <li>We address general privacy worries at the beginning, so users proceed with this knowledge in mind</li>
                 </ul>
             </div>
         </div>
 
 
-    <div class="section">
-        <h2>Addressing general privacy worries</h2>
-    </div>
-
-    <a target="_blank" href="images/HBProfileBuilder/Health Section.png">
-
-        <div class="imgcontainer prod">
-            <img src="images/HBProfileBuilder/Health Section.png">
-        </div>
-    </a>
-
-    <div class="section">
-        <div class="insightcont">
-            <p class="bold">The question
-            <ul>
-                <p>How can we address the right privacy worries at the right time?</p>
-            </ul>
+        <div class="section">
+            <h1>Addressing specific privacy worries</h1>
         </div>
 
-        <div class="insightcont">
-            <p class="bold">Key design outcomes
-            <ul>
-                <li>We address general privacy worries at the beginning, so users proceed with this knowledge in mind</li>
-            </ul>
-        </div>
-    </div>
+        <a target="_blank" href="images/HBProfileBuilder/Info bubble.gif">
 
+            <div class="imgcontainer prod">
+                <img src="images/HBProfileBuilder/Info bubble.gif">
+            </div>
+        </a>
 
-    <div class="section">
-        <h2>Addressing specific privacy worries</h2>
-    </div>
+        
+        <div class="section">
+            <div class="insightcont">
+                <p class="bold">The question
+                <ul>
+                    <p>What if users are worried about their privacy while filling out the form?</p>
+                </ul>
+            </div>
 
-    <a target="_blank" href="images/HBProfileBuilder/Info bubble.gif">
-
-        <div class="imgcontainer prod">
-            <img src="images/HBProfileBuilder/Info bubble.gif">
-        </div>
-    </a>
-
-    
-    <div class="section">
-        <div class="insightcont">
-            <p class="bold">The question
-            <ul>
-                <p>What if users are worried about their privacy while filling out the form?</p>
-            </ul>
-        </div>
-
-        <div class="insightcont">
-            <p class="bold">Key design outcomes
-            <ul>
-                <li>An extra info button beside sensitive questions to address specific worries about how or why
-                     this information will be used</li>
-            </ul>
-        </div>
-    </div>
-
-</div>
-
-<div class="sectioncontainer gray">
-    <div class="section">
-        <!--FINAL PRODUCT-->
-        <h1>Impact</h1>
-    </div>
-
-        <div class="margin">
-            <div class="imgcontainer">
-                <img src="images/HBProfileBuilder/impact.png">
+            <div class="insightcont">
+                <p class="bold">Key design outcomes
+                <ul>
+                    <li>An extra info button beside sensitive questions to address specific worries about how or why
+                        this information will be used</li>
+                </ul>
             </div>
         </div>
-</div>
+
+    </div>
+</section>
+
+<section id="outcomes">
+    <div class="sectioncontainer gray">
+        <div class="section">
+            <!--FINAL PRODUCT-->
+            <h1>Impact</h1>
+        </div>
+
+            <div class="margin">
+                <div class="imgcontainer">
+                    <img src="images/HBProfileBuilder/impact.png">
+                </div>
+            </div>
+    </div>
 <!--REFLECTION-->
 
-<div class="sectioncontainer">
-    <div id="reflection" class="section">
-        <h1>Reflection</h1>
-        <br>
-        <h2>Challenge: Designing for everyone</h2>
-        <p>How could we design a profile builder that felt inclusive and usable for everyone? This was one of the major challenges of this project. Making the questions non-ambiguous, the answer options
-            inclusive, and thinking about the connotations of visual indicators across different cultures. This is just a small set of the many different things I learned about
-            when designing with inclusivity in mind.
-            A challenging but necessary goal to have! </p>
+    <div class="sectioncontainer">
+        <div id="reflection" class="section">
+            <h1>Challenge: Designing for everyone</h1>
+            <p>How could we design a profile builder that felt inclusive and usable for everyone? This was one of the major challenges of this project. Making the questions non-ambiguous, the answer options
+                inclusive, and thinking about the connotations of visual indicators across different cultures. This is just a small set of the many different things I learned about
+                when designing with inclusivity in mind.
+                A challenging but necessary goal to have! </p>
 
-            <br>        
-            <br>
-        <h2>Looking forward: Progress bar potential</h2>
-        <p>I believe a profile builder has a lot of opportunities to be fun and exciting. Moving forward, I’d love to design a similar profile builder that draws on the elements of
-            character building in many games. In other words, how could we gamify a profile builder?
+                <br>        
+                <br>
+            <h1>Looking forward: Progress bar potential</h1>
+            <p>I believe a profile builder has a lot of opportunities to be fun and exciting. Moving forward, I’d love to design a similar profile builder that draws on the elements of
+                character building in many games. In other words, how could we gamify a profile builder?
 
-        <p>This could be done simply through the progress indicator. Making a lightbulb light up, a flower bloom, or a slime blob grow into a personalized slime. The possibilities are endless!
+            <p>This could be done simply through the progress indicator. Making a lightbulb light up, a flower bloom, or a slime blob grow into a personalized slime. The possibilities are endless!
+        </div>
     </div>
-</div>
+</section>
 
 <div class="recommendsection">
     <div class="recommendmargin">
-        <h2>Checkout my other work!</h2>
+        <h1>Checkout my other work!</h1>
 
         <div class="recommendgallery">
             <a href="../pages/smartread.html" class="casestudy">
@@ -466,3 +522,21 @@
   </div>
   
 </body>
+<script>    
+document.addEventListener("scroll", (function() {
+    var tocList = document.querySelectorAll(".toc");
+    var i = tocList[0].getBoundingClientRect().top;
+
+    if (tocList.length) {
+        if( i <= 20 ){
+            for (let o = 0; o < tocList.length; o++){
+                tocList[o].classList.add("sticked");
+            }
+        } else {
+            for (let o = 0; o < tocList.length; o++){
+                tocList[o].classList.remove("sticked");
+            }
+        }
+    }
+}))
+</script>

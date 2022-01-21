@@ -25,6 +25,10 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
+:root {
+  --orange: #fc683b;
+}
+
 ul {
     display: block;
     list-style-type: disc;
@@ -481,21 +485,21 @@ h2.cardtitle {
   overflow: hidden;
 }
 
-.static {
+img.static {
     position: absolute;
-    max-height: 100%;
-    background-size: 100% auto;
-    z-index: 4;
-    
-    object-fit: cover;
+  max-height: 100%;
+  background-size: 100% auto;
+  z-index: 4;
+  
+  object-fit: cover;
 }
 
-.active {
-    position: absolute;
-    max-height: 100%;
-    background-size: 100% auto;
-    
-    object-fit: cover;
+img.active {
+  position: absolute;
+  max-height: 100%;
+  background-size: 100% auto;
+  
+  object-fit: cover;
 }
 
 /**COLOURS**/
@@ -515,12 +519,14 @@ h2.cardtitle {
 }
 
 .orangegradient {
-  background-color: #fc683b;
+  background-color: var(--orange);
   color: white;
+
+  border: var(--orange);
 }
 
 .orangetext {
-  color: #fc683b;
+  color: var(--orange);
 }
 
 .yellowgradient {
