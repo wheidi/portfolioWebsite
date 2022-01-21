@@ -27,6 +27,26 @@
         x.className = "brandbutton";
       }
     }
+
+    //toc
+    window.addEventListener('DOMContentLoaded', () => {
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            const id = entry.target.getAttribute('id');
+            if (entry.intersectionRatio > 0) {
+                document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
+            } else {
+                document.querySelector(`nav a[href="#${id}"]`).classList.remove('active');
+            }
+    });
+});
+
+// Track all sections that have an `id` applied
+document.querySelectorAll('section[id]').forEach((section) => {
+    observer.observe(section);
+});
+});
     </script>
 </head>
 
@@ -100,7 +120,7 @@
 
 <div class="sectioncontainer gray">
     <div id="challenge" class="section">
-        <h2 class="bluetext">The challenge</h2>
+        <h1 class="bluetext">The challenge</h1>
         <p>We are exposed to an abundance of information while on social media. <span class="bold">How do we know if this information is reputable
             or misinformed?</span>
             </p>
@@ -111,259 +131,277 @@
     </div>
 </div>
 
-<div class="sectioncontainer">
-    <div class=section>
-        <!--Justification-->
-        <h1>The impact of fake news</h1>
-        <p> From an online survey of over 200+ participants, we found the following:</p>
-
-        <p><img class="imgcontainer" src="images/SmartRead/User research percentages.png">
-
+<!--toc-->
+<div class="sectioncontainer toctitlecontainer">
+    <div class="section">
+        <h1>The process</h1>
     </div>
 </div>
 
-<div class="sectioncontainer gray">
-    <!--User research-->
-    <div class=section>
-
-        <h1>Research into the problem</h1>
-
-        <p>Online research on our Target Audience, Students or Early Career Adults in their early to mid 20s, found the following out of 400+ survey participants.
-
-            <p><img class="imgcontainer" src="images/SmartRead/User research findings.png">
-
-    </div>
-</div>
-<div class="sectioncontainer"> 
-    <div class=section>
-            <h1>Design principles</h1>
-
-            <p><img class="imgcontainer" src="images/SmartRead/Design Principles.png">
-
-    </div>
-</div>
-    <!--
-    <div class=section>
-    <h1>Feedback from Testing workshops</h1>
-    <p>We tested our designs over 2 different workshops, where we synthesized test scripts and tasks for our testers to fulfill, while we watched, recorded, and took notes of their behaviour.
-
-    <h2>Script Example</h2>
-
-    <a target="_blank" href="images/SmartRead/Tester Goal Example.png">
-
-        <p><img class="imgcontainer" src="images/SmartRead/Tester Goal Example.png">
+<nav id="nav-toc" class="sticky">
+    <a class="toc" href="#research">
+        Research
     </a>
 
-    <p>From these workshops we were able to understand areas where users may have problems. These areas were synthesized into a Heuristic Evaluation Table.
-
-    <a target="_blank" href="images/SmartRead/Test Findings.png">
-
-        <p><img class="imgcontainer" src="images/SmartRead/Test Findings.png">
+<a class="toc" href="#design">
+        Design
     </a>
 
-    <p> We will now look at each problem area in more depth.</p>
-    </div>
-    -->
-<div class="sectioncontainer gray">
-    <div class=section>
-        <h1>Assessing article credibility
-        </h1>
+    <a class="toc" href="#prototypes">
+        Prototype
+    </a>
 
-        <h2>Metrics for assessing credibility</h2>
-        <p>We determined how to measure credibility by interviewing our target audience and learning about how
-            they would measure credibility. </p>
+
+    <a class="toc" href="#outcomes">
+        Outcomes
+    </a>
+
+</nav>
+<div class="sectioncontainer toctitlecontainer">
+</div>
+<section id="research">
+    <div class="sectioncontainer gray">
+        <div class=section>
+            <!--Justification-->
+            <h1>The impact of fake news</h1>
+            <p> From an online survey of over 200+ participants, we found the following:</p>
+
+            <p><img class="imgcontainer" src="images/SmartRead/User research percentages.png">
+
+        </div>
+    </div>
+
+    <div class="sectioncontainer">
+        <!--User research-->
+        <div class=section>
+
+            <h1>Research into the problem</h1>
+
+            <p>Online research on our Target Audience, Students or Early Career Adults in their early to mid 20s, found the following out of 400+ survey participants.
+
+                <p><img class="imgcontainer" src="images/SmartRead/User research findings.png">
+
+        </div>
+    </div>
+</section>
+
+<section id="design">
+    <div class="sectioncontainer gray"> 
+        <div class=section>
+                <h1>Design principles</h1>
+
+                <p><img class="imgcontainer" src="images/SmartRead/Design Principles.png">
+
+        </div>
+    </div>
+
+    <div class="sectioncontainer">
+        <div class=section>
+            <h1>Assessing article credibility</h1>
+
+            <p>We determined how to measure credibility by interviewing our target audience and learning about how
+                they would measure credibility. </p>
 
             <a target="_blank" href="images/SmartRead/Assessing Credibility.png">
 
                 <p><img class="imgcontainer" src="images/SmartRead/Assessing Credibility.png">
             </a>
 
-        <h2>Presenting the credibility score</h2>
-
-        <a target="_blank" href="images/SmartRead/Score breakdown iteration 1.png">
-
-            <p><img class="imgcontainer" src="images/SmartRead/Score breakdown iteration 1.png">
-        </a>
-
-        <div class="insightcont">
-            <p class="bold">Testing Insights
-                <ul>
-                    <li>A lot of information at once, users feel reluctant to look through it all - it feels like "work"</li>
-                    <li>Users are confused as to how these scores are calculated, “why is something 74% vs 70%?”</li>
-                </ul>
         </div>
+    </div>
+
+    <div class="sectioncontainer gray">
+        <div class="section">
+            <h1>Fitting our app into the flow</h1>
+
+            <p>Our users already have a behaviour flow for reading articles, how can we fit into this flow?</p>
+
+            <a target="_blank" href="images/SmartRead/Hierarchical task analysis.png">
+
+                <p><img class="imgcontainer" src="images/SmartRead/Hierarchical task analysis.png">
+            </a>
+
+            <div class="insightcont">
+                <p class="bold">Insights
+                    <ul>
+                        <li>Since users already have an estabished behaviour flow, it may take too much extra effort to change or add a behaviour to this flow.
+                    </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="prototypes">
+    <div class="sectioncontainer">
+        <div class=section>
+            <h1>Designing a seamless intervention</h1>
+
+            <a target="_blank" href="images/SmartRead/Notification score.png">
+
+                <p><img class="imgcontainer" src="images/SmartRead/Notification score.png">
+            </a>
+
+            <a target="_blank" href="images/SmartRead/Notification iteration 1.png">
+
+                <p><img class="imgcontainer" src="images/SmartRead/Notification iteration 1.png">
+            </a>
+
+            <div class="insightcont">
+                <p class="bold">Testing Insights
+                    <ul>
+                        <li>Using a notification to deliver our credibility score was received and adopted easily
+                        <li>The information in the extended notification was hard to understand</li>
+                    </ul>
+            </div>
 
 
-        <h2>Final iteration</h2>
+            <h1>Notification - Final iteration</h1>
 
-        <a target="_blank" href="images/SmartRead/Score breakdown iteration final.png">
+            <a target="_blank" href="images/SmartRead/Notification iteration final.png">
 
-            <p><img class="imgcontainer" src="images/SmartRead/Score breakdown iteration final.png">
-        </a>
+                <p><img class="imgcontainer" src="images/SmartRead/Notification iteration final.png">
+            </a>
 
-        <div class="insightcont">
+            <div class="insightcont">
+                <p class="bold">Key Design Decisions
+                    <ul>
+                        <li>Average score is the largest number, and moved to a more upfront location</li>
+                        <li>Added a title for “Related Articles” section</li>
+                    </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="sectioncontainer gray">
+        <div class="section">
+            <h1>Presenting the credibility score</h1>
+
+            <a target="_blank" href="images/SmartRead/Score breakdown iteration 1.png">
+
+                <p><img class="imgcontainer" src="images/SmartRead/Score breakdown iteration 1.png">
+            </a>
+
+            <div class="insightcont">
+                <p class="bold">Testing Insights
+                    <ul>
+                        <li>A lot of information at once, users feel reluctant to look through it all - it feels like "work"</li>
+                        <li>Users are confused as to how these scores are calculated, “why is something 74% vs 70%?”</li>
+                    </ul>
+            </div>
+
+
+            <h1>Credibility Score - Final iteration</h1>
+
+            <a target="_blank" href="images/SmartRead/Score breakdown iteration final.png">
+
+                <p><img class="imgcontainer" src="images/SmartRead/Score breakdown iteration final.png">
+            </a>
+
+            <div class="insightcont">
+                <p class="bold">Key Design Decisions </p>
+                <ul>
+                    <li>Implemented gradual disclosure in the form of drop down menus to remove more detailed, less relevant information from the screen</li>
+                    <li>Included a score breakdown system to show exactly how scores are calculated</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="sectioncontainer">
+        <div class=section>
+            <h1>Confusing page elements</h1>
+
+            <p>Our home page which has both a database search & article history functionality was greatly confusing to our testers.</p>
+
+            <h1>Home - Initial iteration</h1>
+
+            <a target="_blank" href="images/SmartRead/Home page iteration 1.png">
+
+                <p><img class="imgcontainer" src="images/SmartRead/Home page iteration 1.png">
+            </a>
+
+            <div class="insightcont">
+            <p class="bold">Testing Insights </p>
+                <ul>
+                    <li>Difficulty understanding what the search bar was for
+                </ul>
+            </div>
+
+            <h1>Home - Final iteration</h1>
+
+            <a target="_blank" href="images/SmartRead/Separating DB_History pages.png">
+
+                <p><img class="imgcontainer" src="images/SmartRead/Separating DB_History pages.png">
+            </a>
+
+            <div class="insightcont">
             <p class="bold">Key Design Decisions </p>
-            <ul>
-                <li>Implemented gradual disclosure in the form of drop down menus to remove more detailed, less relevant information from the screen</li>
-                <li>Included a score breakdown system to show exactly how scores are calculated</li>
-            </ul>
+                <ul>
+                    <li>Separated the 2 functionalities into their own respective pages</li>
+                    <li>Replaced the “Smart Read” title to reflect the current page title and help with navigation</li>
+                    <li>Added page navigation at the bottom of the screen to easily access these different pages</li>
+                </ul>
+            </div>
+
+            <h1>Article History page</h1>
+
+            <a target="_blank" href="images/SmartRead/Article History page.png">
+
+                <p><img class="imgcontainer" src="images/SmartRead/Article History page.png">
+            </a>
+
+            <div class="insightcont">
+                <p class="bold">Key Design Decisions</p>
+                    <ul>
+                        <li>Page title now reflects the current page</li>
+                        <li>Search bar hint text indicates what this search bar is searching for</li>
+                        <li>Currently selected page is indicated by a lighter color on the navigation bar</li>
+                    </ul>
+            </div>
+
+            <h1>Search Database page</h1>
+            <a target="_blank" href="images/SmartRead/Database Search page.png">
+
+                <p><img class="imgcontainer" src="images/SmartRead/Database Search page.png">
+            </a>
+
+            <div class="insightcont">
+                <p class="bold">Key Design Decisions</p>
+                    <ul>
+                        <li>Search bar hint text indicates what this search bar is searching for</li>
+                        <li>Initial, empty search page illustration gives a suggestion on how to use the search bar and or how to use this Search Database page</li>
+                    </ul>
+            </div>
 
         </div>
-
     </div>
-</div>
+</section>
 
-<div class="sectioncontainer">
-    <div class=section>
-        <h1>A solution that fits seamlessly</h1>
+<section id="outcomes">
+    <!--REFLECTION-->
+    <div class="sectioncontainer">
+        <div class="section">
+            <h1>Challenge: Avoiding information overload</h1>
+            <p>How to present an abundance of information without overwhelming our users? Our credibility report had a lot of information that needed to be presented. Leveraging progressive disclosure
+                elements and prioritizing information according to our users' needs were all very important aspects of this challenge. </p>
 
-        <p>Interviewing our audience also contributed to a User Flow</p>
-
-        <a target="_blank" href="images/SmartRead/Hierarchical task analysis.png">
-
-            <p><img class="imgcontainer" src="images/SmartRead/Hierarchical task analysis.png">
-        </a>
-
-        <div class="insightcont">
-            <p class="bold">Insights
-                <ul>
-                    <li>Users already have an existing behaviour flow for this task. To maximize usability, we should fit seamlessly into their flow.
-                </ul>
+                <br>        
+                <br>
+            <h1>Looking forward: Other audiences</h1>
+            <p>Going forward, I'd love to consider other target audiences of interest. In this project, we targetted young adults in their early 20s. However, would there be interest in older adults?
+                What demographic is most susceptible to fake news? How could we pivot our designs to cater to these audiences? For example, older audiences may be more interested in sharing credibility
+                scores with their friends or family members. There is a lot of potential to expand this project,
+                especially when considering how we can best make an impact on fake news as well.</p>
         </div>
-
-        <h2>Initial iteration</h2>
-
-        <a target="_blank" href="images/SmartRead/Notification score.png">
-
-            <p><img class="imgcontainer" src="images/SmartRead/Notification score.png">
-        </a>
-
-        <a target="_blank" href="images/SmartRead/Notification iteration 1.png">
-
-            <p><img class="imgcontainer" src="images/SmartRead/Notification iteration 1.png">
-        </a>
-
-        <div class="insightcont">
-            <p class="bold">Testing Insights
-                <ul>
-                    <li>Our push notification solution to deliver our Credibility score was successfully received and integrated well
-                    <li>The information in the extended notification was hard to understand</li>
-                </ul>
-        </div>
-
-
-        <h2>Final iteration</h2>
-
-        <a target="_blank" href="images/SmartRead/Notification iteration final.png">
-
-            <p><img class="imgcontainer" src="images/SmartRead/Notification iteration final.png">
-        </a>
-
-        <div class="insightcont">
-            <p class="bold">Key Design Decisions
-                <ul>
-                    <li>Average score is the largest number, and moved to a more upfront location</li>
-                    <li>Added a title for “Related Articles” section</li>
-                </ul>
-        </div>
-
-
     </div>
-</div>
-
-<div class="sectioncontainer gray">
-    <div class=section>
-        <h1>Confusing page elements</h1>
-
-        <p>Our home page which has both a database search & article history functionality was greatly confusing to our testers.</p>
-
-        <h2>Initial iteration</h2>
-
-        <a target="_blank" href="images/SmartRead/Home page iteration 1.png">
-
-            <p><img class="imgcontainer" src="images/SmartRead/Home page iteration 1.png">
-        </a>
-
-        <div class="insightcont">
-        <p class="bold">Testing Insights </p>
-            <ul>
-                <li>Difficulty understanding what the search bar was for
-            </ul>
-        </div>
-
-        <h2>Final iteration</h2>
-
-        <a target="_blank" href="images/SmartRead/Separating DB_History pages.png">
-
-            <p><img class="imgcontainer" src="images/SmartRead/Separating DB_History pages.png">
-        </a>
-
-        <div class="insightcont">
-        <p class="bold">Key Design Decisions </p>
-            <ul>
-                <li>Separated the 2 functionalities into their own respective pages</li>
-                <li>Replaced the “Smart Read” title to reflect the current page title and help with navigation</li>
-                <li>Added page navigation at the bottom of the screen to easily access these different pages</li>
-            </ul>
-        </div>
-
-        <h2>New Article History page</h2>
-        <p>Taking a closer look at the newly designed, Article History page.</p>
-
-        <a target="_blank" href="images/SmartRead/Article History page.png">
-
-            <p><img class="imgcontainer" src="images/SmartRead/Article History page.png">
-        </a>
-
-        <div class="insightcont">
-            <p class="bold">Key Design Decisions</p>
-                <ul>
-                    <li>Page title now reflects the current page</li>
-                    <li>Search bar hint text indicates what this search bar is searching for</li>
-                    <li>Currently selected page is indicated by a lighter color on the navigation bar</li>
-                </ul>
-        </div>
-
-        <h2> New Search Database page</h2>
-
-        <a target="_blank" href="images/SmartRead/Database Search page.png">
-
-            <p><img class="imgcontainer" src="images/SmartRead/Database Search page.png">
-        </a>
-
-        <div class="insightcont">
-            <p class="bold">Key Design Decisions</p>
-                <ul>
-                    <li>Search bar hint text indicates what this search bar is searching for</li>
-                    <li>Initial, empty search page illustration gives a suggestion on how to use the search bar and or how to use this Search Database page</li>
-                </ul>
-        </div>
-
-    </div>
-</div>
-
-<!--REFLECTION-->
-<div class="sectioncontainer">
-    <div class="section">
-        <h1>Reflection</h1>
-        <br>
-        <h2>Challenge: Avoiding information overload</h2>
-        <p>How to present an abundance of information without overwhelming our users? Our credibility report had a lot of information that needed to be presented. Leveraging progressive disclosure
-            elements and prioritizing information according to our users' needs were all very important aspects of this challenge. </p>
-
-            <br>        
-            <br>
-        <h2>Looking forward: Other audiences</h2>
-        <p>Going forward, I'd love to consider other target audiences of interest. In this project, we targetted young adults in their early 20s. However, would there be interest in older adults?
-            What demographic is most susceptible to fake news? How could we pivot our designs to cater to these audiences? For example, older audiences may be more interested in sharing credibility
-            scores with their friends or family members. There is a lot of potential to expand this project,
-            especially when considering how we can best make an impact on fake news as well.</p>
-    </div>
-</div>
+</section>
 
 <div class="recommendsection">
     <div class="recommendmargin">
-        <h2>Checkout my other work</h2>
+        <h1>Checkout my other work</h1>
 
         <div class="recommendgallery">
             <a href="../pages/honeybeehub-profilebuilder.html" class="casestudy">
@@ -418,3 +456,21 @@
   </div>
 
 </body>
+<script>
+document.addEventListener("scroll", (function() {
+    var tocList = document.querySelectorAll(".toc");
+    var i = tocList[0].getBoundingClientRect().top;
+
+    if (tocList.length) {
+        if( i <= 20 ){
+            for (let o = 0; o < tocList.length; o++){
+                tocList[o].classList.add("sticked");
+            }
+        } else {
+            for (let o = 0; o < tocList.length; o++){
+                tocList[o].classList.remove("sticked");
+            }
+        }
+    }
+}))
+</script>
