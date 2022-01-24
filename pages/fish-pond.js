@@ -35,7 +35,6 @@ function pausePlayAnim() {
     play = !play;
 
     if (play) {
-
         console.log("playing")
         requestAnimationFrame(draw);
         document.querySelector('#playPause').innerText= 'Pause';
@@ -58,7 +57,7 @@ function setMouseCoords(event) {
     mx -= rect.left;
     my -= rect.top;
 
-    //console.log("x coords: " + mx + "Y coords: " + my);
+    console.log("x coords: " + mx + "Y coords: " + my);
 }
 
 function clearMouseCoords() {
@@ -149,8 +148,6 @@ class Fish {
         ctx.globalAlpha = 0.5;
         
         for (let i = 1; i < this.fishPieces.length; i++ ) {
-            // console.log("curr fish coords: " + i + ": " + this.fishPieces[i].x + ", " + this.fishPieces[i].y);
-            // console.log("prev fish coords: " + i + ": " + this.fishPieces[i-1].x + ", " + this.fishPieces[i-1].y);
 
             this.fishPieces[i].prevx = this.fishPieces[i].x;
             this.fishPieces[i].prevy = this.fishPieces[i].y;
@@ -243,7 +240,7 @@ class Fish {
     findMouse() {
         if(mx != 0 && my != 0) {
 
-            //console.log("mouse coords: " + mx +", "+my);
+            console.log("mouse coords: " + mx +", "+my);
 
             var distx = mx - this.fishPieces[0].x;
             var disty = my - this.fishPieces[0].y;
@@ -266,7 +263,6 @@ function addFish() {
     for (let i = 0; i < numFish; i++) {
         var x = Math.floor(Math.random() * ((canvas.width - ballRadius) + 1));
         var y = Math.floor(Math.random() * ((canvas.height - ballRadius) + 1));
-        console.log("canvas w, h: " + canvas.width + ", "+canvas.height);
         var newFish = new Fish(x, y, fishColour, ballRadius);
 
         fishes.push(newFish);
@@ -295,4 +291,3 @@ function draw() {
 setSize();
 addFish();
 draw();
-

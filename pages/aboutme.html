@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <link rel="stylesheet" type="text/css" href="../css/main.css">
 <link rel="stylesheet" type="text/css" href="../css/aboutme.css">
 
 <script>
-    function myFunction() {
+    function openNav() {
       var x = document.getElementById("navlinks");
       if (x.className === "toplinks") {
         x.className += " responsive";
@@ -28,11 +28,9 @@
       }
     }
     </script>
-
 </head>
 
-<title>Heidi's portfolio
-</title>
+<title>Heidi's portfolio</title>
 <link rel="shortcut icon" type="image/jpg" href="./images/Welcome/Icon White.svg"/>
 
 <body>
@@ -50,7 +48,7 @@
             <a href="./art-projects.html">Hobby</a>
             <a href="./aboutme.html">About</a> 
             <a href="./HeidiW_Resume_2021.pdf" target=_blank>Resume</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <a href="javascript:void(0);" class="icon" onclick="openNav()">
               <i class="fa fa-bars"></i>
             </a>
         </div>
@@ -62,95 +60,39 @@
 <!--hero-->
 <div class="center" id="pagebanner">
     <div id="pagehero">
-        <div class="herotext">
-            <h3>Hi again, I'm Heidi!</h3>
-            <h2 >I believe in designs driven by psychology, empathy, awe, and fruity bubble teas.</h2>
+        <div class="imgcol">
+            <img src="./images/Welcome/Portrait.jpg" class="portrait"/>
 
-            <p>👉 Previously a UX Designer and Researcher at <a target="_blank" class="headerlink" href="https://www.honeybeehub.io/">honeybeehub</a> 🐝</p>
-            <br>
-            <p>👉 Recent Grad of Psychology and Cognitive Science at the University of Toronto</p>
+            <div class="buttonset">
+                <a href="mailto:heidihwang8@gmail.com" target="_blank" class="contactbutton"><i class="fa fa-envelope"></i>Email</a>
+                <a href="https://www.linkedin.com/in/w-heidi/" target="_blank" class="contactbutton"><i class="fa fa-linkedin"></i>LinkedIn</a>
+                <a href="https://github.com/wheidi" target="_blank" class="contactbutton"><i class="fa fa-github"></i>Github</a>
+            </div>
         </div>
+        <div class="herotext">
+            <h1>Hi again, I'm Heidi</h1>
 
-        <div><img src="./images/Welcome/Portrait.jpg" class="portrait"/></div>
+            <p>I colour code the apps on my phone. Does this improve app usability? No.
+                But did this curiosity for design
+                 lead me to a fulfilling career path? Yes, absolutely!</p>
+
+            <p>As a UX designer, I leverage my psychology background to understand not only the audience, 
+                but also design and how these two interact. I'm especially curious about how we can use tech
+            to elevate the well-being of those around us.</p>
+
+            <p>👉 Previously a UX Designer @<a target="_blank" class="headerlink" href="https://www.honeybeehub.io/">honeybeehub</a>🐝</p>
+            <p>👉 BSc Psychology & Cognitive Science @University of Toronto</p>
+        </div>
     </div>
 
 </div>
-
 
 <!--end hero-->
-
-<!--start sections-->
-<div class="section">
-    <div id="dripscontainer">
-
-    <div class="drips">
-            <h2>🧑🏾‍🤝‍🧑🏼<span class="bold"> Psychology</span>: <br>
-                Understanding others and myself</h2>
-            <p>"Positive emotions encourage approach behaviour".
-                Incorporating psychology research into my design process helps me understand the people that I'm designing for in a much more nuanced and well-rounded way.
-                </p>
-
-    </div>
-
-    <div class="drips">
-        <h2>🧢<span class="bold"> Empathy</span>: <br> 
-            Wearing different hats</h2>
-        <p>A big part of understanding an audience is empathizing with them. Whenever I encountered ambiguity, I found that a solid starting point would almost always 
-            be to put on my user hat, become the user, and go from there.</p>
-    </div>
-
-    </div>
-
-    <div id="dripscontainer"> 
-
-    <div class="drips">
-        <h2>🍓<span class="bold"> Fruity bubble teas</span>: <br> They're yummy</h2>
-        <p>They're yummy and they have fruit!</p>
-    </div>
-
-    <div class="drips">
-        <h2>🎇<span class="bold"> Awe</span>: <br> A sense of wonder</h2>
-        <p>Often, a good, smooth experience gives me some sense of awe. Even something as simple as a loading animation can elicit awe and thus is
-            an experience that I aspire to craft. (Not to mention, it's also affiliated with a bunch of other positive outcomes as well).
-        </p>
-    </div>
-
-    </div>
-</div>
-
 </content>
 
-<div class="section grey">
+<canvas id="myCanvas" class="pond" onmousemove="setMouseCoords(event)" onmouseout="clearMouseCoords()"></canvas>
 
-    <h3>Connect with me</h3>
-    
-    <div class="buttonset margin">
-        <a href="mailto:heidihwang8@gmail.com" target="_blank" id="accentbutton">Email</a>
-        <a href="https://www.linkedin.com/in/w-heidi/" target="_blank" id="accentbutton">LinkedIn</a>
-        <a href="https://github.com/wheidi" target="_blank" id="accentbutton">Github</a>
-    </div>
-    
-    <div class="tablepost">
-        <div class="column center">
-            <h5>Latest personal project:</h5>
-            <p>A mental health aware Social Media experience</p>
-        </div>
+<div id="footer">
+    <p>Made with ♥ and <span class="bold"> <</>/> </span></p>
 
-        <div class="column center">
-            <h5>Current creative venture:</h5>
-            <p>Pixel art</p>
-        </div>
-
-        <div class="column center">
-            <h5>Currently Playing:</h5>
-            <p>The Witness</p>
-            <p>
-        </div>
-    </div>
-
-            <br>
-           <br>
-           <p class="footer">Made with ❤️ 🧃 and <span class="bold"><</>/> </span> by me. </p>
-
-
-</div>
+<script src="./fish-pond.js"></script>
