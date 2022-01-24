@@ -12,7 +12,7 @@
 <link rel="stylesheet" type="text/css" href="../css/project-page.css">
 
 <script>
-    function myFunction() {
+    function openNav() {
       var x = document.getElementById("navlinks");
       if (x.className === "toplinks") {
         x.className += " responsive";
@@ -28,6 +28,18 @@
       }
     }
 
+    function openToc() {
+        var x = document.getElementById("nav-toc");
+        var y = document.getElementById("tocicon");
+        if (x.className === "navsteps sticky") {
+            x.className += " responsive";
+            var res = y.classList.replace("fa-chevron-down", "fa-chevron-up");
+        } else {
+            x.className = "navsteps sticky";
+            y.classList.replace("fa-chevron-up", "fa-chevron-down");
+        }
+    }
+
     //toc
     window.addEventListener('DOMContentLoaded', () => {
 
@@ -35,7 +47,9 @@
         entries.forEach(entry => {
             const id = entry.target.getAttribute('id');
             if (entry.intersectionRatio > 0) {
-                document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
+                var curr = document.querySelector(`nav a[href="#${id}"]`)
+                curr.classList.add('active');
+                document.getElementById("currtitle").innerHTML = curr.textContent;
             } else {
                 document.querySelector(`nav a[href="#${id}"]`).classList.remove('active');
             }
@@ -68,7 +82,7 @@ document.querySelectorAll('section[id]').forEach((section) => {
                 <a href="./art-projects.html">Hobby</a>
                 <a href="./aboutme.html">About</a> 
                 <a href="./HeidiW_Resume_2021.pdf" target=_blank>Resume</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <a href="javascript:void(0);" class="icon" onclick="openNav()">
                   <i class="fa fa-bars"></i>
                 </a>
             </div>
@@ -138,12 +152,12 @@ document.querySelectorAll('section[id]').forEach((section) => {
     </div>
 </div>
 
-<nav id="nav-toc" class="sticky">
+<nav id="nav-toc" class="navsteps sticky">
     <a class="toc" href="#research">
         Research
     </a>
 
-<a class="toc" href="#design">
+    <a class="toc" href="#design">
         Design
     </a>
 
@@ -156,7 +170,17 @@ document.querySelectorAll('section[id]').forEach((section) => {
         Outcomes
     </a>
 
+    <div class="toctitle">
+        <a href="javascript:void(0);" class="currseg" id="currtitle" onclick="openToc()">
+            Research
+        </a>
+
+        <a href="javascript:void(0);" class="icon" onclick="openToc()">
+            <i class="fa fa-chevron-down" id="tocicon" style="color:black"></i>
+        </a>
+    </div>
 </nav>
+
 <div class="sectioncontainer toctitlecontainer">
 </div>
 <section id="research">
@@ -462,7 +486,7 @@ document.addEventListener("scroll", (function() {
     var i = tocList[0].getBoundingClientRect().top;
 
     if (tocList.length) {
-        if( i <= 20 ){
+        if( i <= 41 ){
             for (let o = 0; o < tocList.length; o++){
                 tocList[o].classList.add("sticked");
             }

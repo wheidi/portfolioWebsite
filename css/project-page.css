@@ -140,9 +140,8 @@ span {
 
 /*Table of Contents*/
 
-nav {
+.navsteps {
     padding: 10px;
-    margin-bottom: 1em;
 
     width: auto;
     height: auto;
@@ -153,6 +152,7 @@ nav {
     justify-content: center;
 
     background-color: white;
+    transition: all 100ms ease-in-out;
 }
 
 nav.sticky {
@@ -162,7 +162,7 @@ nav.sticky {
 
 .toc {
     padding: 10px;
-    margin: 0 2em;
+    margin: 10px 20px;
     transition: all 100ms ease-in-out;
     width: 5em;
     height: 5em;
@@ -177,15 +177,14 @@ nav.sticky {
 }
 
 .toc:focus, .toc.active, .toc:hover {
-
     background-color: black;
     color: white;
     font-weight: 500;
 }
 
 .sticked {
-    color: gray;
-    border-color: #eee;
+    color: #6e6e6e;
+    border-color: #b1b1b1;
     font-size: 0.9em;
 
     height: auto;
@@ -271,6 +270,39 @@ title {
     margin: 20px 30px;
 }
 
+.navsteps .icon {
+    display: none;
+  
+    font-size: 1.5em;
+    padding: 10px 30px;
+}
+
+.navsteps .currseg {
+    display: none;
+
+    font-weight: 500;
+    padding: 10px 30px;
+
+}
+
+.navsteps .toctitle {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+
+    background-color: white;
+
+    border-color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+
 @media screen and (max-width: 1000px) {
     #pagebanner {
         flex-direction: column;
@@ -282,7 +314,6 @@ title {
         max-width: auto;
     }
 
-    
     #pagehero {
         padding: 50px;
         width: auto;
@@ -297,7 +328,6 @@ title {
 }
 
 @media screen and (max-width: 800px){
-
     #pagebanner {
         padding: 50px 30px;
     }
@@ -307,9 +337,84 @@ title {
     }
 
     .cell {
-        width: 100%;
+        width: auto;
         margin-bottom: 1em;
         padding: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .toc:focus, .toc.active {
+        background-color: #eee;
+        color: black;
+        font-weight: 500;
+    }
+
+    .toctitle {
+        border: 1px solid #eee;
+        border-width: 0 0 1px 0;
+    }
+
+    .toc:hover {
+        background-color: #eee;
+        color: black;
+        font-weight: 500;
+    }
+
+    .navsteps {
+        padding: 10px 25px;
+    }
+
+    .navsteps .toc {
+        display: none;
+        border-radius: 0;
+        margin: 0;
+    }
+    
+    .navsteps .icon {
+        float: right;
+        display: block;
+    }
+
+    .navsteps .currseg {
+        width: auto;
+        display: block;
+        float: left;
+    }
+
+    .navsteps.responsive {
+        position: sticky;
+        
+        margin: 1em 0;
+        padding: 1em 0;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding-top: 50px;
+    }
+
+    .navsteps.responsive .toc {
+        border: none;
+        width: 100%;
+        padding: 20px 0;
+        height: auto;
+        display: flex;
+        justify-content: center;
+
+        font-size: 1em;
+    }
+
+    .navsteps.responsive .toc.icon {
+        float: right;
+        display: flex;
+        position: sticky;
+        right: 0;
+        top: 0;
+
+        display: flex;
+        justify-content: flex-end;
     }
 }
 
@@ -380,7 +485,7 @@ li {
 
 .casestudy {
     height: 250px;
-    width: 100%;
+    width: 90%;
     
     padding: 20px;
     margin: 30px;

@@ -40,11 +40,8 @@ ul {
 body {
   font-family: 'Maven Pro', verdana, sans-serif;
   font-size: 18px;
-}
+  transition: all 100ms ease-in-out;
 
-.headercontainer {
-  position: absolute;
-  z-index: 1;
 }
 
 canvas {
@@ -55,6 +52,11 @@ canvas {
   background: white;
   display: block;
   width: 100%;
+}
+
+.headercontainer {
+  position: absolute;
+  z-index: 1;
 }
 
 p {
@@ -414,12 +416,12 @@ img {
 }
 
 .casetext.mini {
-  width: 100%;
+  width: auto;
   text-align: center;
 }
 
 .homeimgcontainer.mini {
-  width: 100%;
+  max-width: 100%;
 }
 
 .cardsubtitle {
@@ -563,20 +565,20 @@ title {
     padding: 0px;
 
     text-align: center;
-    width: 100%;
+    width: auto;
   }
  
   .casestudy {
     background-color: white;
     flex-direction: column;
     height: 80vh;
-    width: 100%;
+    width: auto;
 
     padding: 0 30px 0 30px;
   }
 
   .cardsubtitle {
-    width: 100%;
+    width: auto;
     align-items: center;
 
   }
@@ -586,7 +588,7 @@ title {
   }
 
   .homeimgcontainer {
-    width: 100%;
+    width: 90%;
     margin: 0 50px;
     align-items: flex-start;
   }
@@ -677,8 +679,8 @@ title {
   color: black;
 }
 
-@media screen and (max-width: 500px) {
-    .footermargin {
+@media screen and (max-width: 600px) {
+  .footermargin {
     flex-direction: column;
   }
 

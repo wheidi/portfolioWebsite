@@ -15,20 +15,32 @@
 <link rel="stylesheet" type="text/css" href="../css/project-page.css">
 
 <script>
-    function myFunction() {
-      var x = document.getElementById("navlinks");
-      if (x.className === "toplinks") {
+    function openNav() {
+        var x = document.getElementById("navlinks");
+        if (x.className === "toplinks") {
         x.className += " responsive";
-      } else {
+        } else {
         x.className = "toplinks";
-      }
-    
-      var x = document.getElementById("navtitle");
-      if (x.className === "brandbutton") {
+        }
+
+        var x = document.getElementById("navtitle");
+        if (x.className === "brandbutton") {
         x.className += " responsive";
-      } else {
+        } else {
         x.className = "brandbutton";
-      }
+        }
+    }
+
+    function openToc() {
+        var x = document.getElementById("nav-toc");
+        var y = document.getElementById("tocicon");
+        if (x.className === "navsteps sticky") {
+            x.className += " responsive";
+            var res = y.classList.replace("fa-chevron-down", "fa-chevron-up");
+        } else {
+            x.className = "navsteps sticky";
+            y.classList.replace("fa-chevron-up", "fa-chevron-down");
+        }
     }
 
     //toc
@@ -71,7 +83,7 @@
                 <a href="./art-projects.html">Hobby</a>
                 <a href="./aboutme.html">About</a> 
                 <a href="./HeidiW_Resume_2021.pdf" target=_blank>Resume</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <a href="javascript:void(0);" class="icon" onclick="openNav()">
                   <i class="fa fa-bars"></i>
                 </a>
             </div>
@@ -141,23 +153,33 @@
     </div>
 </div>
 
-<nav id="nav-toc" class="sticky">
-        <a class="toc" href="#discover">
+<nav id="nav-toc" class="navsteps sticky">
+    <a class="toc" href="#discover">
+        Research
+    </a>
+
+    <a class="toc" href="#define">
+        Design
+    </a>
+
+    <a class="toc" href="#design">
+        Prototype
+    </a>
+
+
+    <a class="toc" href="#outcomes">
+        Outcomes
+    </a>
+
+    <div class="toctitle">
+        <a href="javascript:void(0);" class="currseg" id="currtitle" onclick="openToc()">
             Research
         </a>
 
-    <a class="toc" href="#define">
-            Design
+        <a href="javascript:void(0);" class="icon" onclick="openToc()">
+            <i class="fa fa-chevron-down"  id="tocicon" style="color:black"></i>
         </a>
-
-        <a class="toc" href="#design">
-            Prototype
-        </a>
-
-
-        <a class="toc" href="#outcomes">
-            Outcomes
-        </a>
+    </div>
 
 </nav>
 <div class="sectioncontainer toctitlecontainer">
@@ -518,13 +540,14 @@
   </div>
   
 </body>
-<script>    
+<script>
 document.addEventListener("scroll", (function() {
     var tocList = document.querySelectorAll(".toc");
     var i = tocList[0].getBoundingClientRect().top;
+    console.log("top: "+i);
 
     if (tocList.length) {
-        if( i <= 20 ){
+        if( i <= 31 ){
             for (let o = 0; o < tocList.length; o++){
                 tocList[o].classList.add("sticked");
             }
