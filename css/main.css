@@ -697,6 +697,7 @@ title {
 .footerlinks a:hover {
   font-weight: 500;
   color: black;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 600px) {
@@ -721,7 +722,6 @@ title {
     align-items: center;
   }
 }
-
 
 /**page nav**/
 
