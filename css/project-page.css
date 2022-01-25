@@ -46,6 +46,26 @@ header {
     width: 100%;
 }
 
+.hbppgradient {
+    background-color: #c94e3e;
+    color: white;
+  }
+  
+  .srgradient  {
+    background-color: #232757;
+    color: white;
+  }
+  
+  .orangegradient  {
+    background-color: var(--orange);
+    color: white;
+  }
+  
+  .yellowgradient  {
+    background-color: #ffe880;
+    color: black;
+  }
+
 /*header*/
 #pagebanner {
   display: flex;

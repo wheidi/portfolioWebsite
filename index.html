@@ -56,10 +56,10 @@ function openNav() {
 <!--nav-->
 
 <content class="center">
-  <div class="headerContainer" onmousemove="setMouseCoords(event)" onmouseout="clearMouseCoords()">
+  <div class="headerContainer">
     <canvas id="myCanvas"></canvas>
 
-    <div id="welcomeheader" class="margin center">
+    <div onmouseenter="triggFish()" id="welcomeheader" class="margin center">
       <div class="welcomecontent">
         <div id="welcomedescription">
           <h1>Hi, I'm Heidi</h1>
@@ -71,100 +71,84 @@ function openNav() {
           <p>I often think about how psychology research can change our digital experiences.</p>
         </div>
         
-        <a class="scrollbutton" href="./index.html#casestudylist">Projects ↓</a>
-
       </div>
     </div>
   </div>
   <!--END BANNER-->
-  
-  <div id="casestudylist" class="center">  
-  
-  	<!-- Honeybee Case Study -->
-    <div class="casecontainer">
-
-      <div class="casestudy">
-            <div class="casetext">
-              <h2 class="cardtitle">A smoother onboarding experience</h2>
-                <div class="cardsubtitle">
-                  <p>@Honeybee </p>
-                  <p>UI/UX • Figma, GIMP</p>
-                  <a id="ctabutton" href="pages/honeybeehub-profilebuilder.html">Read more</a>
-                </div>
-            </div>
-
-          <div class="homeimgcontainer">
-
-            <img class="static" src="pages/images/HBProfileBuilder/HB Preview L.png">
-                        
-            <img class="active" src="pages/images/HBProfileBuilder/HB Preview L.gif">
-          </div> 
-        </div>
-    </div>
-
-		<!-- <End HB CS> -->
-
-  	<!-- Smart Read Case Study -->
-    
-    <div class="casecontainer">
-
-      <div class="casestudy">
-        <div class="casetext">
-          <h2 class="cardtitle">A fake news detector app</h2>
-            <div class="cardsubtitle">
-              <p>@School project</p>
-              <p>UI/UX • Figma, AdobeXD</p>
-              <a id="ctabutton" href="pages/smartread.html">Read more</a>
-            </div>
-        </div>
-          <div class="homeimgcontainer">
-
-            <img class="static" src="pages/images/SmartRead/SR Thumb L.png">
-                          
-            <img class="active" src="pages/images/SmartRead/SR Preview L.gif">
-        </div>
-      </div>
-    </div>
-				<!-- <End SR CS> -->			
-  </div>
-
+<div class="casestudylistcontainer">
   <div id="casestudylist" class="center mini">  
 
-    <!-- Pricing page Case Study -->
-    <div class="casestudy mini">
+    <!-- HB Profile Case Study -->
+    <a href="pages/honeybeehub-profilebuilder.html" class="casestudy mini orangegradient">
         <div class="casetext mini">
-          <h2 class="cardtitle">Transitioning a pricing page</h2>
+          <h2 class="cardtitle">A smoother onboarding flow</h2>
             <div class="cardsubtitle mini">
-              <p>🚧 In progress • @Honeybee • UI/UX • Figma, GIMP</p>
-              <a id="ctabutton" class="ctabutton" href="pages/honeybee-pricingpage.html">Read more</a>
+              <p>@Honeybee • UI/UX • Figma, GIMP</p>
             </div>
         </div>
 
       <div class="homeimgcontainer mini">
 
-        <img class="static" src="pages/images/HBPricingpage/HBPricing Thumb L.png">    
-        <img class="active" src="pages/images/HBPricingpage/HBPricing Thumb L.png">                 
+        <img class="static" src="pages/images/HBProfileBuilder/HB Preview L.png">    
+        <img class="active" src="pages/images/HBProfileBuilder/HB Preview L.gif">                 
       </div>
-    </div>
-    <!-- <End Pricing CS> -->
+    </a>
 
-    <!-- Other projects link -->
-    <div class="casestudy mini">
+    <!-- SR Case Study -->
+    <a href="pages/smartread.html" class="casestudy mini srgradient">
       <div class="casetext mini">
-        <h2 class="cardtitle">Side projects</h2>
+        <h2 class="cardtitle">A fake news detector app</h2>
           <div class="cardsubtitle mini">
-            <p>Icons, vectors, and other fun things I've worked on</p>
-            <a id="ctabutton" href="pages/art-projects.html">See more</a>
+            <p>@Smart Read • UI/UX • Figma, Adobe XD</p>
           </div>
       </div>
 
       <div class="homeimgcontainer mini">
-        <img class="static" src="pages/images/Extras/Side projects thumb.png">
-        <img class="active" src="pages/images/Extras/Side projects thumb.png">
+        <img class="static" src="pages/images/SmartRead/SR Thumb Grey L.png">             
+        <img class="active" src="pages/images/SmartRead/SR Prev Blue XL.gif">
+      </div>
+    </a>
 
+
+  </div>
+</div>
+
+  <div class="casestudylistcontainer">
+    <div id="casestudylist" class="center mini">  
+      <!-- Pricing page Case Study -->
+      <a href="pages/honeybee-pricingpage.html" class="casestudy mini hbppgradient">
+          <div class="casetext mini">
+            <h2 class="cardtitle">Transitioning a pricing page</h2>
+              <div class="cardsubtitle mini">
+                <p>🚧 In progress • @Honeybee • UI/UX • Figma, GIMP</p>
+              </div>
+          </div>
+
+        <div class="homeimgcontainer mini">
+
+          <img class="static" src="pages/images/HBPricingpage/HBPricing Thumb L.png">    
+          <img class="active" src="pages/images/HBPricingpage/HBPricing Thumb L.png">                 
         </div>
+      </a>
+      <!-- <End Pricing CS> -->
+
+      <!-- Other projects link -->
+      <a href="pages/art-projects.html" class="casestudy mini yellowgradient">
+        <div class="casetext mini">
+          <h2 class="cardtitle">Side projects</h2>
+            <div class="cardsubtitle mini">
+              <p>Icons, vectors, and other fun things I've worked on</p>
+            </div>
+        </div>
+
+        <div class="homeimgcontainer mini">
+          <img class="static" src="pages/images/Extras/Side projects thumb.png">
+          <img class="active" src="pages/images/Extras/Side projects thumb.png">
+
+          </div>
+        </a>
+        <!-- <Other projects link> -->	
     </div>
-			<!-- <Other projects link> -->	
   </div>
     
   </content>
@@ -184,7 +168,15 @@ function openNav() {
       </div>
     </div>
 
+     <!-- <div id="casestudylist" class="center">   -->
   </body>   
 </html>
 
 <script src="pages/fish-pond.js"></script>
+<script>
+  setSize(0, 0, 1);
+
+  function triggFish() {
+    addFish(5);
+  }
+</script>

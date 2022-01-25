@@ -7,7 +7,8 @@ const fps = 30;
 
 
 /*fish vars*/
-var numFish = 5;
+var numFish = 0;
+var maxFish = 10;
 var randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
 var fishColour = "#8F8FFF";
 var fishes = [];
@@ -24,6 +25,10 @@ var finWidth = 2;
 /*mouse position variables*/
 var mx = 0;
 var my = 0;
+var flag = 0;
+var width = window.innerWidth;
+var height = window.innerHeight;
+var first = 0;
 
 
 /** functions + classes**/
@@ -44,9 +49,19 @@ function pausePlayAnim() {
 }
 
 /** POND **/
-function setSize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+function setSize(w = width, h = height, auto) {
+    console.log("w h: " + w + ", " + h);
+    
+    if (auto === 1){
+        flag = auto;
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    } else {
+        width = w;
+        height = h;
+        canvas.width = w;
+        canvas.height = h;
+    }
 }
 
 function setMouseCoords(event) {
@@ -85,8 +100,8 @@ class Fish {
         this.heady = y;
         this.ballRadius = rad;
 
-        this.dx = -1;
-        this.dy = -1;
+        this.dx = 1;
+        this.dy = 1;
         this.fishPieces = [];
         this.speed = spaceMax/2;
 
@@ -99,24 +114,24 @@ class Fish {
                 if (i < headLength) {
 
                     var newPiece = 
-                    new fishPiece (this.headx + this.dx + (this.speed * (i + 1)), 
-                    this.heady + this.dy + (this.speed * (i + 1)), this.dx, this.dy, rad - 1, fishColour);
+                    new fishPiece (- (this.headx + this.dx + (this.speed * (i + 1))), 
+                    - (this.heady + this.dy + (this.speed * (i + 1))), this.dx, this.dy, rad - 1, fishColour);
 
                     this.fishPieces.push(newPiece);
                     rad += 1;
 
                 } else if (i > fishLength - tailLength) {
                     var newPiece = 
-                    new fishPiece (this.headx + this.dx + (this.speed * (i + 1)), 
-                    this.heady + this.dy + (this.speed * (i + 1)), this.dx, this.dy, rad, fishColour);
+                    new fishPiece (- (this.headx + this.dx + (this.speed * (i + 1))), 
+                    - (this.heady + this.dy + (this.speed * (i + 1))), this.dx, this.dy, rad, fishColour);
 
                     this.fishPieces.push(newPiece);
                     rad -= 1;
 
                 }  else if ((i => headLength) && (i < torsoLength)){
                     var newPiece = 
-                    new fishPiece (this.headx + this.dx + (this.speed * (i + 1)), 
-                    this.heady + this.dy + (this.speed * (i + 1)), this.dx, this.dy, rad, fishColour);
+                    new fishPiece (- (this.headx + this.dx + (this.speed * (i + 1))), 
+                    - (this.heady + this.dy + (this.speed * (i + 1))), this.dx, this.dy, rad, fishColour);
 
                     this.fishPieces.push(newPiece);
                 }
@@ -227,6 +242,11 @@ class Fish {
     }
 
     checkObstacle() {
+        if (first === 0) {
+            first = 1;
+            return;
+        };
+
         if ((this.fishPieces[0].x + this.dx < 0) || (this.fishPieces[0].x + this.dx > canvas.width)){
             this.dx *= -1;
         }
@@ -259,14 +279,19 @@ class Fish {
     };
 }
 
-function addFish() {
-    for (let i = 0; i < numFish; i++) {
-        var x = Math.floor(Math.random() * ((canvas.width - ballRadius) + 1));
-        var y = Math.floor(Math.random() * ((canvas.height - ballRadius) + 1));
-        var newFish = new Fish(x, y, fishColour, ballRadius);
+function addFish(num = numFish) {
+    numFish += num;
+    if (numFish < maxFish){
+        for (let i = 0; i < num; i++) {
+            var x = Math.floor(Math.random() * (0 -ballRadius + 1));
+            var y = Math.floor(Math.random() * (0 -ballRadius + 1));
+            var newFish = new Fish(x, y, fishColour, ballRadius);
 
-        fishes.push(newFish);
-    };
+            fishes.push(newFish);
+        };
+    } else {
+        console.log("Too many fish, cannot add anymore!");
+    }
 }
 
 function draw() {
@@ -275,7 +300,7 @@ function draw() {
         return;
     }
 
-    setSize();
+    setSize(width, height, flag);
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -288,6 +313,7 @@ function draw() {
         requestAnimationFrame(draw);
       }, 1000 / fps);
 };
-setSize();
+/** setting up the pond **/
+setSize(width, height, flag);
 addFish();
 draw();

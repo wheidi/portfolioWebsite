@@ -70,7 +70,7 @@
             </div>
         </div>
         <div class="herotext">
-            <h1>Hi again, I'm Heidi</h1>
+            <h1>👋 Hi again, I'm Heidi</h1>
 
             <p>I colour code the apps on my phone. Does this improve app usability? No.
                 But did this curiosity for design
@@ -79,7 +79,8 @@
             <p>As a UX designer, I leverage my psychology background to understand not only the audience, 
                 but also design and how these two interact. I'm especially curious about how we can use tech
             to elevate the well-being of those around us.</p>
-
+            
+            <p>For a quick little break, checkout my pond below :).</p>
             <p>👉 Previously a UX Designer @<a target="_blank" class="headerlink" href="https://www.honeybeehub.io/">honeybeehub</a>🐝</p>
             <p>👉 BSc Psychology & Cognitive Science @University of Toronto</p>
         </div>
@@ -90,9 +91,18 @@
 <!--end hero-->
 </content>
 
-<canvas id="myCanvas" class="pond" onmousemove="setMouseCoords(event)" onmouseout="clearMouseCoords()"></canvas>
+<canvas id="myCanvas" class="pond" onmousemove="setMouseCoords(evt)" onmouseout="clearMouseCoords()"></canvas>
 
 <div id="footer">
     <p>Made with ♥ and <span class="bold"> <</>/> </span></p>
+</div>
 
 <script src="./fish-pond.js"></script>
+<script>
+  setSize(0, 0, 1);
+  addFish(5);
+
+  function triggFish() {
+    addFish(1);
+  }
+</script>

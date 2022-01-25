@@ -51,7 +51,8 @@ canvas {
   z-index: -1;
   background: white;
   display: block;
-  width: 100%;
+
+  max-width: 100%;
 }
 
 .headercontainer {
@@ -236,7 +237,7 @@ img {
   transition: all 0.1s ease-in-out;
   transition-timing-function: ease-in-out;
 
-  padding: 15px 15px 15px 15px;
+  padding: 15px;
 
   height: auto;
 
@@ -263,13 +264,19 @@ img {
   position: relative;
   top: 0px;
   right: 0px;
+  display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+  transition: all 0.3s ease-in-out;
+}
+
+.toplinks a {
 
   display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: center;
-
-  transition: all 0.3s ease-in-out;
+	justify-content: flex-end;
 }
 
 
@@ -306,7 +313,7 @@ img {
 
   .toplinks {
     position: absolute;
-    right: 0px;
+    right: 10px;
   }
 
   .toplinks a {
@@ -327,6 +334,9 @@ img {
     width: auto;
     flex-direction: column;
     align-items: center;
+
+    z-index: 2;
+    background-color: inherit;
 
     padding: 50px 0 0 0;
   }
@@ -352,12 +362,18 @@ img {
 }
 /*case studies*/
 
+.casestudylistcontainer {
+  background-color: white;
+  width: 100%;
+}
+
 #casestudylist {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  max-width: 1400px;
+  padding: 0px 30px;
   height: auto;
 }
 
@@ -366,16 +382,16 @@ img {
 }
 
 .casestudy {
-  background-color: rgb(255, 255, 255, 0.75);
-  border-radius: 25px;
+  opacity: 0.85;
+  border-radius: 5px;
 
-  max-width: 1400px;
-  width: auto;
-  height: 70vh;
+  max-width: 500px;
+  max-height: 500px;
   flex-grow: 1;
   overflow: hidden;
 
-  padding: 0 50px 0 50px;
+  padding: 25px;
+  margin: 25px;
 
   display: flex;
   flex-direction: row;
@@ -386,40 +402,33 @@ img {
   text-decoration: none;
 
   animation: none;
-  transition: all 0.3s;
+  transition: all 100ms;
   transition-timing-function: ease-in-out;
+}
+
+.casestudy:hover {
+  opacity: 1;
+  text-decoration: none;
+
+  border-radius: 15px;
 }
 
 .casestudy.mini {
   flex-direction: column;
   height: 50vh;
-  margin-bottom: 100px;
 }
 
-.casecontainer {
-  width: 100%;
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-
-  margin-bottom: 100px;
-}
-
-.casemargin {
-  max-width: 1400px;
-}
 
 .casetext {
   width: 50%;
-  height: 60vh;
+  height: 25%;
 
-  padding: 0 30px 0 30px;
+  padding: 30px 30px 0 30px;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: left;
+  justify-content: flex-start;
+  align-items: center;
 
   z-index: 5;
   text-decoration: none;
@@ -428,10 +437,6 @@ img {
 .casetext.mini {
   width: auto;
   text-align: center;
-}
-
-.homeimgcontainer.mini {
-  max-width: 100%;
 }
 
 .cardsubtitle {
@@ -487,9 +492,9 @@ h2.cardtitle {
 
 .homeimgcontainer {
   position: relative;
-  width: 50%;
+  width: 100%;
   
-  height:60vh;
+  height: 50%;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -504,6 +509,7 @@ img.static {
   z-index: 4;
   
   object-fit: cover;
+  transition: all 110ms ease-in-out;
 }
 
 img.active {
@@ -515,34 +521,42 @@ img.active {
 }
 
 /**COLOURS**/
-
-.hbppgradient {
-  background-color: #ff7e6d;
-  color: white;
+.orangegradient {
+  background-color: #eee;
+  color: black;
 }
 
 .srgradient {
+  background-color: #eee;
+  color: black;
+}
+.yellowgradient {
+  background-color: #eee;
+  color: black;
+}
+.hbppgradient {
+  background-color: #eee;
+  color: black;
+}
+
+.hbppgradient:hover {
+  background-color: #c94e3e;
+  color: white;
+}
+
+.srgradient:hover  {
   background-color: #232757;
   color: white;
 }
 
-.bluetext {
-  color: #20245a;
-}
-
-.orangegradient {
+.orangegradient:hover  {
   background-color: var(--orange);
   color: white;
-
-  border: var(--orange);
 }
 
-.orangetext {
-  color: var(--orange);
-}
-
-.yellowgradient {
-  background-color: #ffe880;
+.yellowgradient:hover  {
+  background-color: #f5cb57;
+  color: black;
 }
 
 .casestudy:hover .static{
@@ -566,23 +580,26 @@ title {
 
   #casestudylist.mini {
     flex-direction: column;
+    margin-bottom: 0;
   }
 
   .casetext {
-    align-items: center;
-    justify-content: flex-end;
+    width: auto;
+    height: 30%;
 
-    padding: 0px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
 
     text-align: center;
-    width: auto;
+
   }
  
   .casestudy {
-    background-color: white;
+    opacity: 1;
     flex-direction: column;
-    height: 80vh;
-    width: auto;
+    width: 80%;
 
     padding: 0 30px 0 30px;
   }
@@ -594,7 +611,7 @@ title {
   }
 
   .casestudy.mini {
-    height: 80vh;
+    height: 50vh;
   }
 
   .homeimgcontainer {
