@@ -9,7 +9,6 @@ const fps = 30;
 /*fish vars*/
 var numFish = 0;
 var maxFish = 10;
-var randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
 var fishColour = "#8F8FFF";
 var fishes = [];
 var detectionRadius = 200;
@@ -49,9 +48,7 @@ function pausePlayAnim() {
 }
 
 /** POND **/
-function setSize(w = width, h = height, auto) {
-    console.log("w h: " + w + ", " + h);
-    
+function setSize(w = width, h = height, auto) {    
     if (auto === 1){
         flag = auto;
         canvas.width = window.innerWidth;
@@ -71,8 +68,10 @@ function setMouseCoords(event) {
     let rect = canvas.getBoundingClientRect();
     mx -= rect.left;
     my -= rect.top;
+}
 
-    console.log("x coords: " + mx + "Y coords: " + my);
+function setMaxFish(max) {
+    maxFish = max;
 }
 
 function clearMouseCoords() {
@@ -260,8 +259,6 @@ class Fish {
     findMouse() {
         if(mx != 0 && my != 0) {
 
-            console.log("mouse coords: " + mx +", "+my);
-
             var distx = mx - this.fishPieces[0].x;
             var disty = my - this.fishPieces[0].y;
 
@@ -281,7 +278,7 @@ class Fish {
 
 function addFish(num = numFish) {
     numFish += num;
-    if (numFish < maxFish){
+    if (numFish <= maxFish){
         for (let i = 0; i < num; i++) {
             var x = Math.floor(Math.random() * (0 -ballRadius + 1));
             var y = Math.floor(Math.random() * (0 -ballRadius + 1));
@@ -305,7 +302,6 @@ function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     for (let i = 0; i < fishes.length; i++) {
-
         fishes[i].fishAct();
     }  
 

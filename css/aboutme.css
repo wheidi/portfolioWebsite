@@ -143,18 +143,21 @@ canvas {
     justify-content: center;
 }
 
+.pond {
+    background-color: white;
+}
+
 /**footer**/
 #footer {
-    width: auto;
+    width: 100%;
     height: auto;
     min-height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    margin: 1em 0;
-    padding: 0 1em;
-
+    padding: 1em 0;
+    margin: 0;
 }
 
 /**Mobile adjustments**/
