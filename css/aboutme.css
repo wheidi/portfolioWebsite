@@ -98,6 +98,7 @@ img {
 
 .contactbutton:active, .contactbutton:focus, .contactbutton:hover {
     font-weight: 500;
+    text-decoration: none;
 }
 
 .sectioncontainer {
