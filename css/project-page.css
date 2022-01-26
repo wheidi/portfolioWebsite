@@ -473,6 +473,27 @@ li {
     font-weight: 700;
 }
 
+/**impact section**/
+
+.impactrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 35px 0;
+    width: 100%;
+}
+
+.impactitem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 30px;
+
+    text-align: center;
+}
+
 /**recommend section**/
 
 .recommendsection {
