@@ -9,7 +9,7 @@ const fps = 30;
 /*fish vars*/
 var numFish = 0;
 var maxFish = 10;
-var fishColour = "#8F8FFF";
+var fishColour = "rgb(143, 143, 255, 0.45)";
 var fishes = [];
 var detectionRadius = 200;
 var spaceMax = 5;
@@ -20,6 +20,10 @@ var headLength = fishLength/8;
 var torsoLength = (fishLength * 2)/8;
 var tailLength = (fishLength * 5)/8;
 var finWidth = 2;
+
+/*pond assets */
+var numLillies = 3;
+var lilyColour = "rgb(179, 247, 158, 0.5)";
 
 /*mouse position variables*/
 var mx = 0;
@@ -159,7 +163,6 @@ class Fish {
     }
 
     drawFish() {
-        ctx.globalAlpha = 0.5;
         
         for (let i = 1; i < this.fishPieces.length; i++ ) {
 
@@ -276,12 +279,30 @@ class Fish {
     };
 }
 
+function drawLily() {
+    var maxSizeLily = window.innerWidth/12;
+
+    for (let i = 0; i < numLillies; i++){
+        ctx.beginPath();
+        ctx.arc(50, 50, maxSizeLily, 0, Math.PI*2);
+        ctx.fillStyle = lilyColour;
+        ctx.fill();
+        ctx.closePath();
+    }
+}
+
+function drawAssets() {
+    for (let i = 0; i < numLillies; i++) {
+        drawLily();
+    }
+}
+
 function addFish(num = numFish) {
     numFish += num;
     if (numFish <= maxFish){
         for (let i = 0; i < num; i++) {
-            var x = Math.floor(Math.random() * (0 -ballRadius + 1));
-            var y = Math.floor(Math.random() * (0 -ballRadius + 1));
+            var x = Math.floor(Math.random() * (0 - ballRadius + 1));
+            var y = Math.floor(Math.random() * (0 - ballRadius + 1));
             var newFish = new Fish(x, y, fishColour, ballRadius);
 
             fishes.push(newFish);
@@ -303,7 +324,9 @@ function draw() {
 
     for (let i = 0; i < fishes.length; i++) {
         fishes[i].fishAct();
-    }  
+    }
+
+    drawAssets();
 
     setTimeout(() => {
         requestAnimationFrame(draw);
