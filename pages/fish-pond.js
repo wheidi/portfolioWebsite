@@ -1,5 +1,3 @@
-//import {Fish} from "./fish.js";
-
 var canvas = document.getElementById("myCanvas");
 /*rendering context. Tool used to pain on Canvas*/
 var ctx = canvas.getContext("2d");
@@ -21,9 +19,8 @@ var torsoLength = (fishLength * 2)/8;
 var tailLength = (fishLength * 5)/8;
 var finWidth = 2;
 
-/*pond assets */
-var numLillies = 3;
-var lilyColour = "rgb(179, 247, 158, 0.5)";
+/*decor vars */
+var showDecor = 0;
 
 /*mouse position variables*/
 var mx = 0;
@@ -63,6 +60,10 @@ function setSize(w = width, h = height, auto) {
         canvas.width = w;
         canvas.height = h;
     }
+}
+
+function setDecor(flag=0) {
+    showDecor=flag;
 }
 
 function setMouseCoords(event) {
@@ -279,24 +280,6 @@ class Fish {
     };
 }
 
-function drawLily() {
-    var maxSizeLily = window.innerWidth/12;
-
-    for (let i = 0; i < numLillies; i++){
-        ctx.beginPath();
-        ctx.arc(50, 50, maxSizeLily, 0, Math.PI*2);
-        ctx.fillStyle = lilyColour;
-        ctx.fill();
-        ctx.closePath();
-    }
-}
-
-function drawAssets() {
-    for (let i = 0; i < numLillies; i++) {
-        drawLily();
-    }
-}
-
 function addFish(num = numFish) {
     numFish += num;
     if (numFish <= maxFish){
@@ -326,7 +309,9 @@ function draw() {
         fishes[i].fishAct();
     }
 
-    drawAssets();
+    if(showDecor===1){
+        drawAssets();
+    }
 
     setTimeout(() => {
         requestAnimationFrame(draw);
