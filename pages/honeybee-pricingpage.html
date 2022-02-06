@@ -15,27 +15,58 @@
 <link rel="stylesheet" type="text/css" href="../css/project-page.css">
 
 <script>
-    function openNav() {
-      var x = document.getElementById("navlinks");
-      if (x.className === "toplinks") {
-        x.className += " responsive";
-      } else {
-        x.className = "toplinks";
-      }
-    
-      var x = document.getElementById("navtitle");
-      if (x.className === "brandbutton") {
-        x.className += " responsive";
-      } else {
-        x.className = "brandbutton";
-      }
+  function openNav() {
+    var x = document.getElementById("navlinks");
+    if (x.className === "toplinks") {
+      x.className += " responsive";
+    } else {
+      x.className = "toplinks";
     }
+
+    var x = document.getElementById("navtitle");
+    if (x.className === "brandbutton") {
+      x.className += " responsive";
+    } else {
+      x.className = "brandbutton";
+    }
+  }
+
+  function openToc() {
+      var x = document.getElementById("nav-toc");
+      var y = document.getElementById("tocicon");
+      if (x.className === "navsteps sticky") {
+          x.className += " responsive";
+          var res = y.classList.replace("fa-chevron-down", "fa-chevron-up");
+      } else {
+          x.className = "navsteps sticky";
+          y.classList.replace("fa-chevron-up", "fa-chevron-down");
+      }
+  }
+
+  //toc
+  window.addEventListener('DOMContentLoaded', () => {
+
+      const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+              const id = entry.target.getAttribute('id');
+              if (entry.intersectionRatio > 0) {
+                  document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
+              } else {
+                  document.querySelector(`nav a[href="#${id}"]`).classList.remove('active');
+              }
+          });
+      });
+
+      // Track all sections that have an `id` applied
+      document.querySelectorAll('section[id]').forEach((section) => {
+          observer.observe(section);
+      });
+  });
 </script>
 
 </head>
 
-<title>Heidi's Portfolio
-</title>
+<title>Heidi Wang | Portfolio</title>
 <link rel="shortcut icon" type="image/jpg" href="./images/Welcome/Icon White.svg"/>
 
 
@@ -106,8 +137,8 @@
 
 <div class="sectioncontainer gray">
   <div id="challenge" class="section">
-      <h2>The challenge</h2>
-      <p>Our current pricing model does not fit the needs of some of our customers. <span class="bold">How can we introduce subscription pricing
+      <h1>The challenge</h1>
+      <p>Our current pricing model does not fit the needs of larger research labs. <span class="bold">How can we introduce subscription pricing
          and appeal to larger organizations?</span>
           </p>
           <br>
@@ -117,8 +148,94 @@
       </div>
 </div>
 
+<!--TOC-->
+<!-- <div class="sectioncontainer toctitlecontainer">
+  <div class="section">
+      <h1>The process</h1>
+  </div>
+</div>
 
+<nav id="nav-toc" class="navsteps sticky">
+  <a class="toc" href="#discover">
+      Research
+  </a>
+
+  <a class="toc" href="#define">
+      Design
+  </a>
+
+  <a class="toc" href="#design">
+      Prototype
+  </a>
+
+
+  <a class="toc" href="#outcomes">
+      Outcomes
+  </a>
+
+  <div class="toctitle">
+      <a href="javascript:void(0);" class="currseg" id="currtitle" onclick="openToc()">
+          Research
+      </a>
+
+      <a href="javascript:void(0);" class="icon" onclick="openToc()">
+          <i class="fa fa-chevron-down"  id="tocicon" style="color:black"></i>
+      </a>
+  </div>
+
+</nav>
 <!--Research-->
+<!-- 
+<section id="discover">
+  <div class="sectioncontainer gray">
+
+    <div class="section">
+        <h1>Defining a target audience</h1>
+    </div>
+
+        <a target="_blank" href="images/HBPricingpage/Target Audience.png">
+            <div class="imgcontainer">
+                <img src="images/HBPricingpage/Target Audience.png">
+            </div>
+        </a>
+  </div>
+  <div class="sectioncontainer">
+      <div class="section">
+          <h1>Discovering the problem</h1>
+          <p>I took a look at our current pricing page to see why it does not solve our problem.</p>
+          </div>
+
+          <a target="_blank" href="images/HBPricingpage/Current flow annotated.png">
+            <div class="imgcontainer">
+                <img src="images/HBPricingpage/Current flow annotated.png">
+            </div>
+          </a>
+  </div>
+</section>
+
+<section id="define">
+
+  <div class="sectioncontainer gray">
+    <div class=section>
+      <h1>Design principles</h1>
+    </div>
+
+    <div class="imgcontainer">
+        <img src="images/HBPricingpage/Design principles.png">
+    </div>
+  </div>
+</section>
+
+
+<section id="design">
+  <div class="sectioncontainer">
+    <div class="section">
+        <h1>Helping users make choices</h1>
+        <p>How can we help our users navigate the different pricing options we have?</p>
+    </div>
+
+</section> -->
+
 
 <div class="warningcell">
     <h2>🚧 Case study under construction 🚧</h2> 
@@ -188,3 +305,22 @@
   
   
 </body>
+<script>
+  document.addEventListener("scroll", (function() {
+    var tocList = document.querySelectorAll(".toc");
+    var i = tocList[0].getBoundingClientRect().top;
+    console.log("top: "+i);
+
+    if (tocList.length) {
+        if( i <= 31 ){
+            for (let o = 0; o < tocList.length; o++){
+                tocList[o].classList.add("sticked");
+            }
+        } else {
+            for (let o = 0; o < tocList.length; o++){
+                tocList[o].classList.remove("sticked");
+            }
+        }
+    }
+}))
+</script>

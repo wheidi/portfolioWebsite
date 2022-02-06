@@ -7,7 +7,7 @@ const fps = 30;
 /*fish vars*/
 var numFish = 0;
 var maxFish = 10;
-var fishColour = "rgb(143, 143, 255, 0.45)";
+var fishColour = "rgb(255, 111, 97, 0.85)";
 var fishes = [];
 var detectionRadius = 200;
 var spaceMax = 5;
@@ -178,11 +178,23 @@ class Fish {
             ctx.fillStyle = this.colour;
             ctx.fill();
             ctx.closePath();
- 
+        }
+    }
+
+    drawShadow() {
+        
+        for (let i = 1; i < this.fishPieces.length; i++ ) {
+            ctx.beginPath();
+            ctx.arc(this.fishPieces[i].x + 20, this.fishPieces[i].y + 20, this.fishPieces[i].ballRadius, 0, Math.PI*2);
+            ctx.fillStyle = "rgb(0, 0, 0, 0.02)";
+            ctx.fill();
+            ctx.closePath();
         }
     }
 
     fishAct() {
+        this.drawShadow();
+
         this.drawFish();
         this.moveFish();
         this.findMouse();
