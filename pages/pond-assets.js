@@ -17,7 +17,7 @@ class Lily {
 
     draw(){
         ctx.beginPath();
-        ctx.arc(this.x + 25, this.y + 25, this.size, 0, Math.PI*1.8);
+        ctx.arc(this.x + 25, this.y + 25, this.size, 0, Math.PI*2);
         ctx.fillStyle = "rgb(0, 0, 0, 0.05)";
         ctx.fill();
         ctx.closePath();
