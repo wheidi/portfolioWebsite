@@ -278,12 +278,22 @@ img {
 	justify-content: flex-end;
 }
 
-
-.toplinks a.icon {
+.menuicon {
   display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+
   transition: none;
 
   font-size: 1.5em;
+
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  margin: 16px 32px;
+
+  z-index: 5;
 }
 
 .scrollbutton {
@@ -319,13 +329,10 @@ img {
     display: none;
   }
 
-  .toplinks a.icon {
-    float: right;
+  .menuicon {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    color: inherit;
 
-    font-size: 1.5em;
   }
 
   .toplinks.responsive {
@@ -344,17 +351,6 @@ img {
     display: flex;
     justify-content: center;
   }
-
-  .toplinks.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
-
   .brandbutton {
     z-index: 5;
   }
