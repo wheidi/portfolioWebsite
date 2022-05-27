@@ -163,7 +163,7 @@ canvas {
     .herotext {
         margin-top: 2em;
         width: auto;
-        text-align: center;
+        text-align: left;
     }
 
     .imgcol {
@@ -172,10 +172,6 @@ canvas {
 
     #pagehero {
         flex-direction: column;
-    }
-
-    .buttonset {
-        flex-direction: row;
     }
 
     #pagebanner {
