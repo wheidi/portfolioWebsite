@@ -248,7 +248,8 @@ nav.sticky {
 }
 
 .prod {
-    max-width: 1400px;
+    max-height: 100vh;
+    object-fit: cover;
 }
 
 title {
