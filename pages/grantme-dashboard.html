@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<html>
+    
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HT77TMRF72"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-HT77TMRF72');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="../css/project-page.css">
+
+<script>
+    function openNav() {
+        var x = document.getElementById("navlinks");
+        if (x.className === "toplinks") {
+        x.className += " responsive";
+        } else {
+        x.className = "toplinks";
+        }
+
+        var x = document.getElementById("navtitle");
+        if (x.className === "brandbutton") {
+        x.className += " responsive";
+        } else {
+        x.className = "brandbutton";
+        }
+    }
+
+    function openToc() {
+        var x = document.getElementById("nav-toc");
+        var y = document.getElementById("tocicon");
+        if (x.className === "navsteps sticky") {
+            x.className += " responsive";
+            var res = y.classList.replace("fa-chevron-down", "fa-chevron-up");
+        } else {
+            x.className = "navsteps sticky";
+            y.classList.replace("fa-chevron-up", "fa-chevron-down");
+        }
+    }
+
+    //toc
+    window.addEventListener('DOMContentLoaded', () => {
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                if (entry.intersectionRatio > 0) {
+                    document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
+                } else {
+                    document.querySelector(`nav a[href="#${id}"]`).classList.remove('active');
+                }
+            });
+        });
+
+        // Track all sections that have an `id` applied
+        document.querySelectorAll('section[id]').forEach((section) => {
+            observer.observe(section);
+        });
+    });
+</script>
+
+</head>
+
+<title>Heidi Wang | Portfolio</title>
+
+<link rel="shortcut icon" type="image/jpg" href="./images/Welcome/Icon White.svg"/>
+
+<!--nav-->
+<body>
+    <ul id="topnav" class="center orangegradient">
+    
+        <div class="navmargin">
+            <div class="brandbutton" id="navtitle">
+                <a href="https://w-heidi.com/"><img class="headerimg" src="images/Welcome/Icon White.svg"></a>
+              </div>
+      
+              <div class="toplinks" id="navlinks">
+                <a href="../index.html#casestudylist">Work</a>
+                <a href="./art-projects.html">Hobby</a>
+                <a href="./aboutme.html">About</a> 
+                <a href="./Heidi_Wang_Resume_2023.pdf" target=_blank>Resume</a>
+            </div>
+      
+            <a href="javascript:void(0);" class="menuicon" onclick="openNav()">
+              <i class="fa fa-bars"></i> </a>
+        </div>
+      </ul>
+<!--nav-->
+
+<header class="center orangegradient">
+<!--HERO-->
+
+<div class="center" id="pagebanner">
+    <div id="pagehero">
+            <div><img class="heroimg center" src="images/GMDashboard/Dashboard_desktop_preview.png" /></div>
+    </div>
+    <div class="headertext">
+        <h2>GrantMe - EdTech</h2>
+        <h1>Revitalizing a low-use dashboard</h1>
+    </div>
+</div>
+</header>
+
+<!--OVERVIEW-->
+<div class="introcontainer center">
+    <div class="overviewcontainer">
+        <div class="row">
+            <div class="cell">
+                <p class="bold">Role 
+                <p>Product Designer
+            </div>
+            <div class="cell">
+                <p class="bold">Type
+                <p> Full-Time
+            </div>
+            <div class="cell">
+                <p class="bold">Tools
+                <p> Figma, Notion, Figjam
+            </div>
+            <div class="cell">
+                <p class="bold">Team
+                <p> 1 Product Designer (me!)
+            </div>
+            <div class="cell">
+                <p class="bold">Impact
+                <p> +20% page usage
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="sectioncontainer gray">
+    <div id="challenge" class="section">
+        <h1 class="orangetext">The problem</h1>
+        <p>Our platform dashboard had a significantly low usage rate 📉.</span>
+            </p>
+            <br>
+            <p>
+            As a core page to the platform experience, how can we increase the usefullness of the dashboard?</p>
+    </div>
+</div>
+
+<!--TOC-->
+<div class="sectioncontainer toctitlecontainer">
+    <div class="section">
+        <h1>The process</h1>
+    </div>
+</div>
+
+<nav id="nav-toc" class="navsteps sticky">
+    <a class="toc" href="#discover">
+        Discovery
+    </a>
+
+    <a class="toc" href="#research">
+        Research
+    </a>
+
+    <a class="toc" href="#define">
+        Design
+    </a>
+
+    <a class="toc" href="#design">
+        Prototype
+    </a>
+
+
+    <a class="toc" href="#outcomes">
+        Outcomes
+    </a>
+
+    <div class="toctitle">
+        <a href="javascript:void(0);" class="currseg" id="currtitle" onclick="openToc()">
+            Research
+        </a>
+
+        <a href="javascript:void(0);" class="icon" onclick="openToc()">
+            <i class="fa fa-chevron-down"  id="tocicon" style="color:black"></i>
+        </a>
+    </div>
+
+</nav>
+<div class="sectioncontainer toctitlecontainer">
+</div>
+<!--Discovery-->
+<section id="discover">
+    <div class="sectioncontainer">
+        <div class="section">
+            <h1>Discovering the problem</h1>
+            <p>Looking into user heatmap data, I found a great disparity on one of our core pages.</p>
+            <br>
+
+            <div class="impactrow">
+                <div class="impactitem"><h3>91%</h3><p>Most users that visited the dashboard did not interact with it</p></div>
+                <div class="impactitem"><h3>#1</h3><p>The dashboard was the most viewed page on our platform</p></div>
+            </div>
+            <br>     
+            <p>The core action on the dashboard is clicks, however only 9% of users that visited the page clicked on anything. Being such a high-traffic page, and a page in our onboarding, the dashboard could greatly impact a majority of our user experiences and should be improved.</p>
+        </div>
+    </div>
+
+    <div class="sectioncontainer gray">
+        <div class="section">
+            <h1>Defining a target audience</h1>
+            <p>Through user surveys, interviews, and usage recordings, I gained a picture of a user's motivations with the dashboard.</p>
+        </div>
+
+            <a target="_blank" href="images/GMDashboard/Persona-GM-Dashboard.png">
+                <div class="imgcontainer">
+                    <img src="images/GMDashboard/Persona-GM-Dashboard.png">
+                </div>
+            </a>
+    </div>
+
+    <div class="sectioncontainer">
+        <div class="section">
+            <h1>The problem with our current experience</h1>
+            <p>I reviewed our current experience against the feedback from our users.</p>
+            </div>
+
+            <a target="_blank" href="images/GMDashboard/Old_Anotated_Dashboard.png">
+                <div class="imgcontainer">
+                    <img src="images/GMDashboard/Old_Anotated_Dashboard.png">
+                </div>
+            </a>
+        
+        <div class="section">
+            <div class="insightcont">
+                <p class="bold">Insights
+                    <ul>
+                        <li>Crucial items were located under the fold of a typical desktop laptop, the most common device for our users</li>
+                        <li>Low relevance information at the top of the page, especially for returning users</li>
+                        <li>Important items such as upcoming appointments or tasks were missing</li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="define">
+    <div class="sectioncontainer gray">
+        <div class=section>
+                <h1>Defining Goals</h1>
+
+                <p>How might we help students determine their next course of action?</p>
+                <br>
+                <p>Our users are busy and navigate a complex space of university admissions, scholarships, and other activities. 
+                    We should give them clarity on what they need to do next to achieve their goals.</p>
+
+                <div class="insightcont">
+                    <p class="bold">Goal metrics to monitor
+                        <ul>
+                            <li>Increase click-through on the dashboard</li>
+                            <li>Time on page does not increase significantly</li>
+                        </ul>
+                </div>
+    </div>
+
+</section>
+
+<section id="design">
+    <div class="sectioncontainer">
+
+        <div class="section">
+            <h1>Ideating Solutions</h1>
+            <p>I reviewed dashboards from education software, project management software, and productivity software.</p>
+
+        </div>
+
+        <a target="_blank" href="images/GMDashboard/Inspiration.png">
+            <div class="imgcontainer prod">
+                <img src="images/GMDashboard/Inspiration.png">
+            </div>
+        </a>
+
+        <div class="section">
+
+            <div class="insightcont">
+                <p class="bold">Insights
+                <ul>
+                    <li>Users should be able to follow up on any item displayed to them</li>
+                    <li>Overcrowding a dashboard can lead to feeling overwhelmed</li>
+                    <li>Information must be shown in context. Users want to know what a number is now, and also how it changed
+                        from before</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h1>Designing the progress bar</h1>
+        </div>
+
+        <a target="_blank" href="images/HBProfileBuilder/Progress bar 3.5.gif">
+            <div class="imgcontainer prod">
+                <img src="images/HBProfileBuilder/Progress bar 3.5.gif">
+            </div>
+            </a>
+
+            <div class="section">
+                <div class="insightcont">
+                    <p class="bold">The question
+                    <ul>
+                        <p>How can we accurately keep track of progress, what's to come, and capitalize on the feeling of progress?</p>
+                    </ul>
+                </div>
+        
+                <div class="insightcont">
+                    <p class="bold">Key design outcomes
+                    <ul>
+                        <li>3 separate loading bars to represent 3 separate sections</li>
+                        <li>The current section's loading bar is maximized</li>
+                        <li>User is more likely to view the progress bar when it will be growing - when the user interacts with the “Next” button</li>
+                    </ul>
+                </div>
+            </div>
+
+
+        <div class="section">
+            <h1>Addressing general privacy worries</h1>
+        </div>
+
+        <a target="_blank" href="images/HBProfileBuilder/Health Section.png">
+
+            <div class="imgcontainer prod">
+                <img src="images/HBProfileBuilder/Health Section.png">
+            </div>
+        </a>
+
+        <div class="section">
+            <div class="insightcont">
+                <p class="bold">The question
+                <ul>
+                    <p>How can we address the right privacy worries at the right time?</p>
+                </ul>
+            </div>
+
+            <div class="insightcont">
+                <p class="bold">Key design outcomes
+                <ul>
+                    <li>We address general privacy worries at the beginning, so users proceed with this knowledge in mind</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="section">
+            <h1>Addressing specific privacy worries</h1>
+        </div>
+
+        <a target="_blank" href="images/HBProfileBuilder/Info bubble.gif">
+
+            <div class="imgcontainer prod">
+                <img src="images/HBProfileBuilder/Info bubble.gif">
+            </div>
+        </a>
+
+        
+        <div class="section">
+            <div class="insightcont">
+                <p class="bold">The question
+                <ul>
+                    <p>What if users are worried about their privacy while filling out the form?</p>
+                </ul>
+            </div>
+
+            <div class="insightcont">
+                <p class="bold">Key design outcomes
+                <ul>
+                    <li>An extra info button beside sensitive questions to address specific worries about how or why
+                        this information will be used</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="outcomes">
+    <div class="sectioncontainer gray">
+        <div class="section">
+            <!--FINAL PRODUCT-->
+            <h1>Impact</h1>
+        </div>
+        <div class="impactrow">
+            <div class="impactitem"><h1>87%</h1><p>Completion rate</p></div>
+            <div class="impactitem"><h1>1000+</h1><p>Profiles with collected data</p></div>
+        </div>
+    </div>
+<!--REFLECTION-->
+
+    <div class="sectioncontainer">
+        <div id="reflection" class="section">
+            <h1>Challenge: Designing for everyone</h1>
+            <p>How could we design a profile builder that felt inclusive and usable for everyone? This was one of the major challenges of this project. Making the questions non-ambiguous, the answer options
+                inclusive, and thinking about the connotations of visual indicators across different cultures. This is just a small set of the many different things I learned about
+                when designing with inclusivity in mind.
+                A challenging but necessary goal to have! </p>
+
+                <br>        
+                <br>
+            <h1>Looking forward: Progress bar potential</h1>
+            <p>I believe a profile builder has a lot of opportunities to be fun and exciting. Moving forward, I’d love to design a similar profile builder that draws on the elements of
+                character building in many games. In other words, how could we gamify a profile builder?
+
+            <p>This could be done simply through the progress indicator. Making a lightbulb light up, a flower bloom, or a slime blob grow into a personalized slime. The possibilities are endless!
+        </div>
+    </div>
+</section>
+
+<div class="recommendsection">
+    <div class="recommendmargin">
+        <h1>Checkout my other work!</h1>
+
+        <div class="recommendgallery">
+            <a href="../pages/smartread.html" class="casestudy srgradient">
+
+                <div class="casetext mini">
+                    <h3 class="cardtitle">Smart Read</h3>
+                    <p class="cardsubtitle mini">A fake news detector • Figma</p>
+                </div>
+  
+                <div class="homeimgcontainer mini">
+  
+                    <img class="static" src="../pages/images/SmartRead/SR Prev Blue L.png">
+                                
+                    <img class="active" src="../pages/images/SmartRead/SR Prev Blue L.png">
+                </div>
+            </a>
+
+            <a href="../pages/art-projects.html" class="casestudy yellowgradient">
+
+                <div class="casetext mini">
+                    <h3 class="cardtitle">Side projects</h3>
+                    <p class="cardsubtitle">Icons, vectors, and other things I've worked on</p>
+            
+            
+                </div>
+            
+                <div class="homeimgcontainer mini">
+            
+                    <img class="static" src="../pages/images/Extras/Side projects thumb.png">
+                                    
+                    <img class="active" src="../pages/images/Extras/Side projects thumb.png">
+                </div>
+                </a>
+
+        </div>
+    </div>
+</div>
+    
+<div id="footer">
+    <div class="footermargin">
+      <div class="footerlogo">
+        <img class="footerimg" src="./images/Welcome/Icon White.svg">
+      </div>
+  
+        <div class="footerlinkscontainer">            
+            <div class="footerlinks">
+              <a href="mailto:heidihwang8@gmail.com" target="_blank">heidihwang8@gmail.com</a>
+              <a href="https://www.linkedin.com/in/w-heidi/" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+</body>
+<script>
+document.addEventListener("scroll", (function() {
+    var tocList = document.querySelectorAll(".toc");
+    var i = tocList[0].getBoundingClientRect().top;
+    console.log("top: "+i);
+
+    if (tocList.length) {
+        if( i <= 31 ){
+            for (let o = 0; o < tocList.length; o++){
+                tocList[o].classList.add("sticked");
+            }
+        } else {
+            for (let o = 0; o < tocList.length; o++){
+                tocList[o].classList.remove("sticked");
+            }
+        }
+    }
+}))
+</script>
