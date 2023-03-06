@@ -439,7 +439,7 @@ title {
     }
 }
 
-ul {
+ul, ol {
     padding-top: 1em;
 
     padding-bottom: 1em;

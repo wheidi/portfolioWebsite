@@ -171,11 +171,11 @@ gtag('config', 'G-HT77TMRF72');
     </a>
 
     <a class="toc" href="#define">
-        Design
+        Goals
     </a>
 
     <a class="toc" href="#design">
-        Prototype
+        Design
     </a>
 
 
@@ -196,6 +196,7 @@ gtag('config', 'G-HT77TMRF72');
 </nav>
 <div class="sectioncontainer toctitlecontainer">
 </div>
+
 <!--Discovery-->
 <section id="discover">
     <div class="sectioncontainer">
@@ -225,8 +226,36 @@ gtag('config', 'G-HT77TMRF72');
                 </div>
             </a>
     </div>
+</section>
 
+<!--Research-->
+<section id="research">
     <div class="sectioncontainer">
+        <div class="section">
+            <h1>Understanding what students want</h1>
+                <p>From a survey and brainstorming sessions with internal teams, I collected and prioritized what items should be featured in the
+                    dashoard.</p>
+                </div>
+
+                <a target="_blank" href="images/GMDashboard/Sticky Diagram.png">
+                    <div class="imgcontainer">
+                        <img src="images/GMDashboard/Sticky Diagram.png">
+                    </div>
+                </a>
+            
+            <div class="section">
+                <div class="insightcont">
+                    <p class="bold">Important items for students
+                        <ul>
+                            <li>Scholarship & school deadlines</li>
+                            <li>Time-sensitive opportunities, such as upcoming appointments or live workshops</li>
+                            <li>Updates on work in progress, such as essay feedback</li>
+                        </ul>
+                </div>
+            </div>
+    </div>
+
+    <div class="sectioncontainer gray">
         <div class="section">
             <h1>The problem with our current experience</h1>
             <p>I reviewed our current experience against the feedback from our users.</p>
@@ -252,11 +281,11 @@ gtag('config', 'G-HT77TMRF72');
 </section>
 
 <section id="define">
-    <div class="sectioncontainer gray">
+    <div class="sectioncontainer">
         <div class=section>
                 <h1>Defining Goals</h1>
 
-                <p>How might we help students determine their next course of action?</p>
+                <p>How might we help students quickly determine their next course of action?</p>
                 <br>
                 <p>Our users are busy and navigate a complex space of university admissions, scholarships, and other activities. 
                     We should give them clarity on what they need to do next to achieve their goals.</p>
@@ -273,7 +302,7 @@ gtag('config', 'G-HT77TMRF72');
 </section>
 
 <section id="design">
-    <div class="sectioncontainer">
+    <div class="sectioncontainer gray">
 
         <div class="section">
             <h1>Ideating Solutions</h1>
@@ -294,99 +323,41 @@ gtag('config', 'G-HT77TMRF72');
                 <ul>
                     <li>Users should be able to follow up on any item displayed to them</li>
                     <li>Overcrowding a dashboard can lead to feeling overwhelmed</li>
-                    <li>Information must be shown in context. Users want to know what a number is now, and also how it changed
+                    <li>Information shown in context - users care about current numbers, but also how it changed
                         from before</li>
                 </ul>
             </div>
         </div>
+    </div>
 
+    <div class="sectioncontainer">
         <div class="section">
-            <h1>Designing the progress bar</h1>
+            <h1>Testing and iterations</h1>
+            <p>I iterated on mid-fi wireframes to help determine what general elements to have on the dashboard, then moved to hi-fi when I needed
+                more detailed testing insights from non-product team members and users.
+            </p>
         </div>
 
-        <a target="_blank" href="images/HBProfileBuilder/Progress bar 3.5.gif">
+        <a target="_blank" href="images/GMDashboard/Dashboard_iterations.png">
             <div class="imgcontainer prod">
-                <img src="images/HBProfileBuilder/Progress bar 3.5.gif">
+                <img src="images/GMDashboard/Dashboard_iterations.png">
             </div>
-            </a>
+        </a>
 
             <div class="section">
-                <div class="insightcont">
-                    <p class="bold">The question
-                    <ul>
-                        <p>How can we accurately keep track of progress, what's to come, and capitalize on the feeling of progress?</p>
-                    </ul>
-                </div>
         
                 <div class="insightcont">
                     <p class="bold">Key design outcomes
                     <ul>
-                        <li>3 separate loading bars to represent 3 separate sections</li>
-                        <li>The current section's loading bar is maximized</li>
-                        <li>User is more likely to view the progress bar when it will be growing - when the user interacts with the “Next” button</li>
+                        <li>Only showing upcoming items felt unmotivating. We should also display the progress that was made 
+                            to help motivate students (this is supported by the Zeigarnik effect).
+                        </li>
+                        <li>A majority of students preferred the dashboard with more colours. They find it, "more fun". </li>
+                        <li>Students need help understanding what some numbers represent on the dashboard. Using progressive disclosure in the form of tooltips
+                            helps students understand without overwhelming them with too much text at once.</li>
                     </ul>
                 </div>
             </div>
-
-
-        <div class="section">
-            <h1>Addressing general privacy worries</h1>
-        </div>
-
-        <a target="_blank" href="images/HBProfileBuilder/Health Section.png">
-
-            <div class="imgcontainer prod">
-                <img src="images/HBProfileBuilder/Health Section.png">
-            </div>
-        </a>
-
-        <div class="section">
-            <div class="insightcont">
-                <p class="bold">The question
-                <ul>
-                    <p>How can we address the right privacy worries at the right time?</p>
-                </ul>
-            </div>
-
-            <div class="insightcont">
-                <p class="bold">Key design outcomes
-                <ul>
-                    <li>We address general privacy worries at the beginning, so users proceed with this knowledge in mind</li>
-                </ul>
-            </div>
-        </div>
-
-
-        <div class="section">
-            <h1>Addressing specific privacy worries</h1>
-        </div>
-
-        <a target="_blank" href="images/HBProfileBuilder/Info bubble.gif">
-
-            <div class="imgcontainer prod">
-                <img src="images/HBProfileBuilder/Info bubble.gif">
-            </div>
-        </a>
-
-        
-        <div class="section">
-            <div class="insightcont">
-                <p class="bold">The question
-                <ul>
-                    <p>What if users are worried about their privacy while filling out the form?</p>
-                </ul>
-            </div>
-
-            <div class="insightcont">
-                <p class="bold">Key design outcomes
-                <ul>
-                    <li>An extra info button beside sensitive questions to address specific worries about how or why
-                        this information will be used</li>
-                </ul>
-            </div>
-        </div>
-
-    </div>
 </section>
 
 <section id="outcomes">
