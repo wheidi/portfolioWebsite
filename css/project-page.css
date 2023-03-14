@@ -55,6 +55,11 @@ header {
     background-color: #232757;
     color: white;
   }
+
+  .brightbluegradient {
+    background-color: #006BE6;
+    color: black;
+  }
   
   .orangegradient  {
     background-color: var(--orange);
@@ -107,7 +112,7 @@ header {
 
 .headertext h2 {
     font-size: 1em;
-    color: #ffd7cb;
+    color: white;
     padding: 20px 0px;
 }
 

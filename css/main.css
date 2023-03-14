@@ -521,6 +521,16 @@ img.active {
   color: black;
 }
 
+.brightbluegradient {
+  background-color: #eee;
+  color: black;
+}
+
+.brightbluegradient:hover {
+  background-color: #006BE6;
+  color: white;
+}
+
 .srgradient {
   background-color: #eee;
   color: black;
