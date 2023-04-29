@@ -44,7 +44,7 @@ li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
 
     margin-bottom: 2em;
@@ -55,6 +55,7 @@ li {
   max-width: 250px;
   display: block;
   border-radius: 400px;
+  margin: 0px 0px 1em 0px;
 
   float: left;
   
@@ -81,7 +82,6 @@ li {
     flex-direction: column;
     width: auto;
     height: auto;
-    margin: 10px;
 }
 
 .contactbutton {
@@ -171,11 +171,16 @@ canvas {
         text-align: left;
     }
 
+    .buttonset {
+        flex-direction: row;
+    }
+
     .imgcol {
         margin: 0;
     }
 
     #pagehero {
+        align-items: center;
         flex-direction: column;
     }
 
@@ -185,6 +190,6 @@ canvas {
     }
 
     .portrait {
-        margin: 2em 0 2em 0;
+        margin: 2em 0 1em 0;
     }
 }
