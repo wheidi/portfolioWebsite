@@ -47,29 +47,29 @@ header {
 }
 
 .hbppgradient {
-    background-color: #c94e3e;
+    background-color: var(--light-blue);
     color: white;
-  }
+    }
   
-  .srgradient  {
-    background-color: #232757;
+.srgradient  {
+    background-color: var(--violet);
     color: white;
-  }
+    }
 
-  .brightbluegradient {
-    background-color: #006BE6;
+.brightbluegradient {
+    background-color: var(--dark-blue);
     color: black;
-  }
+    }
   
-  .orangegradient  {
+.orangegradient  {
     background-color: var(--orange);
     color: white;
-  }
+    }
   
-  .yellowgradient  {
+.yellowgradient  {
     background-color: #ffe880;
     color: black;
-  }
+    }
 
 /*header*/
 #pagebanner {

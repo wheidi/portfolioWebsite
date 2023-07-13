@@ -26,7 +26,11 @@ footer, header, hgroup, menu, nav, section {
 }
 
 :root {
-  --orange: #fc683b;
+  --orange: #FF4735;
+  --dark-blue: #3532C8;
+  --violet: #C83283;
+  --light-blue: #259DF4;
+
 }
 
 ul {
@@ -529,7 +533,7 @@ img.active {
 }
 
 .brightbluegradient:hover {
-  background-color: #006BE6;
+  background-color: var(--dark-blue);
   color: white;
 }
 
@@ -547,12 +551,12 @@ img.active {
 }
 
 .hbppgradient:hover {
-  background-color: #c94e3e;
+  background-color: var(--light-blue);
   color: white;
 }
 
 .srgradient:hover  {
-  background-color: #232757;
+  background-color: var(--violet);
   color: white;
 }
 
