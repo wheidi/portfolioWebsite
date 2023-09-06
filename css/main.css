@@ -124,7 +124,8 @@ img {
 
 #welcomeheader {
   max-width: 1000px;
-  height: 60vh;
+  height: 50vh;
+  min-height: 400px;
 
   display: flex;
   flex-direction:column;
