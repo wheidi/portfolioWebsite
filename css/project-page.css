@@ -388,7 +388,7 @@ title {
     }
 
     .navsteps {
-        padding: 10px 25px;
+        padding: 10px 24px;
     }
 
     .navsteps .toc {
@@ -516,7 +516,7 @@ li {
     justify-content: center;
     align-items: center;
 
-    margin: 25px 0 0 0;
+    margin: 24px 0 0 0;
 }
 
 .recommendmargin {
