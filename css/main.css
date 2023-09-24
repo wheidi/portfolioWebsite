@@ -393,7 +393,6 @@ img {
   border-radius: 5px;
 
   max-width: 500px;
-  max-height: 500px;
   flex-grow: 1;
   overflow: hidden;
 
@@ -422,7 +421,7 @@ img {
 
 .casestudy.mini {
   flex-direction: column;
-  height: 50vh;
+  height: 500px;
 }
 
 
@@ -493,7 +492,7 @@ img {
 
 h2.cardtitle {
   font-weight: 500;
-  margin-bottom: 8px;
+  margin: 0px 8px 0px 8px;
 
   text-decoration: none;
 }
@@ -638,14 +637,14 @@ title {
     padding: 0 24px 0 24px;
   }
 
+  .casestudy.mini {
+    height: 400px;
+  }
+
   .cardsubtitle {
     width: auto;
     align-items: center;
 
-  }
-
-  .casestudy.mini {
-    height: 50vh;
   }
 
   .homeimgcontainer {
