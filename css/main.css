@@ -591,10 +591,20 @@ title {
     flex-direction: column;
   }
 
+  #welcomedescription {
+    height: 60vh;
+  }
+
   #welcomedescription h2{
     text-align: left;
     font-size: 1.2rem;
   }
+
+  #welcomedescription h1{
+    text-align: left;
+    font-size: 1.8rem;
+  }
+
 
   #ctabutton {
     max-width: 575px;
