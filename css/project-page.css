@@ -523,16 +523,17 @@ li {
     max-width: 1000px;
     width: 100%;
     height: 100%;
-    margin: 0 30px 0 30px;
+    margin: 0 32px 0 32px;
 }
 
 .casestudy {
-    height: 250px;
+    height: auto;
     width: 90%;
     
-    padding: 20px;
-    margin: 30px;
+    padding: 24px;
+    margin: 32px;
     flex-direction: column;
+    gap: var(--small, 16px);
 }
 
 .casestudy a:hover {
@@ -540,7 +541,6 @@ li {
 }
 
 .casetext {
-    padding-bottom: 20px;
     height: auto;
 }
 

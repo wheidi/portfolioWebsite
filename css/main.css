@@ -93,6 +93,10 @@ h3 {
   font-family: 'Poppins', verdana, sans-serif;
   font-size: 2em;
 }
+  
+.column h4 {
+  font-weight: 700;
+}
 
 a {
   text-decoration: none;
@@ -135,7 +139,7 @@ img {
   display: flex;
   flex-direction:column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
   padding-top: 50px;
   padding-bottom: 50px;
@@ -143,7 +147,7 @@ img {
 
 #welcomedescription {
   width: 100%;
-  border-radius: 25px;
+  border-radius: 24px;
 
   display: flex;
   flex-direction: column;
@@ -262,8 +266,8 @@ img {
 .navmargin {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 32px;
+  padding-right: 32px;
   max-width: 1100px;
   display: flex;
   flex-direction: row;
@@ -375,41 +379,34 @@ img {
 }
 
 #casestudylist {
+
+  max-width: 1100px;
+  padding: 0px 32px;
+
   display: flex;
+  padding-bottom: var(--xxLarge, 0px);
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  max-width: 1400px;
-  padding: 0px 32px;
-  height: auto;
-}
-
-#casestudylist.mini {
-  flex-direction: row;
+  gap: var(--xxLarge, 40px);
+  align-self: stretch;
 }
 
 .casestudy {
-  opacity: 0.85;
-  border-radius: 5px;
-
-  max-width: 500px;
-  flex-grow: 1;
-  overflow: hidden;
-
-  padding: 24px;
-  margin: 24px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  
-  text-decoration: none;
-
   animation: none;
   transition: all 100ms;
   transition-timing-function: ease-in-out;
+  display: flex;
+  padding: var(--xxxLarge, 48px);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--xxLarge, 40px);
+  align-self: stretch;
+  height: auto;
+
+  border-radius: var(--Large, 24px);
+  background: var(--Subtle-Gray, #EEE);
+
 }
 
 .casestudy:hover {
@@ -419,30 +416,24 @@ img {
   border-radius: 16px;
 }
 
-.casestudy.mini {
-  flex-direction: column;
-  height: 500px;
-}
-
 
 .casetext {
-  width: 50%;
-  height: 25%;
 
-  padding: 24px 24px 0 24px;
-
-  display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--Medium, 16px);
+  align-self: stretch;
 
   z-index: 5;
   text-decoration: none;
+  display: flex;
+
 }
 
 .casetext.mini {
   width: auto;
-  text-align: center;
+  text-align: left;
 }
 
 .cardsubtitle {
@@ -454,10 +445,6 @@ img {
   justify-content: space-evenly;
   align-items: left;
 
-}
-
-.cardsubtitle.mini {
-  align-items: center;
 }
 
 .cardsubtitle p {
@@ -491,27 +478,62 @@ img {
 }
 
 h2.cardtitle {
-  font-weight: 500;
-  margin: 0px 8px 0px 8px;
+  font-weight: 700;
 
   text-decoration: none;
 }
 
+.fourcolumncontainer {
+  display: flex;
+  padding: var(--Medium) 0px;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 24px var(--Large, 24px);
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+
+.column {
+  display: flex;
+  min-width: 200px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Small, 8px);
+  flex: 1 0 0;
+  text-align: left;
+}
+
 .homeimgcontainer {
   position: relative;
-  width: 100%;
-  
-  height: 50%;
-  overflow: hidden;
+  min-height: 530px;
   display: flex;
-  align-items: center;
+  padding: var(--Large, 24px);
+  flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+  height: auto;
   overflow: hidden;
+
+  border-radius: var(--Medium, 16px);
+  background: var(--portfolio-surface, #FFF);
+}
+
+.homeimgcontainer.mini {
+  min-height: 200px;
 }
 
 img.static {
-    position: absolute;
-  max-height: 100%;
+  height: auto;
+  max-width: 90%;
+  max-height: 90%;
+
+  align-self: center; /* Center vertically */
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+
+  position: absolute;
+
   background-size: 100% auto;
   z-index: 4;
   
@@ -520,8 +542,16 @@ img.static {
 }
 
 img.active {
+
+  height: auto;
+  max-width: 90%;
+  max-height: 90%;
+
+  align-self: center; /* Center vertically */
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+
   position: absolute;
-  max-height: 100%;
   background-size: 100% auto;
   
   object-fit: cover;
@@ -589,6 +619,13 @@ title {
 
   #casestudylist {
     flex-direction: column;
+    padding: 16px;
+  }
+
+
+  .homeimgcontainer {
+    min-height: 250px;
+
   }
 
   #welcomedescription {
@@ -611,46 +648,12 @@ title {
   }
 
   #casestudylist.mini {
-    flex-direction: column;
     margin-bottom: 0;
-  }
-
-  .casetext {
-    width: auto;
-    height: 30%;
-
-    align-items: center;
-    justify-content: center;
-
-    padding: 0px 0px 16px 0px;
-
-    text-align: center;
-
   }
  
   .casestudy {
-    opacity: 1;
-    flex-direction: column;
-    width: auto;
-    margin: 24px 0px;
-
-    padding: 0 24px 0 24px;
-  }
-
-  .casestudy.mini {
-    height: 400px;
-  }
-
-  .cardsubtitle {
-    width: auto;
-    align-items: center;
-
-  }
-
-  .homeimgcontainer {
-    width: 90%;
-    margin: 0 50px;
-    align-items: flex-start;
+    padding: 24px;
+    gap: var(--Small);
   }
 }
 
@@ -673,7 +676,7 @@ title {
   max-width: 1100px;
   width: 100%;
   height: 100%;
-  margin: 0 30px 0 30px;
+  margin: 0 32px 0 32px;
 
   display: flex;
   flex-direction: row;
