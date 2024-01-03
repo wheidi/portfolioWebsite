@@ -2,7 +2,7 @@
 var ctx = canvas.getContext("2d");
 
 /*pond assets */
-var numLillies = 25;
+var numLillies = 10;
 var maxSizeLily = 100;
 var minSizeLily = 25;
 var items = [];
