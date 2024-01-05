@@ -376,11 +376,6 @@ title {
         font-weight: 500;
     }
 
-    .toctitle {
-        border: 1px solid #eee;
-        border-width: 0 0 1px 0;
-    }
-
     .toc:hover {
         background-color: #eee;
         color: black;
