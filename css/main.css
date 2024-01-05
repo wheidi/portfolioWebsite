@@ -616,6 +616,9 @@ title {
 }
 
 @media screen and (max-width: 1000px) {
+  h2.cardtitle {
+    margin-top: 24px;
+  }
 
   #casestudylist {
     flex-direction: column;
