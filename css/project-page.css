@@ -3,6 +3,7 @@ h1 {
   font-weight: 500;
 }
 
+
 h2 {
     font-size: 1.5em;
     font-weight: 500;
@@ -162,6 +163,10 @@ span {
 .section h1 {
     padding-top: 100px;
 
+}
+
+.impactitem h1 {
+    padding-top: 40px;
 }
 
 .section p, ul {
