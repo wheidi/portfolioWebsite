@@ -85,8 +85,10 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5em;
-  line-height: 150%;
+  font-family: 'Poppins', verdana, sans-serif;
+  font-size: 2em;
+  font-weight: 500;
+  margin-bottom: .5em;
 }
 
 h3 {
@@ -96,6 +98,11 @@ h3 {
   
 .column h4 {
   font-weight: 700;
+}
+
+h6 {
+  font-size: 1.5em;
+  line-height: 150%;
 }
 
 a {
