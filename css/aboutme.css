@@ -172,10 +172,11 @@ canvas {
 
     .imgcol {
         margin: 0;
+        align-items: flex-start;
     }
 
     #pagehero {
-        align-items: center;
+        align-items: flex-start;
         flex-direction: column;
     }
 
