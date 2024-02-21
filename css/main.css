@@ -198,7 +198,7 @@ img {
 
 }
 
-#welcomedescription h2 {
+#welcomedescription h6 {
   text-align: center;
 }
 
@@ -485,7 +485,7 @@ img {
 }
 
 h2.cardtitle {
-  font-weight: 700;
+  font-weight: 500;
 
   text-decoration: none;
 }
@@ -495,7 +495,7 @@ h2.cardtitle {
   padding: var(--Medium) 0px;
   align-items: flex-start;
   align-content: flex-start;
-  gap: 24px var(--Large, 24px);
+  gap: 16px var(--Large, 16px);
   align-self: stretch;
   flex-wrap: wrap;
 }
@@ -625,6 +625,7 @@ title {
 @media screen and (max-width: 1000px) {
   h2.cardtitle {
     margin-top: 24px;
+    font-size: 1.5em;
   }
 
   #casestudylist {
@@ -642,7 +643,7 @@ title {
     height: 60vh;
   }
 
-  #welcomedescription h2{
+  #welcomedescription h6{
     text-align: left;
     font-size: 1.2rem;
   }
