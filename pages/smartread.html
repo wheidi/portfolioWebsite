@@ -140,13 +140,14 @@ document.querySelectorAll('section[id]').forEach((section) => {
 
 <div class="sectioncontainer gray">
     <div id="challenge" class="section">
-        <h1 class="bluetext">The challenge</h1>
-        <p>We are exposed to an abundance of information while on social media. <span class="bold">How do we know if this information is reputable
+        <h1 class="bluetext">Misinformation in social media</h1>
+        <p>Fact-checking information we see on social media is often inconvenient, leading to my peers and I consuming
+            information on social media with no consideration for its validity. <span class="bold">How do we know if the information we consume is reputable
             or misinformed?</span>
             </p>
             <br>
             <p>
-                Within a group of 5, I conducted in-person interviews, contributed to both
+                Within a group of 5 designers, I conducted in-person interviews, contributed to both
                 lo-fi and hi-fi prototypes, tested and iterated on our final app design, and presented our designs within a design competition.</p>
     </div>
 </div>
@@ -188,27 +189,36 @@ document.querySelectorAll('section[id]').forEach((section) => {
 </div>
 
 <section id="research">
-    <div class="sectioncontainer gray">
-        <div class=section>
-            <!--Justification-->
-            <h1>The impact of fake news</h1>
-            <p> From an online survey of over 200+ participants, we found the following:</p>
 
-            <p><img class="imgcontainer" src="images/SmartRead/User research percentages.png">
+    <div class="sectioncontainer">
+        <div class="section">
+            <h1>Online misinformation was affecting my peers</h1>
+            <p>I conducted an online survey with over 200+ participants and we found that a majority of
+                students or early career adults in their early to mid 20s are affected by this problem.
+            </p>
+            <br>
 
+            <div class="impactrow">
+                <div class="impactitem"><h3>57%</h3><p>Participants that were fooled by fake news</p></div>
+                <div class="impactitem"><h3>89%</h3><p>Participants use social media as their primary source</p></div>
+            </div>
+            <br>     
+            <p>At least 57% of participants have reported that they believed something was true, but later found out was false (fake news). To note, most of these people also use social media as their primary source for information.
+            </p>
         </div>
     </div>
+
 
     <div class="sectioncontainer">
         <!--User research-->
         <div class=section>
 
-            <h1>Research into the problem</h1>
+            <h1>Research papers confirmed the problem</h1>
 
-            <p>Online research on our Target Audience: Students or Early Career Adults in their early to mid 20s, found the following out of 400+ survey participants.</p>
+            <p>Given our limited research timeline, we looked to published research papers and confirmed our results.</p>
                 <p><img class="imgcontainer" src="images/SmartRead/User research findings.png"></p>
-                <p>This validated our own survey findings. We recognized that misinfomation was not only affecting a majority of our audience, but also that a common source
-                     of information was social media. </p>
+                <p>From a published research paper with over 400+ participants, we confirmed that misinformation is an ongoing problem that
+                    starts at identification - 62% of people are unable to identify if information is not reputable.
 
         </div>
     </div>
@@ -218,24 +228,33 @@ document.querySelectorAll('section[id]').forEach((section) => {
 
     <div class="sectioncontainer gray">
         <div class=section>
-            <h1>Assessing article credibility</h1>
+            <h1>Learning how to fact-check from experts</h1>
 
-            <p>We determined how to measure credibility by interviewing our target audience and learning about how
-                they would measure credibility. We also took insight fom science classes on how to evaluate sources for reputability. </p>
+            <p>I interviewed 5 audience members to understand their perspective, 
+                but given the previous research on how this group misidentifies fake news, we also looked to experts.
+                We consulted my university research professors on how to critically evaluate information.</p>
 
             <a target="_blank" href="images/SmartRead/Assessing Credibility.png">
 
                 <p><img class="imgcontainer" src="images/SmartRead/Assessing Credibility.png">
             </a>
 
+            <div class="insightcont">
+                <p class="bold">Insights
+                    <ul>
+                        <li>There were two general areas to consider: fact-checking methods that included the source of the information or
+                             fact-checking methods that looked at the content.</li>
+                    </ul>
+            </div>
         </div>
     </div>
 
     <div class="sectioncontainer">
         <div class="section">
-            <h1>Fitting our app into the flow</h1>
+            <h1>Integrating our app into their flow</h1>
 
-            <p>From the user inteviews we conducted, we found that our users already have a behaviour flow for reading articles on social media.</p>
+            <p>We were worried about adoption. From my user interviews, we knew that our audience already has an established flow. 
+                Our solution would need to fit seamlessly into that.</p>
 
             <a target="_blank" href="images/SmartRead/Hierarchical task analysis.png">
 
@@ -245,7 +264,7 @@ document.querySelectorAll('section[id]').forEach((section) => {
             <div class="insightcont">
                 <p class="bold">Insights
                     <ul>
-                        <li>Since users already have an estabished behaviour flow, it may take too much extra effort to change or add a behaviour to this flow.
+                        <li>Since users already have an established flow, it would take extra effort to add a behavior change to this flow.
                     </ul>
             </div>
         </div>
@@ -255,7 +274,7 @@ document.querySelectorAll('section[id]').forEach((section) => {
         <div class=section>
                 <h1>Design principles</h1>
 
-                <p>From our findings, we decided on the following design pinciples.</p>
+                <p>From our findings, we decided on the following design principles.</p>
 
                 <p><img class="imgcontainer" src="images/SmartRead/Design Principles.png">
 
@@ -265,8 +284,18 @@ document.querySelectorAll('section[id]').forEach((section) => {
 
 <section id="prototypes">
     <div class="sectioncontainer">
+        <div class="section">
+            <h1>Key components of the final design</h1>
+            <p>The final product and design process was presented to a panel of IBM design experts and fellow contestants.
+                Our product achieved 2nd place in the design competition.
+            </p>
+
+        </div>
+
         <div class=section>
-            <h1>Designing a seamless intervention</h1>
+            <h2>Testing the notification</h2>
+
+            <p>From a number of solution options, we tested the notification approach as it seemed most feasible for development.</p>
 
             <a target="_blank" href="images/SmartRead/Notification score.png">
 
@@ -285,9 +314,11 @@ document.querySelectorAll('section[id]').forEach((section) => {
                         <li>The information in the extended notification was hard to understand. Testers were getting confused by the information hierarchy</li>
                     </ul>
             </div>
+            <br>
+            <br>
 
 
-            <h1>Notification - Final iteration</h1>
+            <h2>Notification final iteration</h2>
 
             <a target="_blank" href="images/SmartRead/Notification iteration final.png">
 
@@ -304,11 +335,9 @@ document.querySelectorAll('section[id]').forEach((section) => {
 
 
         </div>
-    </div>
 
-    <div class="sectioncontainer gray">
         <div class="section">
-            <h1>Presenting the credibility score</h1>
+            <h2>Testing the credibility score</h2>
 
             <a target="_blank" href="images/SmartRead/Score breakdown iteration 1.png">
 
@@ -321,10 +350,12 @@ document.querySelectorAll('section[id]').forEach((section) => {
                         <li>A lot of information at once, users feel reluctant to look through it all - it feels like "work"</li>
                         <li>Users are confused as to how these scores are calculated, “why is something 74% vs 70%?”</li>
                     </ul>
+                    <br>
+                    <br>
             </div>
 
 
-            <h1>Credibility Score - Final iteration</h1>
+            <h2>Credibility score final iteration</h2>
 
             <a target="_blank" href="images/SmartRead/Score breakdown iteration final.png">
 
@@ -337,18 +368,18 @@ document.querySelectorAll('section[id]').forEach((section) => {
                     <li>Implemented gradual disclosure in the form of drop down menus to remove more detailed, less relevant information from the screen</li>
                     <li>Included a score breakdown system to show exactly how scores are calculated</li>
                 </ul>
+                <br>
+                <br>
 
             </div>
         </div>
-    </div>
 
-    <div class="sectioncontainer">
         <div class=section>
-            <h1>Confusing page elements</h1>
-
-            <p>Our home page which has both a database search & article history functionality was greatly confusing to our testers.</p>
-
-            <h1>Home - Initial iteration</h1>
+ 
+            <h2>Testing in-app navigation</h2>
+            <p>Our app had two main features: searching for articles, or, browsing your history of articles. Through user testing we found that
+                students were repeatedly having problems finding where to complete these tasks.
+            </p>
 
             <a target="_blank" href="images/SmartRead/Home page iteration 1.png">
 
@@ -358,11 +389,14 @@ document.querySelectorAll('section[id]').forEach((section) => {
             <div class="insightcont">
             <p class="bold">Testing Insights </p>
                 <ul>
-                    <li>Difficulty understanding what the search bar was for
+                    <li>It's unclear what the search bar is searching</li>
+                    <li>The history list of articles consistently gets mistaken as search results</li>
                 </ul>
+                <br>
+                <br>
             </div>
 
-            <h1>Home - Final iteration</h1>
+            <h2>App navigation final iteration</h2>
 
             <a target="_blank" href="images/SmartRead/Separating DB_History pages.png">
 
@@ -372,13 +406,16 @@ document.querySelectorAll('section[id]').forEach((section) => {
             <div class="insightcont">
             <p class="bold">Key Design Decisions </p>
                 <ul>
-                    <li>Separated the 2 functionalities into their own respective pages</li>
+                    <li>Separated the 2 functionalities into their own pages, this is consistent with other app navigation</li>
                     <li>Replaced the “Smart Read” title to reflect the current page title and help with navigation</li>
                     <li>Added page navigation at the bottom of the screen to easily access these different pages</li>
                 </ul>
+                
+                <br>
+                <br>
             </div>
 
-            <h1>Article History page</h1>
+            <h2>New Article History page</h2>
 
             <a target="_blank" href="images/SmartRead/Article History page.png">
 
@@ -392,9 +429,11 @@ document.querySelectorAll('section[id]').forEach((section) => {
                         <li>Search bar hint text indicates what this search bar is searching for</li>
                         <li>Currently selected page is indicated by a lighter color on the navigation bar</li>
                     </ul>
+                    <br>
+                    <br>
             </div>
 
-            <h1>Search Database page</h1>
+            <h2>New Search Database page</h2>
             <a target="_blank" href="images/SmartRead/Database Search page.png">
 
                 <p><img class="imgcontainer" src="images/SmartRead/Database Search page.png">
@@ -435,7 +474,7 @@ document.querySelectorAll('section[id]').forEach((section) => {
                 <br>        
                 <br>
             <h1>Looking forward: Other audiences & AI?</h1>
-            <p>Going forward, I'd love to consider other target audiences of interest. In this project, we targetted young adults in their early 20s. However, I wonder how this may be changed for older adults?
+            <p>Going forward, I'd love to consider other target audiences of interest. In this project, we targeted young adults in their early 20s. However, I wonder how this may be changed for older adults?
                 There is a lot of potential to expand this project, especially when considering how we can best make an impact on fake news as well.</p>
                 <br>
             <p> <p class="bold"> Edit (Dec 2022): </p> Now with AI becoming much more accessible as a content generator, how would a misinformation app scale to address AI applications?</p>
