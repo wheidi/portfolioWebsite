@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
   --dark-blue: #3532C8;
   --violet: #C83283;
   --light-blue: #259DF4;
+  --dark-green: #008080;
   --accent: rgb(255, 111, 97);
 
 }
@@ -126,12 +127,12 @@ img {
 }
 
 ::selection {
-  background: #e5e5e5;
+  background: #cfcfcf;
   text-decoration: inherit;
 }
 
 ::-moz-selection {
-  background: #e5e5e5;
+  background: #cfcfcf;
   text-decoration: inherit;
 
 }
@@ -412,7 +413,7 @@ img {
   height: auto;
 
   border-radius: var(--Large, 24px);
-  background: var(--Subtle-Gray, #EEE);
+  background: var(--Subtle-Gray, #cfcfcf);
 
 }
 
@@ -565,13 +566,29 @@ img.active {
 }
 
 /**COLOURS**/
-.orangegradient {
-  background-color: #eee;
+
+.darkgreengradient {
+  background-color: var(--dark-green);
   color: black;
 }
 
+.darkgreengradient:hover {
+  background-color: var(--dark-green);
+  color: white;
+}
+
+.orangegradient {
+  background-color: #e0e0e0;
+  color: black;
+}
+
+.orangegradient:hover  {
+  background-color: var(--orange);
+  color: white;
+}
+
 .brightbluegradient {
-  background-color: #eee;
+  background-color: #e0e0e0;
   color: black;
 }
 
@@ -581,15 +598,27 @@ img.active {
 }
 
 .srgradient {
-  background-color: #eee;
+  background-color: #e0e0e0;
   color: black;
 }
+
+.srgradient:hover  {
+  background-color: var(--violet);
+  color: white;
+}
+
 .yellowgradient {
-  background-color: #eee;
+  background-color: #e0e0e0;
   color: black;
 }
+
+.yellowgradient:hover  {
+  background-color: #f5cb57;
+  color: black;
+}
+
 .hbppgradient {
-  background-color: #eee;
+  background-color: #e0e0e0;
   color: black;
 }
 
@@ -598,24 +627,9 @@ img.active {
   color: white;
 }
 
-.srgradient:hover  {
-  background-color: var(--violet);
-  color: white;
-}
-
-.orangegradient:hover  {
-  background-color: var(--orange);
-  color: white;
-}
-
-.yellowgradient:hover  {
-  background-color: #f5cb57;
-  color: black;
-}
 
 .casestudy:hover .static{
 	opacity: 0;
-
 }
 
 title {

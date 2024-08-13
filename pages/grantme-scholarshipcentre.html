@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+
+<html>
+    
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HT77TMRF72"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-HT77TMRF72');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/823433b5a7.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="../css/project-page.css">
+
+<script>
+    function openNav() {
+        var x = document.getElementById("navlinks");
+        if (x.className === "toplinks") {
+        x.className += " responsive";
+        } else {
+        x.className = "toplinks";
+        }
+
+        var x = document.getElementById("navtitle");
+        if (x.className === "brandbutton") {
+        x.className += " responsive";
+        } else {
+        x.className = "brandbutton";
+        }
+    }
+
+    function openToc() {
+        var x = document.getElementById("nav-toc");
+        var y = document.getElementById("tocicon");
+        if (x.className === "navsteps sticky") {
+            x.className += " responsive";
+            var res = y.classList.replace("fa-chevron-down", "fa-chevron-up");
+        } else {
+            x.className = "navsteps sticky";
+            y.classList.replace("fa-chevron-up", "fa-chevron-down");
+        }
+    }
+
+    //toc
+    window.addEventListener('DOMContentLoaded', () => {
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                if (entry.intersectionRatio > 0) {
+                    document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
+                } else {
+                    document.querySelector(`nav a[href="#${id}"]`).classList.remove('active');
+                }
+            });
+        });
+
+        // Track all sections that have an `id` applied
+        document.querySelectorAll('section[id]').forEach((section) => {
+            observer.observe(section);
+        });
+    });
+</script>
+
+</head>
+
+<title>Heidi Wang | Portfolio</title>
+
+<link rel="shortcut icon" type="image/jpg" href="./images/Welcome/Icon White.svg"/>
+
+<!--nav-->
+<body>
+    <ul id="topnav" class="center darkgreengradient">
+    
+        <div class="navmargin">
+            <div class="brandbutton" id="navtitle">
+                <a href="https://w-heidi.com/"><img class="headerimg" src="images/Welcome/Icon White.svg"></a>
+              </div>
+      
+              <div class="toplinks" id="navlinks">
+                <a href="../index.html#casestudylist">Work</a>
+            <!--<a href="./art-projects.html">Hobby</a>-->
+                <a href="./aboutme.html">About</a> 
+                <a href="./Heidi_Wang_Resume_2024.pdf" target=_blank>Resume</a>
+            </div>
+      
+            <a href="javascript:void(0);" class="menuicon" onclick="openNav()">
+              <i class="fa fa-bars"></i> </a>
+        </div>
+      </ul>
+<!--nav-->
+
+<header class="center darkgreengradient">
+<!--HERO-->
+
+<div class="center" id="pagebanner">
+    <div id="pagehero">
+            <div><img class="heroimg center" src="images/GMScholarshipCentre/Thumbnail full.gif" /></div>
+    </div>
+    <div class="headertext">
+    <h6>GrantMe - EdTech</h6>
+        <h1>Streamlined content management with internal tool redesign</h1>
+    </div>
+</div>
+</header>
+
+<!--OVERVIEW-->
+
+<div class="introcontainer center">
+    <div class="overviewcontainer">
+        <div class="row">
+            <div class="cell">
+                <p class="bold">Impact
+                <p>Reduced task completion from 15 to 10 mins (33%) during user testing
+            </div>
+            <div class="cell">
+                <p class="bold">Role 
+                <p>Full Time Product Designer
+            </div>
+            <div class="cell">
+                <p class="bold">Team
+                <p>Product Manager, COO, Student Success Manager, Student Success Team (Content Management Team)
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="sectioncontainer gray">
+    <div id="challenge" class="section">
+        <h1>The problem with out-dated scholarship data</h1>
+        <p>We have over 3,000+ scholarships that the Student Success content management team keeps updated. These scholarships often change their application process every year, but we were having trouble keeping up. 
+            This resulted in students writing scholarship applications based on out-dated information, which led to negative reviews, poor user experience, and even refunds. </p> 
+            <br>
+            <p>For this problem, we worked with the content team to improve our scholarship updating process.
+            </p>
+    </div>
+</div>
+
+<!--TOC-->
+<div class="toctitlecontainer">
+    <div class="tocsection">
+        <h1>The process</h1>
+    </div>
+</div>
+
+<nav id="nav-toc" class="navsteps sticky">
+    <a class="toc" href="#discover">
+        Research
+    </a>
+
+    <a class="toc" href="#design">
+        Design
+    </a>
+
+
+    <a class="toc" href="#outcomes">
+        Impact
+    </a>
+
+    <div class="toctitle">
+        <a href="javascript:void(0);" class="currseg" id="currtitle" onclick="openToc()">
+            Research
+        </a>
+
+        <a href="javascript:void(0);" class="icon" onclick="openToc()">
+            <i class="fa fa-chevron-down"  id="tocicon" style="color:black"></i>
+        </a>
+    </div>
+
+</nav>
+<div class="toctitlecontainer">
+</div>
+
+<!--Discovery-->
+<section id="discover">
+    <div class="sectioncontainer">
+        <div class="section">
+            <h1>Setting a goal to create direction</h1>
+            <p>To drive clarity on what to design for, I discussed with the product manager, COO, and content team manager, on what metric we should monitor.
+            </p>
+            <br>
+
+            <div class="impactrow">
+                <div class="impactitem"><h3>15 minutes to update one scholarship was too long</h3></div>
+            </div>
+            <p>With the volume of scholarships we had to update, spending 15 minutes per update was too long. With the number of people we had, it would be unfeasible to update all the key scholarships in time.
+            <br>     
+            <p>Our goal was to <span class="bold">reduce the task duration of updating one scholarship</span>.
+            </p>
+        </div>
+    </div>
+
+    <div class="sectioncontainer gray">
+        <div class="section">
+            <h1>Flow redundancies and in-person interruptions slowed the process down</h1>
+            <p>I job-shadowed, conducted interviews, and reviewed screen recordings to understand the Jobs To Be Done to update a scholarship. 
+
+                <div class="insightcont">
+                    <p class="bold">Learnings
+
+                        <ul>
+                            <li>There were 2 main flows: Updating scholarships based on deadlines, and updating scholarships based on reports of problems</li>
+                            <li>A lot of time went into browsing each scholarship's website for updates</li>
+                            <li>Team members were often interrupted with people asking them questions/giving requests</li>
+                        </ul>
+                </div>
+                <br>
+            
+                <h3>There were many opportunities to reduce steps and save time in their current flow</h3>
+                <br>
+                <p>After drafting a user flow, I could easily and quickly identify where time could be saved.</p>
+
+            <a target="_blank" href="images/GMScholarshipCentre/User Flow.png">
+                <div class="imgcontainer">
+                    <img src="images/GMScholarshipCentre/User Flow.png">
+                </div>
+            </a>
+
+            <div class="insightcont">
+                <p class="bold">Time was lost to
+
+                    <ul>
+                        <li>Looking for which scholarships to update next</li>
+                        <li>Finding the link to a scholarship website</li>
+                        <li>Updating the status of the scholarship</li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+
+
+<!--Research-->
+
+    <div class="sectioncontainer">
+        <div class="section">
+            <h1>Keeping stakeholders informed led to operational improvements</h1>
+                <p>I presented our findings of the main areas of problems to our CEO, founder, and Product Manager. From this, we gained alignment and feedback, and initiated 2 projects.</p>
+
+                <a target="_blank" href="images/GMScholarshipCentre/initiated projects.png">
+                    <div class="imgcontainer">
+                        <img src="images/GMScholarshipCentre/initiated projects.png">
+                    </div>
+                </a>
+            
+                <p>I became responsible for designing an internal tool to streamline the scholarship management process!</p>
+
+        </div>
+    </div>
+
+    <div class="sectioncontainer gray">
+        <div class="section">
+            <h1>Inspiration from familiar tools</h1>
+            <p>I researched how other tools looked, with special attention to the tools our team already uses to leverage the Consistency and Standards usability heuristic.</p>
+
+            <a target="_blank" href="images/GMScholarshipCentre/Online inspiration.png">
+                <div class="imgcontainer">
+                    <img src="images/GMScholarshipCentre/Online inspiration.png">
+                </div>
+            </a>
+        
+            <div class="insightcont">
+                <p class="bold">Learnings
+                    <ul>
+                        <li>Hubspot's Tasks experience makes transitioning between tasks seamless</li>
+                        <li>A dashboard that focuses on one component drives faster action</li>
+                        <li>A complicated dashboard (Ex: Kanban board) starts off slower, but the user has a better understanding of the state of the system</li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="design">
+    <div class="sectioncontainer gray">
+        <div class="section">
+            <h1>Determining information hierarchy to jump-start wireframes</h1>
+            <p>I worked with my design mentor to create object-diagrams and ideate on how information should be organized.</p>
+
+            <a target="_blank" href="images/GMScholarshipCentre/Information Hierarchy.png">
+                <div class="imgcontainer">
+                    <img src="images/GMScholarshipCentre/Information Hierarchy.png">
+                </div>
+            </a>
+        
+            <div class="insightcont">
+                <p class="bold">Insights
+                    <ul>
+                        <li>Group scholarships based on the 2 different flows: Scholarship Reports and Scholarship Updates</li>
+                        <li>Have a summary row at the top so managers and team members easily know the status of the system</li>
+                        <li>Navigation menus are unnecessary since we only have 3 flows</li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="sectioncontainer">
+        <div class="section">
+            <h1>Iterating with the team</h1>
+            <p>I worked closely with my product manager and the Student Success content team to ideate and iterate on the design.</p>
+
+        </div>
+
+        <div class="section">
+            <h2>Simple flows felt faster</h2>
+
+            <a target="_blank" href="images/GMScholarshipCentre/Lofi wireframes 1.png">
+                <div class="imgcontainer prod">
+                    <img src="images/GMScholarshipCentre/Lofi wireframes 1.png">
+                </div>
+            </a>
+    
+            <div class="insightcont">
+                <p class="bold">Insights
+                <ul>
+                    <li>A more focussed view of the homepage drove faster action and felt clearer compared to the kanban board</li>
+                    <li>The kanban board felt cluttered, not everything on the page is needed at the same time</li>
+                    <li>Team members preferred when Scholarship details opened as a slideout, it felt "easier"</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Identifying unclear elements through user testing</h2>
+            <p>After determining the flow approach, I added details to the designs for further testing.</p>
+
+            <a target="_blank" href="images/GMScholarshipCentre/Iteration 1.png">
+                <div class="imgcontainer prod">
+                    <img src="images/GMScholarshipCentre/Iteration 1.png">
+                </div>
+            </a>
+    
+            <div class="insightcont">
+                <p class="bold">Insights from user testing
+                <ul>
+                    <li>The relationship between the summary statistics and the content was unclear, object labels were not consistent enough</li>
+                    <li>There was confusion with what the "Start" button did, and how it's similar to clicking a specific scholarship in the list</li>
+                    <li>The tabs for Approach B was grouped incorrectly, users were confused on if the tabs would have repeat or unique scholarships</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Bringing clarity to confusing elements</h2>
+            <p>I iterated based on the user testing results. I also initiated a design review with my design mentor to get more feedback.</p>
+
+            <a target="_blank" href="images/GMScholarshipCentre/Iteration 2.png">
+                <div class="imgcontainer prod">
+                    <img src="images/GMScholarshipCentre/Iteration 2.png">
+                </div>
+            </a>
+    
+            <div class="insightcont">
+                <p class="bold">Insights
+                <ul>
+                    <li>Turned the Reports section to a conditional alert with a slideout flow</li>
+                    <li>Cleared up the wording so similar objects were labelled exactly the same</li>
+                    <li>Clarified the tab groups, moved "All funding" so it is a separate section</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+    <div class="sectioncontainer gray">
+        <div class="section">
+            <h1>Remaining flexible during change</h1>
+            <p>At this point, the Scholarship Report flow was changed. Now, we wanted Scholarship Reports to be secondary to Scholarship Updates, which is not what the current design communicates.
+                I quickly met with the product manager and Student Success team manager to clarify the flow changes and align on what to expect.</p>
+
+                <a target="_blank" href="images/GMScholarshipCentre/Change iteration.png">
+                    <div class="imgcontainer prod">
+                        <img src="images/GMScholarshipCentre/Change iteration.png">
+                    </div>
+                </a>
+
+                <div class="insightcont">
+                    <p class="bold">Key changes
+                    <ul>
+                        <li>Removed the Report alert, as visually, an orange alert looks very important
+                        <li>Added the Reports flow to the All Scholarships section, underneath the Scholarship Updates section (the Coming Up In 3 Months section)</li>
+                        <li>Adjusted the titles and copy accordingly</li>
+                    </ul>
+                </div>
+        </div>
+
+
+        <div class="section">
+            <h1>Simplifying transitions between Scholarships</h1>
+            <p>From our research, we found that time was lost to identifying scholarships to update, finding the scholarship link, and updating scholarship status. I worked closely with the Student Success Team
+                to ideate, test, and design what the slide-out flow would look like.
+
+
+            <a target="_blank" href="images/GMScholarshipCentre/Scholarship slideout.png">
+                <div class="imgcontainer prod">
+                    <img src="images/GMScholarshipCentre/Scholarship slideout.png">
+                </div>
+            </a>
+
+    
+            <div class="insightcont">
+                <p class="bold">Key design outcomes
+                <ul>
+                    <li>Moved scholarship website link to the top and blue, like a typical link
+                    </li>
+                    <li>Update the scholarship status automatically by clicking a button
+                    </li>
+                    <li>After updating a scholarship, automatically transition to the next scholarship
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section id="outcomes">
+    <div class="sectioncontainer">
+        <div class="section">
+            <!--FINAL PRODUCT-->
+            <h1>Impact</h1>
+            <p>Unfortunately, this tool has yet to be built as the company goes through some structural changes. However, during testing with the team, I found the following:</p>
+
+        <div class="impactrow">
+            <div class="impactitem"><h1>-5 minutes</h1><p>Save 5 minutes per scholarship update</p></div>
+        </div>
+        <p>This 33% improvement is significant, especially given that we have approximately 3,000 scholarships that need to be updated every month. This 5 minutes saved per scholarship amounts to
+            250 hours saved a month!
+        </p>
+
+
+
+        </div>
+    </div>
+<!--REFLECTION-->
+
+    <div class="sectioncontainer gray">
+        <div id="reflection" class="section">
+            <h1>Reflection</h1>
+            <h2>How to iterate quickly with teammates</h2>
+            <p>With our users being teammates within the same office, it was a lot easier to collaborate with them. 
+                However I still needed to be mindful about using their time intentionally. Thus, opportunities to design more efficiently included being able to use lo-fi designs to iterate,
+                and being able to job shadow easily. Identifying these opportunities helped me design a solution more quickly, and also build buy-in as the team was very involved in the process.
+            </p>
+
+                <br>        
+                <br>
+            <h2>Handling changes mid-design</h2>
+
+            <p>The flow for a key action was changed mid-way through the project. Despite that, What helped this transition go smoothly
+                without adding too much time to the project was the swift communication with the manager on exactly what was changed. During this conversation, I asked questions to clarify exactly
+                what was changed and what wasn't. From there, in conjunction with the information-hierarchy work we did earlier, I was able to easily adjust the changed flow without having to change 
+                any other part of the design.
+                 <br>
+                 <br>
+            </p>
+        </div>
+
+            <div class="pagenav">
+                <a href="../index.html#casestudylist" id="ctabutton" class="pagenavbutton"> ← Back to Case Studies</a>
+            
+            </div>
+
+    </div>
+
+
+</section>
+
+
+    
+<div id="footer">
+    <div class="footermargin">
+      <div class="footerlogo">
+        <img class="footerimg" src="./images/Welcome/Icon White.svg">
+      </div>
+  
+        <div class="footerlinkscontainer">            
+            <div class="footerlinks">
+              <a href="mailto:heidihwang8@gmail.com" target="_blank">heidihwang8@gmail.com</a>
+              <a href="https://www.linkedin.com/in/w-heidi/" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+</body>
+<script>
+document.addEventListener("scroll", (function() {
+    var tocList = document.querySelectorAll(".toc");
+    var i = tocList[0].getBoundingClientRect().top;
+    console.log("top: "+i);
+
+    if (tocList.length) {
+        if( i <= 31 ){
+            for (let o = 0; o < tocList.length; o++){
+                tocList[o].classList.add("sticked");
+            }
+        } else {
+            for (let o = 0; o < tocList.length; o++){
+                tocList[o].classList.remove("sticked");
+            }
+        }
+    }
+}))
+</script>
