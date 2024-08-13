@@ -568,7 +568,7 @@ img.active {
 /**COLOURS**/
 
 .darkgreengradient {
-  background-color: var(--dark-green);
+  background-color: #e0e0e0;
   color: black;
 }
 
