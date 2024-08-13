@@ -56,7 +56,10 @@ header {
     background-color: var(--light-blue);
     color: white;
     }
-  
+.darkgreengradient {
+    background-color: var(--dark-green);
+    color: white;
+    }
 .srgradient  {
     background-color: var(--violet);
     color: white;
